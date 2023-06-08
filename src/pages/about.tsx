@@ -7,13 +7,12 @@ import TechStack from "./components/techStack";
 const AboutPage = ({ data } : {data : object}) => {
 	return (
 		<Layout pageTitle="about me">
-			<TechStack />
 			{data.file.childMdx.body}
+			<TechStack />
 			<StaticImage
 				alt="Colin Lo"
 				src="../images/headshot_edit.jpg"
 			/>
-			
 		</Layout>
 	);
 };

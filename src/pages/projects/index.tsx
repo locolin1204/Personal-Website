@@ -16,14 +16,17 @@ const Projects = ({ data }) => {
 	return (
 		<Layout pageTitle="projects">
 			<StyledLayout>
-				{data.allFile.nodes.map(node => (
-					<ProjectCard
-						title={node.childMdx.frontmatter.title}
-						excerpt={node.childMdx.excerpt}
-						tech={node.childMdx.frontmatter.tech}
-						key={node.childMdx.id}
-					/>
-				))}
+				{data.allFile.nodes.map(node => {
+					const item = node.childMdx;
+					return (
+						<ProjectCard
+							title={item.frontmatter.title}
+							excerpt={item.excerpt}
+							tech={item.frontmatter.tech}
+							key={item.id}
+						/>
+					);
+				})}
 			</StyledLayout>
 		</Layout>
 	);

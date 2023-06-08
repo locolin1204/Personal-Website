@@ -1,5 +1,6 @@
 import React from "react";
-import { StyledTechFrame, StyledTechContainer } from "./styles/about.styled";
+import { StyledTechContainer } from "./styles/about.styled";
+import TechFrame from "./techFrame";
 
 export default function TechStack() {
 	const listOfLang = [
@@ -15,28 +16,25 @@ export default function TechStack() {
 		"SQL",
 	];
 
-  const listOfLib = [
-    "React.js", "Gatsby.js", "SwitftUI", "Kotlin Multiplatform Mobile", "Apollo GraphQL", "PyTorch"
-  ]
+	const listOfLib = [
+		"React.js",
+		"Gatsby.js",
+		"SwitftUI",
+		"Kotlin Multiplatform Mobile",
+		"Apollo GraphQL",
+		"PyTorch",
+	];
+
+	const listOfDb=[
+		"Oracle DB",
+		"MySQL"
+	];
 
 	return (
 		<StyledTechContainer>
-			<StyledTechFrame>
-				<h5>languages</h5>
-				<ul>
-					{listOfLang.map((item, index) => (
-						<li>{item}</li>
-					))}
-				</ul>
-			</StyledTechFrame>
-			<StyledTechFrame>
-      <h5>framework and libraries</h5>
-				<ul>
-					{listOfLib.map((item, index) => (
-						<li>{item}</li>
-					))}
-				</ul></StyledTechFrame>
-			<StyledTechFrame>databases</StyledTechFrame>
+			<TechFrame list={listOfLang} title={"languages"}/>
+			<TechFrame list={listOfLib} title={"framework and libraries"}/>
+			<TechFrame list={listOfDb} title={"databases"}/>
 		</StyledTechContainer>
 	);
 }

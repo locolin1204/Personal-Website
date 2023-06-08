@@ -16,14 +16,18 @@ function ProjectCard({
 	excerpt: string;
 	tech: Array<String>;
 }) {
-	console.log(typeof tech);
 	return (
 		<StyledCardContainer>
 			<StyledTitle>{title}</StyledTitle>
-            <StyledTechList>{tech}</StyledTechList>
-			<StaticImage alt="Colin Lo" src="../../images/todo-list.png" sizes="100x100"/>
+			<StyledTechList>{tech}</StyledTechList>
+			<StaticImage
+				alt="Colin Lo"
+				src="../../images/todo-list-cropped.png"
+				imgStyle={{
+					width: "80%"
+				}}
+			/>
 			<StyledExcerpt>{excerpt}</StyledExcerpt>
-		
 		</StyledCardContainer>
 	);
 }

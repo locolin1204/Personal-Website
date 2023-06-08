@@ -8,13 +8,7 @@ import Footer from "./footer";
 import GlobalStyles from "./styles/global";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import { StyledContainer, StyledPageHeader } from "./styles/layout.styled";
-
-const StyledCol = styled(Col)`
-	/* border: blue 1px solid; */
-	/* text-align: center; */
-	flex: 1;
-`;
+import { StyledContainer, StyledPageHeader, StyledCol } from "./styles/layout.styled";
 
 const theme = {
 	color: {
