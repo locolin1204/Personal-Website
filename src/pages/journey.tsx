@@ -2,24 +2,29 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import JourneyCard from "./components/journeyCard";
+import { StyledJourneyContainer } from "./components/styles/journey.styled";
+
 import { graphql } from "gatsby";
 
 const JourneyPage = ({ data }) => {
 	return (
-		<Layout pageTitle="my journey">
-			{data.allFile.nodes.map(node => {
-				const item = node.childMdx;
-				return (
-					<JourneyCard
-						title={item.frontmatter.title}
-						date={item.frontmatter.date}
-						slug={item.frontmatter.slug}
-						post={item.frontmatter.post}
-
-						key={item.id}
-					/>
-				);
-			})}
+		<Layout pageTitle="journey">
+			<StyledJourneyContainer>
+				{data.allFile.nodes.map((node, index) => {
+					const item = node.childMdx.frontmatter;
+					return (
+						<JourneyCard
+							title={item.title}
+							date={item.date}
+							slug={item.slug}
+							post={item.post}
+							image={item.image}
+							key={node.childMdx.id}
+							index={index}
+						/>
+					);
+				})}
+			</StyledJourneyContainer>
 		</Layout>
 	);
 };
@@ -32,13 +37,16 @@ export const query = graphql`
 		) {
 			nodes {
 				childMdx {
-					id
 					frontmatter {
 						post
-						date
+						date(formatString: "MMMM, YYYY")
 						slug
 						title
-						image
+						image {
+							childImageSharp {
+								gatsbyImageData(width: 500, aspectRatio: 1.5)
+							}
+						}
 					}
 				}
 			}
@@ -46,6 +54,6 @@ export const query = graphql`
 	}
 `;
 
-export const Head = () => <title>my journey</title>;
+// export const Head = () => <title>journey</title>;
 
 export default JourneyPage;

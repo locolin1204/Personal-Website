@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
 	siteMetadata: {
-		title: `Personal Website`,
+		title: `Colin Lo`,
 		siteUrl: `https://www.yourdomain.tld`,
 	},
 	// More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -15,8 +15,7 @@ const config: GatsbyConfig = {
 		"gatsby-plugin-sharp",
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		`gatsby-transformer-remark`,
-		"gatsby-plugin-mdx",
+		// "gatsby-plugin-mdx",
 		"react-bootstrap",
 		{
 			resolve: "gatsby-source-filesystem",
@@ -44,6 +43,30 @@ const config: GatsbyConfig = {
 					{
 						name: `Source Code Pro`,
 						file: `https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap`,
+					},
+				],
+			},
+		},
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 800,
+						},
+					},
+				],
+			},
+		},
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {},
 					},
 				],
 			},

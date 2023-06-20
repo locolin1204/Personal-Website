@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledTechContainer } from "./styles/about.styled";
 import TechFrame from "./techFrame";
+import { graphql } from "gatsby";
 
 export default function TechStack() {
 	const listOfLang = [
@@ -38,3 +39,28 @@ export default function TechStack() {
 		</StyledTechContainer>
 	);
 }
+
+export const query = graphql`
+	query {
+		allFile(
+			filter: { relativePath: { glob: "journey/*.mdx" } }
+			sort: { childrenMdx: { frontmatter: { date: DESC } } }
+		) {
+			nodes {
+				childMdx {
+					frontmatter {
+						post
+						date(formatString: "MMMM, YYYY")
+						slug
+						title
+						image {
+							childImageSharp {
+								gatsbyImageData(width: 500, aspectRatio: 1.5)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`;

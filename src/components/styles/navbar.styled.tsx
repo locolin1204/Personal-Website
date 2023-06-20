@@ -19,13 +19,11 @@ export const StyledNavItem = styled.li`
 `;
 
 export const StyledNavLink = styled(Link)`
-    color: ${({ theme }) => theme.color.sand};
+    color: ${({ theme }) => theme.color.sand500};
     text-decoration: none;
     background: inherit;
-    transition-duration: 2ms ease;
+	transition: color 0.3s ease-in-out;
     &:hover{
-        color: ${({ theme }) => theme.color.darkgrey};
-        transform: scale(1.05);
-        /* font-weight: 600; */
+        color: ${({ theme }) => theme.color.grey500};
     }
 `;

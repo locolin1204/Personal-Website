@@ -2,13 +2,13 @@ import * as React from "react";
 import { ReactNode } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "./navbar";
 import Footer from "./footer";
 import GlobalStyles from "./styles/global";
-import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import { StyledContainer, StyledPageHeader, StyledCol } from "./styles/layout.styled";
+import themeColor from "../resources/color.json";
+
 
 const theme = {
 	color: {
@@ -24,6 +24,7 @@ const theme = {
 		white: "#ffffff"
 	},
 };
+
 const Layout = ({
 	pageTitle,
 	children,
@@ -42,7 +43,8 @@ const Layout = ({
 	`);
 
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={themeColor.light}>
+			<title>colin lo</title>
 			<GlobalStyles />
 			<StyledContainer fluid >
 				<NavBar />
@@ -58,5 +60,6 @@ const Layout = ({
 		</ThemeProvider>
 	);
 };
+
 
 export default Layout;

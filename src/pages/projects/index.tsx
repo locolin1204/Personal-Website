@@ -4,30 +4,27 @@ import { StaticImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import ProjectCard from "../components/projectCard";
-
-const StyledLayout = styled.div`
-	/* border: red 1px solid; */
-	display: flex;
-	flex-direction: column;
-	row-gap: 1em;
-`;
+import { StyledProjectLayout } from "../components/styles/project.styled";
 
 const Projects = ({ data }) => {
 	return (
 		<Layout pageTitle="projects">
-			<StyledLayout>
-				{data.allFile.nodes.map(node => {
+			<StyledProjectLayout>
+				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
 					return (
 						<ProjectCard
+							index={index}
 							title={item.frontmatter.title}
 							excerpt={item.excerpt}
 							tech={item.frontmatter.tech}
+							link={item.frontmatter.link}
 							key={item.id}
+							image={item.frontmatter.image}
 						/>
 					);
 				})}
-			</StyledLayout>
+			</StyledProjectLayout>
 		</Layout>
 	);
 };
@@ -35,7 +32,7 @@ const Projects = ({ data }) => {
 export const query = graphql`
 	query {
 		allFile(
-			filter: { relativePath: { glob: "projects/*" } }
+			filter: { relativePath: { glob: "projects/*.mdx" } }
 			sort: { childMdx: { frontmatter: { date: DESC } } }
 		) {
 			nodes {
@@ -47,6 +44,12 @@ export const query = graphql`
 						title
 						slug
 						tech
+						link
+						image {
+							childImageSharp {
+								gatsbyImageData
+							}
+						}
 					}
 				}
 				relativePath
@@ -55,12 +58,6 @@ export const query = graphql`
 	}
 `;
 
-export const Head = () => <title>projects</title>;
+// export const Head = () => <title>projects</title>;
 
 export default Projects;
-
-{
-	/* <Link to={`/projects/${node.childMdx.frontmatter.slug}`}>
-						{node.childMdx.frontmatter.title}
-					</Link> */
-}

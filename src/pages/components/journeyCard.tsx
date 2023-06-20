@@ -5,36 +5,25 @@ import {
 	StyledJourneyCardContainer,
 	TextContainer,
 } from "./styles/journey.styled";
-import { graphql, useStaticQuery } from "gatsby";
-import bigimage from "../../images/journey/lsc-edboard.jpg";
 
 export default function JourneyCard({
 	title,
 	post,
 	date,
 	slug,
+	image,
+	index,
 }: {
 	title: string;
 	post: string;
 	date: string;
 	slug: string;
+	index: number;
+	image: string;
 }) {
-	// const image = getImage(data.file);
-	// const data = useStaticQuery(graphql`
-	// 	query ($image: String) {
-	// 		file(relativePath: { glob: $image }) {
-	// 			childImageSharp {
-	// 				gatsbyImageData(width: 500)
-	// 			}
-	// 		}
-	// 	}
-	// `);
-	// const imagePath = `../../images/journey/${slug}.jpg`;
-	const imagePath = "../../images/journey/cc-photog.jpg"
-	console.log(imagePath);
-	// const image = getImage(data.file);
+	const gatsbyImage = getImage(image);
 	return (
-		<StyledJourneyCardContainer>
+		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
 			<TextContainer>
 				<h4>{title}</h4>
 				<div>{date}</div>
@@ -42,7 +31,7 @@ export default function JourneyCard({
 			</TextContainer>
 			<div>
 				{/* <img src={require(image)}/> */}
-				{/* <GatsbyImage image={image} alt="yo" /> */}
+				<GatsbyImage image={gatsbyImage} alt="yo" />
 				{/* <StaticImage
 					src={`../../images/journey/${slug}.jpg`}
 					alt={`${slug}`}
