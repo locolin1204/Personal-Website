@@ -71,7 +71,14 @@ const config: GatsbyConfig = {
 				],
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+			  icon: `${__dirname}/src/images/icon.svg`,
+			},
+		  },
 	],
+	
 };
 
 export default config;

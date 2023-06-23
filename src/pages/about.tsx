@@ -1,32 +1,29 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import TechStack from "./components/techStack";
 import AboutText from "./components/aboutText";
 import SoftwareStack from "./components/softwareStack";
+import { StaticImage } from "gatsby-plugin-image";
+import { ProfilePic } from "./components/styles/about.styled";
 
-const AboutPage = ({ data } : {data : object}) => {
+const AboutPage = ({ data }: { data: object }) => {
+	const heroImage = {
+		gatsbyImage: data.imageData,
+		position: "40%",
+		height: "50vh",
+	};
+
 	return (
-		<Layout pageTitle="about me">
-			{/* <StaticImage
-				alt="Colin Lo"
-				src="../images/about/headshot_edit.png"
-				height={300}
-			/>
-			<StaticImage
-				alt="Colin Lo"
-				src="../images/about/cucs_headshot.png"
-				height={300}
-			/>
-			<StaticImage
-				alt="Colin Lo"
-				src="../images/about/lsc-edboard-headshot.png"
-				height={300}
-
-			/> */}
+		<Layout pageTitle="about me" heroImage={heroImage}>
 			<AboutText />
 			{/* {data.file.childMdx.body} */}
+			<ProfilePic>
+				<StaticImage
+					src="../images/about/formal-profilepic-transparent.png"
+					alt="Colin Lo"
+				/>
+			</ProfilePic>
 			<TechStack />
 			<SoftwareStack />
 		</Layout>
@@ -35,11 +32,16 @@ const AboutPage = ({ data } : {data : object}) => {
 
 export const query = graphql`
 	query {
-		file(name: { eq: "about-me-info" }) {
+		mdxData: file(name: { eq: "about-me-info" }) {
 			childMdx {
 				body
 				excerpt
 				id
+			}
+		}
+		imageData: file(relativePath: { glob: "*/about.jpg" }) {
+			childImageSharp {
+				gatsbyImageData
 			}
 		}
 	}

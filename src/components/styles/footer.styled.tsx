@@ -5,7 +5,7 @@ import { IconBase } from "react-icons";
 export const StyledFooter = styled.div`
 	${({ theme: { color } }) => `
         background: ${color.grey200};
-        color: ${color.offwhite};
+        color: ${color.offwhite500};
     `}
 	display:flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ export const StyledIconContainer = styled.div`
 export const StyledIconLink = styled.a`
     display: flex;
     align-items: center;
-	color: ${({ theme }) => theme.color.offwhite};
+	color: ${({ theme }) => theme.color.offwhite500};
     /* border: red 1px solid; */
     &:hover{
         color :${({ theme }) => theme.color.yellow400}

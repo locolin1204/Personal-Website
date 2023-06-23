@@ -25,8 +25,8 @@
 			"yellow800": "#ac9e6a",
 			"yellow700": "#c5b579",
 			"yellow400": "#F6E297",
-            "yellow300": "#f7e5a1",
-            "yellow200": "#f8e8ac",
+			"yellow300": "#f7e5a1",
+			"yellow200": "#f8e8ac",
 			"yellow000": "#faeec1",
 
 			"sand900": "#312b25",
@@ -37,14 +37,22 @@
 
 			"grey900": "#242424",
 			"grey700": "#404040",
-            "grey600": "#525252",
+			"grey600": "#525252",
 			"grey500": "#5B5B5B",
 			"grey300": "#8c8c8c",
-            "grey200": "#adadad",
+			"grey200": "#adadad",
 			"grey100": "#cecece",
-            
-		    "offwhite": "#FAF3EA",
-            
+
+			"offwhite900": "#191817",
+			"offwhite800": "#4b4946",
+			"offwhite700": "#7d7a75",
+			"offwhite600": "#e1dbd3",
+			"offwhite550": "#f8f1e8",
+			"offwhite500": "#FAF3EA",
+			"offwhite400": "#fbf5ee",
+			"offwhite300": "#fdf9f5",
+			"offwhite200": "#fefbf9",
+
 			"white": "#ffffff"
 		}
 	},

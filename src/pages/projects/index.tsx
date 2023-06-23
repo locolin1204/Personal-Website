@@ -13,15 +13,17 @@ const Projects = ({ data }) => {
 				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
 					return (
-						<ProjectCard
-							index={index}
-							title={item.frontmatter.title}
-							excerpt={item.excerpt}
-							tech={item.frontmatter.tech}
-							link={item.frontmatter.link}
-							key={item.id}
-							image={item.frontmatter.image}
-						/>
+						<Link to={`/projects/${item.frontmatter.slug}`} style={{textDecoration: "none"}}>
+							<ProjectCard
+								index={index}
+								title={item.frontmatter.title}
+								excerpt={item.excerpt}
+								tech={item.frontmatter.tech}
+								link={item.frontmatter.link}
+								key={item.id}
+								image={item.frontmatter.image}
+							/>
+						</Link>
 					);
 				})}
 			</StyledProjectLayout>

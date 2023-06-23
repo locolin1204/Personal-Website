@@ -6,8 +6,8 @@ export default function TechFrame({ list, title}: { list: Array<string>, title: 
 		<StyledTechFrame>
 			<h5>{title}</h5>
 			<StyledList>
-				{list.map(item => (
-					<div>{item}</div>
+				{list.map((item, index) => (
+					<div key={index}>{item}</div>
 				))}
 			</StyledList>
 		</StyledTechFrame>

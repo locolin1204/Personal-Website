@@ -6,8 +6,9 @@ import NavBar from "./navbar";
 import Footer from "./footer";
 import GlobalStyles from "./styles/global";
 import { ThemeProvider } from "styled-components";
-import { StyledContainer, StyledPageHeader, StyledCol } from "./styles/layout.styled";
+import { StyledContainer, StyledPageHeader, StyledCol, HeroImage } from "./styles/layout.styled";
 import themeColor from "../resources/color.json";
+import { ImageDataLike, getImage } from "gatsby-plugin-image";
 
 
 const theme = {
@@ -26,9 +27,15 @@ const theme = {
 };
 
 const Layout = ({
+	heroImage,
 	pageTitle,
 	children,
 }: {
+	heroImage: {
+		gatsbyImage: ImageDataLike;
+		position: string;
+		height: string
+	}
 	pageTitle: string;
 	children: ReactNode;
 }) => {
@@ -52,6 +59,7 @@ const Layout = ({
 						{/* <header>{data.site.siteMetadata.title}</header> */}
 						<main>
 							<StyledPageHeader>{pageTitle}</StyledPageHeader>
+							{heroImage ? <HeroImage image={getImage(heroImage.gatsbyImage)} alt="Hero Image" position={heroImage.position} height={heroImage.height}/> : null }
 							{children}
 						</main>
 					</StyledCol>

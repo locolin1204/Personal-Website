@@ -1,22 +1,28 @@
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import {
-	StyledImage,
 	StyledJourneyCardContainer,
 	TextContainer,
+	StyledGatsbyImage,
+	TextWrapper,
+	DateWrapper,
+	PostWrapper,
+	TitleWrapper
 } from "./styles/journey.styled";
 
 export default function JourneyCard({
 	title,
 	post,
-	date,
+	startdate,
+	enddate,
 	slug,
 	image,
 	index,
 }: {
 	title: string;
 	post: string;
-	date: string;
+	startdate: string;
+	enddate: string;
 	slug: string;
 	index: number;
 	image: string;
@@ -24,14 +30,16 @@ export default function JourneyCard({
 	const gatsbyImage = getImage(image);
 	return (
 		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
+			<TextWrapper>
 			<TextContainer>
-				<h4>{title}</h4>
-				<div>{date}</div>
-				<div>{post}</div>
+				<TitleWrapper>{title}</TitleWrapper>
+				<DateWrapper>{startdate} – {enddate}</DateWrapper>
+				<PostWrapper>{post}</PostWrapper>
 			</TextContainer>
+			</TextWrapper>
 			<div>
 				{/* <img src={require(image)}/> */}
-				<GatsbyImage image={gatsbyImage} alt="yo" />
+				<StyledGatsbyImage image={gatsbyImage} alt={title} />
 				{/* <StaticImage
 					src={`../../images/journey/${slug}.jpg`}
 					alt={`${slug}`}

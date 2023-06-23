@@ -1,3 +1,4 @@
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 export const StyledTechContainer = styled.div`
@@ -30,11 +31,47 @@ export const MottoTextContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	font-size: 1.3rem;
-	text-align: center;
-	padding: 10em;
 	font-weight: 200;
-	height: 100vh;
+	height: 35vh;
+	/* padding: 5em; */
 	/* border: red solid 1px; */
-	/* justify-content: center; */
+	align-items: center;
 	/* top: 50%; */
+`;
+
+export const MottoWrapper = styled.div`
+	text-align: center;
+	/* border: red solid 1px; */
+	align-items: center;
+`;
+
+export const ProfilePic = styled.div`
+	display: flex;
+	width: 500px;
+	align-items: center;
+	/* border: red solid 1px; */
+`;
+
+export const BoldText = styled.span`
+	font-weight: 400;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 1.5px;
+		bottom: 0;
+		left: 0;
+		background-color: #000000;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+	&:hover:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
 `;
