@@ -1,5 +1,7 @@
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import React from "react";
+import { motion } from "framer-motion";
 
 export const StyledJourneyCardContainer = styled.div`
 	display: flex;
@@ -17,6 +19,13 @@ export const StyledJourneyCardContainer = styled.div`
 
     width: 100%;
     overflow: hidden;
+    transition: transform 0.5s ease-in-out, margin-top 0.5s ease-in-out, margin-bottom 0.5s ease-in-out;
+    &:hover{
+        transform: scale(1.09);
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
 `;
 
 export const TextContainer = styled.div`
@@ -26,7 +35,8 @@ export const TextContainer = styled.div`
 
 export const TextWrapper = styled.div`
     /* border: red 1px solid; */
-    width: 100%;
+    /* width: 100%; */
+    width: 47%;
     text-align: center;
     padding: 1.5em 3em;
     /* padding-left: 3em; */
@@ -40,8 +50,14 @@ export const StyledJourneyContainer = styled.div`
     /* border: red 1px solid; */
 `
 
+export const ImageWrapper = styled.div`
+    /* border: red 1px solid; */
+    width: 53%;
+`
+
 export const StyledGatsbyImage = styled(GatsbyImage)`
-    width: 40em;
+    /* width: 40em; */
+    width: 100%;
     /* border: red 1px solid; */
 
 `
@@ -62,8 +78,24 @@ export const DateWrapper = styled.div`
 
 export const PostWrapper = styled.div`
 	color: ${({ theme }) => theme.color.grey600};
-    padding-top: 0.8em;
+    padding-top: 0.5em;
+    /* padding-bottom: 2em; */
     font-size: 0.9em;
     font-weight: 300;
 `
 
+
+export const EnterAnimationWrapper = ({ index, children }) => (
+	<motion.div
+		initial="hidden"
+		whileInView="visible"
+		viewport={{ once: true }}
+		transition={{ ease: "easeInOut", duration: 1, delay: index * 0.05 }}
+		variants={{
+			visible: { opacity: 1, y: 0 },
+			hidden: { opacity: 0, y: 100 },
+		}}
+	>
+		{children}
+	</motion.div>
+);

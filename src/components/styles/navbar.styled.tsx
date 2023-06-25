@@ -26,12 +26,17 @@ export const StyledNavItem = styled.li`
     background: inherit;
 `;
 
-export const StyledNavLink = styled(Link)`
+export const StyledNavLink = styled(Link).attrs({
+    // activeStyle: ,
+})`
     color: ${({ theme }) => theme.color.sand500};
     text-decoration: none;
     background: inherit;
 	transition: color 0.3s ease-in-out;
     &:hover{
+        color: ${({ theme }) => theme.color.grey500};
+    }
+    &&[aria-current] {
         color: ${({ theme }) => theme.color.grey500};
     }
 `;

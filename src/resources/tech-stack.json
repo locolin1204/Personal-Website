@@ -1,0 +1,39 @@
+{
+    "lang": [
+      "C",
+      "Java",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Swift",
+      "Kotlin",
+      "Python",
+      "GraphQL",
+      "SQL",
+      "TypeScript"
+    ],
+    "lib": [
+      "React.js",
+      "Gatsby.js",
+      "SwiftUI",
+      "Kotlin Multiplatform Mobile",
+      "Apollo GraphQL",
+      "PyTorch",
+      "Flask"
+    ],
+    "db": [
+      "MySQL",
+      "Oracle DB"
+    ],
+    "design":[
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe Indesign",
+      "Figma"
+    ],
+    "media":[
+      "Final Cut Pro",
+      "Motion 5",
+      "Adobe Lightroom"
+    ]
+  }

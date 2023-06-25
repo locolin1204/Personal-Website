@@ -17,13 +17,13 @@ const AboutPage = ({ data }: { data: object }) => {
 	return (
 		<Layout pageTitle="about me" heroImage={heroImage}>
 			<AboutText />
-			{/* {data.file.childMdx.body} */}
-			<ProfilePic>
+			{/* {data.mdxData.childMdx.body} */}
+			{/* <ProfilePic>
 				<StaticImage
 					src="../images/about/formal-profilepic-transparent.png"
 					alt="Colin Lo"
 				/>
-			</ProfilePic>
+			</ProfilePic> */}
 			<TechStack />
 			<SoftwareStack />
 		</Layout>

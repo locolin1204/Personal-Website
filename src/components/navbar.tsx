@@ -7,7 +7,7 @@ const NavBar = () => {
 		<div>
 			<StyledNavBar>
 				<StyledNavItem>
-					<StyledNavLink to="/" >
+					<StyledNavLink to="/">
 						home
 					</StyledNavLink>
 				</StyledNavItem>

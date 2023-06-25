@@ -21,6 +21,7 @@
     "animate.css": "^4.1.1",
     "babel-plugin-styled-components": "^2.1.1",
     "bootstrap": "^5.2.3",
+    "framer-motion": "^10.12.17",
     "gatsby": "^5.8.1",
     "gatsby-image": "^3.11.0",
     "gatsby-omni-font-loader": "^2.0.2",

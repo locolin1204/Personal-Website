@@ -4,7 +4,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import ProjectCard from "../components/projectCard";
-import { StyledProjectLayout } from "../components/styles/project.styled";
+import { EnterAnimationWrapperCard, StyledProjectLayout } from "../components/styles/project.styled";
+import { motion } from "framer-motion";
 
 const Projects = ({ data }) => {
 	return (
@@ -13,6 +14,17 @@ const Projects = ({ data }) => {
 				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
 					return (
+					// 	<motion.div
+					// 	initial="hidden"
+					// 	whileInView="visible"
+					// 	viewport={{ once: true }}
+					// 	transition={{ ease: "easeInOut", duration: 1, delay: index*0.2}}
+					// 	variants={{
+					// 	  visible: { opacity: 1, y: 0 },
+					// 	  hidden: { opacity: 0, y: 100}
+					// 	}}
+					//   >
+						<EnterAnimationWrapperCard index={index}>
 						<Link to={`/projects/${item.frontmatter.slug}`} style={{textDecoration: "none"}}>
 							<ProjectCard
 								index={index}
@@ -24,6 +36,8 @@ const Projects = ({ data }) => {
 								image={item.frontmatter.image}
 							/>
 						</Link>
+						</EnterAnimationWrapperCard>
+						// {/* </motion.div> */}
 					);
 				})}
 			</StyledProjectLayout>

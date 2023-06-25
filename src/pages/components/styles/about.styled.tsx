@@ -1,16 +1,25 @@
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
+import React from "react";
+import { motion } from "framer-motion";
 
 export const StyledTechContainer = styled.div`
+	/* display: grid; */
 	display: flex;
+	justify-content: space-evenly;
+	/* justify-content: center; */
+	/* padding: 0% 5%; */
 	flex-direction: row;
 	background-color: ${({ theme }) => theme.color.yellow400};
+	overflow: hidden;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
 export const StyledTechFrame = styled.div`
 	border-radius: 0.2em;
 	padding: 2rem;
-	padding-right: 10em;
+	/* padding-right: 10em; */
+	border: 1px red solid;
 `;
 
 export const StyledList = styled.div`
@@ -75,3 +84,70 @@ export const BoldText = styled.span`
 		transform-origin: bottom left;
 	}
 `;
+
+export const EnterAnimationMotto = ({ children }) => (
+	<motion.span
+		initial="hidden"
+		whileInView="visible"
+		viewport={{ once: true }}
+		transition={{ ease: "easeInOut", duration: 1 }}
+		variants={{
+			visible: { opacity: 1, y:0 },
+			hidden: { opacity: 0, y: 50},
+		}}
+	>
+		{children}
+	</motion.span>
+);
+
+export const StyledIcon = styled.img`
+	height: 1em;
+`
+
+export const IconNameWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 0.3em;
+`
+
+export const EnterAnimationTechItem = ({ children, index }) => (
+	<motion.div
+		initial="hidden"
+		whileInView="visible"
+		viewport={{ once: true }}
+		transition={{ ease: "easeInOut", duration: 1, delay: index*0.1 }}
+		variants={{
+			visible: { opacity: 1, y: 0 },
+			hidden: { opacity: 0, y: 20},
+			// visible: { opacity: 1, y: 0 },
+			// hidden: { opacity: 0, y: 100},
+		}}
+	>
+		{children}
+	</motion.div>
+);
+
+
+export const UnderlineText = styled.span`
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 0.05em;
+		bottom: 0;
+		left: 0;
+		background-color: #000000;
+		transform-origin: bottom right;
+		transition: transform 0.5s ease-out;
+	}
+	&:hover:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+`;
+

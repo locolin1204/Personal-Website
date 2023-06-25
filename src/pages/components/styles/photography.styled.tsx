@@ -43,3 +43,11 @@ export const StyledImg = styled.img`
 	height: auto !important;
 	padding: 3px;
 `;
+
+export const TestingImg = styled.img`
+	/* height: 100%; */
+`
+export const TestingDiv = styled.div`
+	display: inline-flex;
+	border: red solid 1px;
+`

@@ -2,11 +2,8 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import JourneyCard from "./components/journeyCard";
-import { StyledJourneyContainer } from "./components/styles/journey.styled";
-
+import { StyledJourneyContainer, EnterAnimationWrapper } from "./components/styles/journey.styled";
 import { graphql } from "gatsby";
-
-import heroImage from "../images/hero-images/JOR06589.jpg";
 
 const JourneyPage = ({ data }) => {
 
@@ -22,6 +19,7 @@ const JourneyPage = ({ data }) => {
 				{data.postData.nodes.map((node, index) => {
 					const item = node.childMdx.frontmatter;
 					return (
+						<EnterAnimationWrapper index={index}>
 						<JourneyCard
 							title={item.title}
 							startdate={item.startdate}
@@ -29,9 +27,11 @@ const JourneyPage = ({ data }) => {
 							slug={item.slug}
 							post={item.post}
 							image={item.image}
+							body={node.childMdx.body}
 							key={node.childMdx.id}
 							index={index}
 						/>
+						</EnterAnimationWrapper>
 					);
 				})}
 			</StyledJourneyContainer>
@@ -47,6 +47,7 @@ export const query = graphql`
 		) {
 			nodes {
 				childMdx {
+					body
 					frontmatter {
 						post
 						startdate(formatString: "MMMM, YYYY")

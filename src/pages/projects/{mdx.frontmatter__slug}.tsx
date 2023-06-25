@@ -11,7 +11,8 @@ import {
 	DateWrapper,
 	RepoDemoLink,
 	LinkWrapper,
-	Arrow
+	Arrow,
+	EnterAnimationMDX
 } from "../components/styles/project.styled";
 
 import Layout from "../../components/layout";
@@ -40,7 +41,7 @@ const ProjectPosts = ({
 				/> */}
 				<StyledGatsbyImageBG image={gatsbyImage} alt={pageData.title} />
 			</ImageWrapper>
-			{/* <p style={{ padding: "2em" }}>{data.mdx.body}</p> */}
+			<EnterAnimationMDX>
 			<DateWrapper>{pageData.date}</DateWrapper>
 				<LinkWrapper>
 			{pageData.link ? (
@@ -58,6 +59,7 @@ const ProjectPosts = ({
 			) : null}
 			</LinkWrapper>
 			{children}
+			</EnterAnimationMDX>
 		</Layout>
 	);
 };

@@ -31,7 +31,7 @@ const Layout = ({
 	pageTitle,
 	children,
 }: {
-	heroImage: {
+	heroImage?: {
 		gatsbyImage: ImageDataLike;
 		position: string;
 		height: string

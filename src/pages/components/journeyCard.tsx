@@ -7,7 +7,8 @@ import {
 	TextWrapper,
 	DateWrapper,
 	PostWrapper,
-	TitleWrapper
+	TitleWrapper,
+	ImageWrapper
 } from "./styles/journey.styled";
 
 export default function JourneyCard({
@@ -18,6 +19,7 @@ export default function JourneyCard({
 	slug,
 	image,
 	index,
+	body,
 }: {
 	title: string;
 	post: string;
@@ -26,6 +28,7 @@ export default function JourneyCard({
 	slug: string;
 	index: number;
 	image: string;
+	body: string;
 }) {
 	const gatsbyImage = getImage(image);
 	return (
@@ -35,9 +38,14 @@ export default function JourneyCard({
 				<TitleWrapper>{title}</TitleWrapper>
 				<DateWrapper>{startdate} – {enddate}</DateWrapper>
 				<PostWrapper>{post}</PostWrapper>
+				
+				{body ? <div><hr />{body}</div> : null}
+				{/* <hr />
+
+				{body} */}
 			</TextContainer>
 			</TextWrapper>
-			<div>
+			<ImageWrapper>
 				{/* <img src={require(image)}/> */}
 				<StyledGatsbyImage image={gatsbyImage} alt={title} />
 				{/* <StaticImage
@@ -48,7 +56,7 @@ export default function JourneyCard({
 						// border: "red 1px solid"
 					}}
 				/> */}
-			</div>
+			</ImageWrapper>
 		</StyledJourneyCardContainer>
 	);
 }

@@ -6,12 +6,15 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import {
 	StyledImgGrid,
 	StyledImg,
+	TestingDiv,
+	TestingImg,
 } from "./components/styles/photography.styled";
 import { graphql } from "gatsby";
 
 interface ImgObject {
 	width: number;
 	img: string;
+	id: string;
 }
 
 function shuffleArray(arr: ImgObject[]) {
@@ -52,14 +55,18 @@ const PhotographyPage = ({ data }) => {
 		fetchData()
 			.then(res => {
 				const imageJSON = res;
-				for (let i = 0; i < imageJSON.data.length; i++) {
+				// imageJSON.data.length
+				for (let i = 0; i < 20; i++) {
 					const width = getRandomSize(150, 400);
-					const img = `https://drive.google.com/uc?export=view&id=${imageJSON.data[i].img_id}`
+					const id = imageJSON.data[i].img_id;
+					const img = `https://drive.google.com/uc?export=view&id=${id}`
 					newImages.push({
 						width,
 						img,
+						id
 					});
 				}
+				console.log(newImages);
 				shuffleArray(newImages);
 				setImages(newImages);
 			})
@@ -86,11 +93,24 @@ const PhotographyPage = ({ data }) => {
 	return (
 		<Layout pageTitle="photography" heroImage={heroImage}>
 			{/* <HeroImage src={heroImage} /> */}
-			<StyledImgGrid>
-				{images.map(({ width, img }, index) => (
-					<StyledImg className="lazyload" key={index} src={img} width={width} />
+			{/* <StyledImgGrid>
+				{images.map(({ width, img, id }, index) => (
+					<div> 
+					<StyledImg className="lazyload" key={id} src={img} width={width} />
+					<p>{index}</p>
+					</div>
 				))}
-			</StyledImgGrid>
+			</StyledImgGrid> */}
+			<div>
+			{images.map(({ width, img, id }, index) => (
+					<TestingDiv> 
+						<TestingImg src={img} key={id} width={width}/>
+					</TestingDiv>
+				))}
+			</div>
+			{/* {images.map(({ width, img, id }) => (
+					<StyledImg className="lazyload" key={id} src={img} width={width} />
+				))} */}
 		</Layout>
 	);
 };
