@@ -57,7 +57,9 @@ const Layout = ({
 				<NavBar />
 					<StyledCol className="mx-auto" md={8}>
 						{/* <header>{data.site.siteMetadata.title}</header> */}
-						<main>
+						<main
+						//  style={{"min-height": "100vh"}}
+						 >
 							<StyledPageHeader>{pageTitle}</StyledPageHeader>
 							{heroImage ? <HeroImage image={getImage(heroImage.gatsbyImage)} alt="Hero Image" position={heroImage.position} height={heroImage.height}/> : null }
 							{children}
