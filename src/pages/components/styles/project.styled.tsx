@@ -6,7 +6,7 @@ import React from "react";
 export const StyledProjectLayout = styled.div`
 	/* border: red 1px solid; */
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	grid-gap: 3rem;
 
 	@media (max-width: 768px) {

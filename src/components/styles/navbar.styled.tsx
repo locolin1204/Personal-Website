@@ -33,10 +33,10 @@ export const StyledNavLink = styled(Link).attrs({
     text-decoration: none;
     background: inherit;
 	transition: color 0.3s ease-in-out;
-    &:hover{
+    /* &:hover{
         color: ${({ theme }) => theme.color.grey500};
-    }
-    &&[aria-current] {
-        color: ${({ theme }) => theme.color.grey500};
+    } */
+    &&[aria-current],  &:hover {
+        color: ${({ theme }) => theme.color.sand700};
     }
 `;

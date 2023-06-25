@@ -20,12 +20,12 @@ export default function TechFrame({
 }) {
 	return (
 		<StyledTechFrame>
+			<div style={{"text-align": "left"}}>
 			<h5>{title}</h5>
 			<StyledList>
 				{list.map((item, index) => (
 					<EnterAnimationTechItem index={index}>
 					<IconNameWrapper key={index}>
-						
 						<StyledIcon src={require(`../../images/techicons/${slug}/${item.replace(/\s+/g,"-").toLowerCase()}.svg`).default} />
 						<UnderlineText>
 						{item}
@@ -33,7 +33,9 @@ export default function TechFrame({
 					</IconNameWrapper>
 					</EnterAnimationTechItem>
 				))}
+				
 			</StyledList>
+			</div>
 		</StyledTechFrame>
 	);
 }

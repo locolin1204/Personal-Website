@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const StyledTechContainer = styled.div`
-	/* display: grid; */
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	/* display: flex; */
+	/* justify-content: space-evenly; */
 	/* justify-content: center; */
 	/* padding: 0% 5%; */
 	flex-direction: row;
@@ -16,10 +16,12 @@ export const StyledTechContainer = styled.div`
 `;
 
 export const StyledTechFrame = styled.div`
-	border-radius: 0.2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: 2rem;
 	/* padding-right: 10em; */
-	border: 1px red solid;
+	/* border: red 1px solid; */
 `;
 
 export const StyledList = styled.div`
@@ -150,4 +152,3 @@ export const UnderlineText = styled.span`
 		transform-origin: bottom left;
 	}
 `;
-
