@@ -13,7 +13,21 @@ export const StyledTechContainer = styled.div`
 	background-color: ${({ theme }) => theme.color.yellow400};
 	overflow: hidden;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/* border: red 1px solid; */
 `;
+
+export const TechContainerWrapper = styled.div`
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	position: relative;
+	right: 50%;
+	object-fit: contain;
+	max-width: 100vw;
+	width: 100vw;
+	background-color: ${({ theme }) => theme.color.yellow400};
+
+`
 
 export const StyledTechFrame = styled.div`
 	display: flex;
@@ -32,10 +46,13 @@ export const StyledList = styled.div`
 export const DesignContainer = styled.div`
 	margin-top: 1rem;
 	padding: 2rem;
-	display: flex;
+	display: grid;
 	font-size: 4em;
-	gap: 1em;
-	background-color: ${({ theme }) => theme.color.yellow400};
+	justify-content: center;
+	gap: 2em;
+	/* background-color: ${({ theme }) => theme.color.yellow400}; */
+	grid-template-columns: repeat(auto-fit, minmax(1em, 1em));
+	/* border: red 1px solid; */
 `;
 
 export const MottoTextContainer = styled.div`
