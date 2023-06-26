@@ -16,6 +16,7 @@ export const StyledProjectLayout = styled.div`
 	@media (max-width: 480px) {
 		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 	}
+	padding-bottom: 4rem;
 `;
 
 export const StyledGatsbyImageBG = styled(GatsbyImage)`

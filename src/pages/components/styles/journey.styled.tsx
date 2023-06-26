@@ -43,7 +43,7 @@ export const TextWrapper = styled.div`
 `
 
 export const StyledJourneyContainer = styled.div`
-    padding-top: 1em;
+    padding: 1em 0em;
     display: flex;
     flex-direction: column;
     gap: 1em;

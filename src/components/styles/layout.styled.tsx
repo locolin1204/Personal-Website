@@ -23,7 +23,7 @@ export const StyledPageHeader = styled.div`
 export const StyledCol = styled(Col)`
 	/* border: red 1px solid; */
 	/* text-align: center; */
-	padding-bottom: 4rem;
+	/* padding-bottom: 4rem; */
 	flex: 1;
 	/* padding-top: 3.5rem; */
 `;

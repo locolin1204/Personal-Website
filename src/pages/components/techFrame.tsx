@@ -21,7 +21,9 @@ export default function TechFrame({
 	return (
 		<StyledTechFrame>
 			<div style={{"text-align": "left"}}>
+			<EnterAnimationTechItem index={0}>
 			<h5>{title}</h5>
+			</ EnterAnimationTechItem>
 			<StyledList>
 				{list.map((item, index) => (
 					<EnterAnimationTechItem index={index}>

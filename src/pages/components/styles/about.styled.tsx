@@ -10,10 +10,11 @@ export const StyledTechContainer = styled.div`
 	/* justify-content: center; */
 	/* padding: 0% 5%; */
 	flex-direction: row;
-	background-color: ${({ theme }) => theme.color.yellow400};
 	overflow: hidden;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	/* border: red 1px solid; */
+	/* background-color: ${({ theme }) => theme.color.yellow200}; */
+	border-radius: 1em;
 `;
 
 export const TechContainerWrapper = styled.div`
@@ -25,7 +26,7 @@ export const TechContainerWrapper = styled.div`
 	object-fit: contain;
 	max-width: 100vw;
 	width: 100vw;
-	background-color: ${({ theme }) => theme.color.yellow400};
+	background-color: ${({ theme }) => theme.color.offwhite300};
 
 `
 
@@ -43,9 +44,9 @@ export const StyledList = styled.div`
 	font-weight: 300;
 `;
 
-export const DesignContainer = styled.div`
-	margin-top: 1rem;
-	padding: 2rem;
+export const SoftwareFrameContainer = styled.div`
+	/* margin-top: 1rem; */
+	/* padding: 2rem; */
 	display: grid;
 	font-size: 4em;
 	justify-content: center;
@@ -53,6 +54,7 @@ export const DesignContainer = styled.div`
 	/* background-color: ${({ theme }) => theme.color.yellow400}; */
 	grid-template-columns: repeat(auto-fit, minmax(1em, 1em));
 	/* border: red 1px solid; */
+	margin: 1rem;
 `;
 
 export const MottoTextContainer = styled.div`
@@ -71,13 +73,6 @@ export const MottoWrapper = styled.div`
 	text-align: center;
 	/* border: red solid 1px; */
 	align-items: center;
-`;
-
-export const ProfilePic = styled.div`
-	display: flex;
-	width: 500px;
-	align-items: center;
-	/* border: red solid 1px; */
 `;
 
 export const BoldText = styled.span`
@@ -169,3 +164,66 @@ export const UnderlineText = styled.span`
 		transform-origin: bottom left;
 	}
 `;
+
+export const StyledAboutSelfIntroContainer = styled.div`
+	display: flex;
+	/* flex-wrap: wrap; */
+	/* display: grid; */
+	/* grid-template-columns: repeat(auto-fit, minmax(5em, 10em)); */
+	padding: 2em 0em;
+`
+
+export const RedLineDiv = styled.div`
+	border: red 1px solid;
+`
+
+export const AboutBodyText = styled.div`
+	display: flex;
+	align-items: center;
+	background-color: ${({ theme }) => theme.color.offwhite300};
+	border-radius: 1em;
+	padding: 2em 4em;
+	/* border: red 1px solid; */
+	/* width: 200%; */
+	margin-top: 5rem;
+	margin-left: -2em;
+	font-weight: 350;
+`
+
+export const ProfilePic = styled.span`
+	/* width: 500px; */
+	display: block;
+	/* border: red solid 1px; */
+	/* right: -100px; */
+	/* width: 70rem; */
+	/* margin-bottom: 10%; */
+	/* margin-right: -3%; */
+	z-index: 999;
+`;
+
+export const SoftwareFrameWrapper = styled.div`
+	text-align: center;
+	padding: 2rem 0em;
+	/* border: red 1px solid; */
+`
+
+export const SoftwareText = styled.div`
+	font-size: 1rem;
+	white-space: nowrap;
+	padding: 1em;
+	font-weight: 300;
+	font-family: Source Code Pro;
+	/* border: red 1px solid; */
+`
+
+export const SoftwareIconTextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: ${({ theme }) => theme.color.grey400};
+	/* border: red 1px solid; */
+`
+
+export const SoftwareTitle = styled.h5`
+	padding-bottom: 1em ;
+`
