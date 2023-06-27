@@ -6,9 +6,10 @@ import {
 	StyledIcon,
 	SoftwareText,
 	SoftwareIconTextWrapper,
-	EnterAnimationTechItem,
+	// EnterAnimationTechItem,
 	SoftwareTitle,
 } from "./styles/about.styled";
+import { EnterAnimation } from "./enterAnimation";
 
 export default function SoftwareFrame({
 	list,
@@ -21,9 +22,9 @@ export default function SoftwareFrame({
 }) {
 	return (
 		<SoftwareFrameWrapper>
-			<EnterAnimationTechItem index={0}>
+			<EnterAnimation offsetY={20}>
 				<SoftwareTitle>{title}</SoftwareTitle>
-			</EnterAnimationTechItem>
+			</EnterAnimation>
 			<SoftwareFrameContainer>
 				{/* <div> */}
 				{/* {list.map((item, index) => (
@@ -37,7 +38,7 @@ export default function SoftwareFrame({
 					</EnterAnimationTechItem>
 				))} */}
 				{list.map((item, index) => (
-					<EnterAnimationTechItem index={index*2}>
+					<EnterAnimation index={index*2} offsetY={20} delay={0.1}>
 						<SoftwareIconTextWrapper>
 							<StyledIcon
 								src={
@@ -48,7 +49,7 @@ export default function SoftwareFrame({
 							/>
 							<SoftwareText>{item}</SoftwareText>
 						</SoftwareIconTextWrapper>
-					</EnterAnimationTechItem>
+					</EnterAnimation>
 				))}
 				{/* </div> */}
 

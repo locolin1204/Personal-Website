@@ -12,10 +12,11 @@ import {
 	RepoDemoLink,
 	LinkWrapper,
 	Arrow,
-	EnterAnimationMDX
+	// EnterAnimationMDX
 } from "../components/styles/project.styled";
 
 import Layout from "../../components/layout";
+import { EnterAnimation } from "../components/enterAnimation";
 
 const ProjectPosts = ({
 	data,
@@ -41,7 +42,7 @@ const ProjectPosts = ({
 				/> */}
 				<StyledGatsbyImageBG image={gatsbyImage} alt={pageData.title} />
 			</ImageWrapper>
-			<EnterAnimationMDX>
+			<EnterAnimation offsetY={100}>
 			<DateWrapper>{pageData.date}</DateWrapper>
 				<LinkWrapper>
 			{pageData.link ? (
@@ -59,7 +60,7 @@ const ProjectPosts = ({
 			) : null}
 			</LinkWrapper>
 			{children}
-			</EnterAnimationMDX>
+			</EnterAnimation>
 		</Layout>
 	);
 };

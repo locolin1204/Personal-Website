@@ -1,6 +1,6 @@
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 
 export const StyledTechContainer = styled.div`
@@ -99,20 +99,20 @@ export const BoldText = styled.span`
 	}
 `;
 
-export const EnterAnimationMotto = ({ children }) => (
-	<motion.span
-		initial="hidden"
-		whileInView="visible"
-		viewport={{ once: true }}
-		transition={{ ease: "easeInOut", duration: 1 }}
-		variants={{
-			visible: { opacity: 1, y:0 },
-			hidden: { opacity: 0, y: 50},
-		}}
-	>
-		{children}
-	</motion.span>
-);
+// export const EnterAnimationMotto = ({ children }) => (
+// 	<motion.span
+// 		initial="hidden"
+// 		whileInView="visible"
+// 		viewport={{ once: true }}
+// 		transition={{ ease: "easeInOut", duration: 1 }}
+// 		variants={{
+// 			visible: { opacity: 1, y: 0 },
+// 			hidden: { opacity: 0, y: 50},
+// 		}}
+// 	>
+// 		{children}
+// 	</motion.span>
+// );
 
 export const StyledIcon = styled.img`
 	height: 1em;
@@ -124,22 +124,22 @@ export const IconNameWrapper = styled.div`
 	gap: 0.3em;
 `
 
-export const EnterAnimationTechItem = ({ children, index }) => (
-	<motion.div
-		initial="hidden"
-		whileInView="visible"
-		viewport={{ once: true }}
-		transition={{ ease: "easeInOut", duration: 1, delay: index*0.1 }}
-		variants={{
-			visible: { opacity: 1, y: 0 },
-			hidden: { opacity: 0, y: 20},
-			// visible: { opacity: 1, y: 0 },
-			// hidden: { opacity: 0, y: 100},
-		}}
-	>
-		{children}
-	</motion.div>
-);
+// export const EnterAnimationTechItem = ({ children, index }) => (
+// 	<motion.div
+// 		initial="hidden"
+// 		whileInView="visible"
+// 		viewport={{ once: true }}
+// 		transition={{ ease: "easeInOut", duration: 1, delay: index*0.1 }}
+// 		variants={{
+// 			visible: { opacity: 1, y: 0 },
+// 			hidden: { opacity: 0, y: 20},
+// 			// visible: { opacity: 1, y: 0 },
+// 			// hidden: { opacity: 0, y: 100},
+// 		}}
+// 	>
+// 		{children}
+// 	</motion.div>
+// );
 
 
 export const UnderlineText = styled.span`

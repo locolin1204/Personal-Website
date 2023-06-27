@@ -5,9 +5,10 @@ import {
 	StyledList,
 	StyledIcon,
 	IconNameWrapper,
-	EnterAnimationTechItem,
+	// EnterAnimationTechItem,
 	UnderlineText
 } from "./styles/about.styled";
+import { EnterAnimation } from "./enterAnimation";
 
 export default function TechFrame({
 	list,
@@ -21,19 +22,19 @@ export default function TechFrame({
 	return (
 		<StyledTechFrame>
 			<div style={{"text-align": "left"}}>
-			<EnterAnimationTechItem index={0}>
+			<EnterAnimation offsetY={20}>
 			<h5>{title}</h5>
-			</ EnterAnimationTechItem>
+			</ EnterAnimation>
 			<StyledList>
 				{list.map((item, index) => (
-					<EnterAnimationTechItem index={index}>
+					<EnterAnimation index={index} delay={0.1} offsetY={20}>
 					<IconNameWrapper key={index}>
 						<StyledIcon src={require(`../../images/techicons/${slug}/${item.replace(/\s+/g,"-").toLowerCase()}.svg`).default} />
 						<UnderlineText>
 						{item}
 						</UnderlineText>
 					</IconNameWrapper>
-					</EnterAnimationTechItem>
+					</EnterAnimation>
 				))}
 				
 			</StyledList>

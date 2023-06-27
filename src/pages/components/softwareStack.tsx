@@ -7,7 +7,7 @@ import {
 } from "react-icons/si";
 import {
 	SoftwareFrameContainer,
-	EnterAnimationTechItem,
+	// EnterAnimationTechItem,
 	TechContainerWrapper,
 } from "./styles/about.styled";
 import TechFrame from "./techFrame";

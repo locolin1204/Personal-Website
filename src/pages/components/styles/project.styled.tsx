@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import React from "react";
+// import React from "react";
 
 export const StyledProjectLayout = styled.div`
 	/* border: red 1px solid; */
@@ -110,33 +110,33 @@ export const LinkWrapper = styled.div`
 	padding-bottom: 0.5em;
 `;
 
-export const EnterAnimationWrapperCard = ({ index, children }) => (
-	<motion.div
-		initial="hidden"
-		whileInView="visible"
-		viewport={{ once: true }}
-		transition={{ ease: "easeInOut", duration: 1, delay: index * 0.2 }}
-		variants={{
-			visible: { opacity: 1, y: 0 },
-			hidden: { opacity: 0, y: 100 },
-		}}
-	>
-		{children}
-	</motion.div>
-);
+// export const EnterAnimationWrapperCard = ({ index, children }) => (
+// 	<motion.div
+// 		initial="hidden"
+// 		whileInView="visible"
+// 		viewport={{ once: true }}
+// 		transition={{ ease: "easeInOut", duration: 1, delay: index * 0.2 }}
+// 		variants={{
+// 			visible: { opacity: 1, y: 0 },
+// 			hidden: { opacity: 0, y: 100 },
+// 		}}
+// 	>
+// 		{children}
+// 	</motion.div>
+// );
 
-export const EnterAnimationMDX = ({ children }) => (
-	<motion.div
-		initial="hidden"
-		whileInView="visible"
-		viewport={{ once: true }}
-		transition={{ ease: "easeInOut", duration: 1}}
-		variants={{
-			visible: { opacity: 1, y: 0 },
-			hidden: { opacity: 0, y: 100 },
-		}}
-	>
-		{children}
-	</motion.div>
-);
+// export const EnterAnimationMDX = ({ children }) => (
+// 	<motion.div
+// 		initial="hidden"
+// 		whileInView="visible"
+// 		viewport={{ once: true }}
+// 		transition={{ ease: "easeInOut", duration: 1}}
+// 		variants={{
+// 			visible: { opacity: 1, y: 0 },
+// 			hidden: { opacity: 0, y: 100 },
+// 		}}
+// 	>
+// 		{children}
+// 	</motion.div>
+// );
 

@@ -1,6 +1,6 @@
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 
 export const StyledJourneyCardContainer = styled.div`
@@ -85,17 +85,17 @@ export const PostWrapper = styled.div`
 `
 
 
-export const EnterAnimationWrapper = ({ index, children }) => (
-	<motion.div
-		initial="hidden"
-		whileInView="visible"
-		viewport={{ once: true }}
-		transition={{ ease: "easeInOut", duration: 1, delay: index * 0.05 }}
-		variants={{
-			visible: { opacity: 1, y: 0 },
-			hidden: { opacity: 0, y: 100 },
-		}}
-	>
-		{children}
-	</motion.div>
-);
+// export const EnterAnimationWrapper = ({ index, children }) => (
+// 	<motion.div
+// 		initial="hidden"
+// 		whileInView="visible"
+// 		viewport={{ once: true }}
+// 		transition={{ ease: "easeInOut", duration: 1, delay: index * 0.05 }}
+// 		variants={{
+// 			visible: { opacity: 1, y: 0 },
+// 			hidden: { opacity: 0, y: 100 },
+// 		}}
+// 	>
+// 		{children}
+// 	</motion.div>
+// );

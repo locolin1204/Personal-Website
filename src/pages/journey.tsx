@@ -2,16 +2,16 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import JourneyCard from "./components/journeyCard";
-import { StyledJourneyContainer, EnterAnimationWrapper } from "./components/styles/journey.styled";
+import { StyledJourneyContainer } from "./components/styles/journey.styled";
 import { graphql } from "gatsby";
+import { EnterAnimation } from "./components/enterAnimation";
 
 const JourneyPage = ({ data }) => {
-
 	const heroImage = {
 		gatsbyImage: data.imageData,
 		position: "45%",
-		height: "45vh"
-	}
+		height: "45vh",
+	};
 
 	return (
 		<Layout pageTitle="journey" heroImage={heroImage}>
@@ -19,19 +19,24 @@ const JourneyPage = ({ data }) => {
 				{data.postData.nodes.map((node, index) => {
 					const item = node.childMdx.frontmatter;
 					return (
-						<EnterAnimationWrapper index={index}>
-						<JourneyCard
-							title={item.title}
-							startdate={item.startdate}
-							enddate={item.enddate}
-							slug={item.slug}
-							post={item.post}
-							image={item.image}
-							body={node.childMdx.body}
-							key={node.childMdx.id}
+						<EnterAnimation
 							index={index}
-						/>
-						</EnterAnimationWrapper>
+							delay={0.05}
+							duration={1}
+							offsetY={100}
+						>
+							<JourneyCard
+								title={item.title}
+								startdate={item.startdate}
+								enddate={item.enddate}
+								slug={item.slug}
+								post={item.post}
+								image={item.image}
+								body={node.childMdx.body}
+								key={node.childMdx.id}
+								index={index}
+							/>
+						</EnterAnimation>
 					);
 				})}
 			</StyledJourneyContainer>
@@ -56,7 +61,7 @@ export const query = graphql`
 						title
 						image {
 							childImageSharp {
-								gatsbyImageData( aspectRatio: 1.5, quality: 100, width: 500)
+								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
 							}
 						}
 					}

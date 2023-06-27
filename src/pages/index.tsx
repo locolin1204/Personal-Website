@@ -11,6 +11,7 @@ import {
 	StyledSpanCS,
 	EnterAnimationText,
 } from "./components/styles/index.styled";
+import { EnterAnimation } from "./components/enterAnimation";
 
 
 
@@ -38,11 +39,11 @@ const IndexPage = () => {
 			<StyledMain>
 				<StyledTextContainer>
 					<StyledMainText>
-						<EnterAnimationText delay="0">hello,</EnterAnimationText>
-						<EnterAnimationText delay="0.5">
+						<EnterAnimation isDiv={false}>hello,</EnterAnimation>
+						<EnterAnimation delay={0.5} isDiv={false}>
 							<br />i am <StyledSpanColin>colin</StyledSpanColin>.
 							<br />
-						</EnterAnimationText>
+						</EnterAnimation>
 					</StyledMainText>
 					<EnterAnimationText delay="1">
 						<StyledSubText>
@@ -50,7 +51,7 @@ const IndexPage = () => {
 						</StyledSubText>
 					</EnterAnimationText>
 
-					<EnterAnimationText delay="1.5">
+					<EnterAnimation isDiv={false} delay={1.5}>
 						<TypeAnimation
 							sequence={typingList}
 							speed={30}
@@ -63,7 +64,7 @@ const IndexPage = () => {
 							}}
 							repeat={Infinity}
 						/>
-					</EnterAnimationText>
+					</EnterAnimation>
 				</StyledTextContainer>
 			</StyledMain>
 		</Layout>
