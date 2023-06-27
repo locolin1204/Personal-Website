@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const EnterAnimation = ({ children, index = 0, delay = 0, duration = 1, isDiv = true, offsetY = 50 }) => {
+export default EnterAnimation = ({ children, index = 0, delay = 0, duration = 1, isDiv = true, offsetY = 50 }) => {
     if (isDiv) {
         return (
             <motion.div
