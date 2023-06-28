@@ -8,8 +8,8 @@ import {
 	SoftwareIconTextWrapper,
 	// EnterAnimationTechItem,
 	SoftwareTitle,
-} from "../styles/about.styled";
-import { EnterAnimation } from "./enterAnimation";
+} from "../../styles/about/about.styled";
+import { EnterAnimation } from "../enterAnimation";
 
 export default function SoftwareFrame({
 	list,
@@ -42,7 +42,7 @@ export default function SoftwareFrame({
 						<SoftwareIconTextWrapper>
 							<StyledIcon
 								src={
-									require(`../images/techicons/${slug}/${item
+									require(`../../images/techicons/${slug}/${item
 										.replace(/\s+/g, "-")
 										.toLowerCase()}.svg`).default
 								}

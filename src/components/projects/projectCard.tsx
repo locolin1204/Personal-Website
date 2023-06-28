@@ -8,7 +8,7 @@ import {
 	InfoWrapper,
 	StyledGatsbyImage,
 	StyledTechItem,
-} from "../styles/projectcard.styled";
+} from "../../styles/projects/projectcard.styled";
 import { AiOutlineLink } from "react-icons/ai";
 
 function ProjectCard({

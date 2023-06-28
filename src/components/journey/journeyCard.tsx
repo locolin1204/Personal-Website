@@ -9,7 +9,7 @@ import {
 	PostWrapper,
 	TitleWrapper,
 	ImageWrapper,
-} from "../styles/journey.styled";
+} from "../../styles/journey/journey.styled";
 
 const HtmlToReactParser = require("html-to-react").Parser;
 

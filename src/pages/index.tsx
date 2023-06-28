@@ -1,6 +1,5 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import IndexMain from "../components/indexMain";
+import Layout from "../components/layout/layout";
 import { TypeAnimation } from "react-type-animation";
 import {
 	StyledMain,
@@ -10,7 +9,7 @@ import {
 	StyledSpanColin,
 	StyledSpanCS,
 	EnterAnimationText,
-} from "../styles/index.styled";
+} from "../styles/home/index.styled";
 import { EnterAnimation } from "../components/enterAnimation";
 
 const IndexPage = () => {

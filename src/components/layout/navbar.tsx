@@ -4,7 +4,7 @@ import {
 	StyledNavBar,
 	StyledNavItem,
 	StyledNavLink,
-} from "../styles/navbar.styled";
+} from "../../styles/layout/navbar.styled";
 
 const NavBar = () => {
 	return (

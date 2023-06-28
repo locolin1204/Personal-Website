@@ -1,13 +1,13 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
-import ProjectCard from "../../components/projectCard";
+import ProjectCard from "../../components/projects/projectCard";
 import {
 	// EnterAnimationWrapperCard,
 	StyledProjectLayout,
-} from "../../styles/project.styled";
+} from "../../styles/projects/project.styled";
 import { motion } from "framer-motion";
 import { EnterAnimation } from "../../components/enterAnimation";
 

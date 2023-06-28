@@ -13,9 +13,9 @@ import {
 	LinkWrapper,
 	Arrow,
 	// EnterAnimationMDX
-} from "../../styles/project.styled";
+} from "../../styles/projects/project.styled";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/layout/layout";
 import { EnterAnimation } from "../../components/enterAnimation";
 
 const ProjectPosts = ({

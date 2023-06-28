@@ -7,8 +7,8 @@ import {
 	IconNameWrapper,
 	// EnterAnimationTechItem,
 	UnderlineText,
-} from "../styles/about.styled";
-import { EnterAnimation } from "./enterAnimation";
+} from "../../styles/about/about.styled";
+import { EnterAnimation } from "../enterAnimation";
 
 export default function TechFrame({
 	list,
@@ -31,7 +31,7 @@ export default function TechFrame({
 							<IconNameWrapper key={index}>
 								<StyledIcon
 									src={
-										require(`../images/techicons/${slug}/${item
+										require(`../../images/techicons/${slug}/${item
 											.replace(/\s+/g, "-")
 											.toLowerCase()}.svg`).default
 									}

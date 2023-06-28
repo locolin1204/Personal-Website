@@ -1,8 +1,8 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import JourneyCard from "../components/journeyCard";
-import { StyledJourneyContainer } from "../styles/journey.styled";
+import JourneyCard from "../components/journey/journeyCard";
+import { StyledJourneyContainer } from "../styles/journey/journey.styled";
 import { graphql } from "gatsby";
 import { EnterAnimation } from "../components/enterAnimation";
 

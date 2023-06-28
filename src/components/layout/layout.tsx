@@ -4,15 +4,15 @@ import { useStaticQuery, graphql } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
-import GlobalStyles from "../styles/global";
+import GlobalStyles from "../../styles/global";
 import { ThemeProvider } from "styled-components";
 import {
 	StyledContainer,
 	StyledPageHeader,
 	StyledCol,
 	HeroImage,
-} from "../styles/layout.styled";
-import themeColor from "../resources/color.json";
+} from "../../styles/layout/layout.styled";
+import themeColor from "../../resources/color.json";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
 
 const theme = {

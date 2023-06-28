@@ -5,8 +5,8 @@ import {
 	// EnterAnimationMotto,
 	MottoTextContainer,
 	MottoWrapper,
-} from "../styles/about.styled";
-import { EnterAnimation } from "./enterAnimation";
+} from "../../styles/about/about.styled";
+import { EnterAnimation } from "../enterAnimation";
 
 export default function AboutText() {
 	return (

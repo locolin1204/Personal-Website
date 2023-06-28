@@ -1,12 +1,12 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { graphql } from "gatsby";
-import TechStack from "../components/techStack";
-import AboutText from "../components/aboutText";
-import SoftwareStack from "../components/softwareStack";
+import TechStack from "../components/about/techStack";
+import AboutText from "../components/about/aboutText";
+import SoftwareStack from "../components/about/softwareStack";
 import { StaticImage } from "gatsby-plugin-image";
-import { ProfilePic } from "../styles/about.styled";
-import AboutSelfIntro from "../components/aboutSelfIntro";
+import { ProfilePic } from "../styles/about/about.styled";
+import AboutSelfIntro from "../components/about/aboutSelfIntro";
 
 const AboutPage = ({ data }: { data: object }) => {
 	const heroImage = {

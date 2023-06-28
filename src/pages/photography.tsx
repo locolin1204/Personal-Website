@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { useState, useEffect } from "react";
 import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
@@ -8,7 +8,7 @@ import {
 	StyledImg,
 	TestingDiv,
 	TestingImg,
-} from "../styles/photography.styled";
+} from "../styles/photography/photography.styled";
 import { graphql } from "gatsby";
 
 interface ImgObject {
@@ -59,11 +59,11 @@ const PhotographyPage = ({ data }) => {
 				for (let i = 0; i < 20; i++) {
 					const width = getRandomSize(150, 400);
 					const id = imageJSON.data[i].img_id;
-					const img = `https://drive.google.com/uc?export=view&id=${id}`
+					const img = `https://drive.google.com/uc?export=view&id=${id}`;
 					newImages.push({
 						width,
 						img,
-						id
+						id,
 					});
 				}
 				console.log(newImages);
@@ -102,9 +102,9 @@ const PhotographyPage = ({ data }) => {
 				))}
 			</StyledImgGrid> */}
 			<div>
-			{images.map(({ width, img, id }, index) => (
-					<TestingDiv> 
-						<TestingImg src={img} key={id} width={width}/>
+				{images.map(({ width, img, id }, index) => (
+					<TestingDiv>
+						<TestingImg src={img} key={id} width={width} />
 					</TestingDiv>
 				))}
 			</div>

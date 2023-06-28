@@ -4,7 +4,7 @@ import {
 	StyledIconContainer,
 	StyledIconLink,
 	StyledTextContainer,
-} from "../styles/footer.styled";
+} from "../../styles/layout/footer.styled";
 import { IoMdMail } from "react-icons/io";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 // import toast, { Toaster } from 'react-hot-toast';
