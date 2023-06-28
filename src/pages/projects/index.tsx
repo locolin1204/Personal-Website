@@ -17,6 +17,7 @@ const Projects = ({ data }) => {
 			<StyledProjectLayout>
 				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
+					console.log(item.frontmatter.slug);
 					return (
 						// 	<motion.div
 						// 	initial="hidden"

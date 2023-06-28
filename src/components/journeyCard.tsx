@@ -11,6 +11,8 @@ import {
 	ImageWrapper,
 } from "../styles/journey.styled";
 
+const HtmlToReactParser = require("html-to-react").Parser;
+
 export default function JourneyCard({
 	title,
 	post,
@@ -30,6 +32,8 @@ export default function JourneyCard({
 	image: string;
 	body: string;
 }) {
+	const htmlToReactParser = new HtmlToReactParser();
+	const reactElement = htmlToReactParser.parse(body);
 	const gatsbyImage = getImage(image);
 	return (
 		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
@@ -40,16 +44,12 @@ export default function JourneyCard({
 						{startdate} – {enddate}
 					</DateWrapper>
 					<PostWrapper>{post}</PostWrapper>
-
 					{body ? (
 						<div>
 							<hr />
-							{body}
+							{reactElement}
 						</div>
 					) : null}
-					{/* <hr />
-
-				{body} */}
 				</TextContainer>
 			</TextWrapper>
 			<ImageWrapper>

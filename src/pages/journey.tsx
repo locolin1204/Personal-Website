@@ -8,7 +8,7 @@ import { EnterAnimation } from "../components/enterAnimation";
 
 const JourneyPage = ({ data }) => {
 	const heroImage = {
-		gatsbyImage: data.imageData,
+		gatsbyImage: data.heroImage,
 		position: "45%",
 		height: "45vh",
 	};
@@ -17,7 +17,8 @@ const JourneyPage = ({ data }) => {
 		<Layout pageTitle="journey" heroImage={heroImage}>
 			<StyledJourneyContainer>
 				{data.postData.nodes.map((node, index) => {
-					const item = node.childMdx.frontmatter;
+					// const item = node.childMdx.frontmatter;
+					const item = node.childMarkdownRemark.frontmatter;
 					return (
 						<EnterAnimation
 							index={index}
@@ -32,8 +33,8 @@ const JourneyPage = ({ data }) => {
 								slug={item.slug}
 								post={item.post}
 								image={item.image}
-								body={node.childMdx.body}
-								key={node.childMdx.id}
+								body={node.childMarkdownRemark.html}
+								key={node.childMarkdownRemark.id}
 								index={index}
 							/>
 						</EnterAnimation>
@@ -45,14 +46,44 @@ const JourneyPage = ({ data }) => {
 };
 
 export const query = graphql`
+	# query {
+	# 	postData: allFile(
+	# 		filter: { relativePath: { glob: "journey/*.mdx" } }
+	# 		sort: { childrenMdx: { frontmatter: { startdate: DESC } } }
+	# 	) {
+	# 		nodes {
+	# 			childMdx {
+	# 				body
+	# 				frontmatter {
+	# 					post
+	# 					startdate(formatString: "MMMM, YYYY")
+	# 					enddate(formatString: "MMMM, YYYY")
+	# 					slug
+	# 					title
+	# 					image {
+	# 						childImageSharp {
+	# 							gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
+	# 		childImageSharp {
+	# 			gatsbyImageData
+	# 		}
+	# 	}
+	# }
 	query {
 		postData: allFile(
-			filter: { relativePath: { glob: "journey/*.mdx" } }
-			sort: { childrenMdx: { frontmatter: { startdate: DESC } } }
+			filter: { relativePath: { glob: "journey/*.md" } }
+			sort: { childrenMarkdownRemark: { frontmatter: { startdate: DESC } } }
 		) {
 			nodes {
-				childMdx {
-					body
+				childMarkdownRemark {
+					html
+					id
 					frontmatter {
 						post
 						startdate(formatString: "MMMM, YYYY")
@@ -68,7 +99,7 @@ export const query = graphql`
 				}
 			}
 		}
-		imageData: file(relativePath: { glob: "*/journey.jpg" }) {
+		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
 			childImageSharp {
 				gatsbyImageData
 			}
