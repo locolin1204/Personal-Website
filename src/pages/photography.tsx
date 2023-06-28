@@ -8,7 +8,7 @@ import {
 	StyledImg,
 	TestingDiv,
 	TestingImg,
-} from "./components/styles/photography.styled";
+} from "../styles/photography.styled";
 import { graphql } from "gatsby";
 
 interface ImgObject {

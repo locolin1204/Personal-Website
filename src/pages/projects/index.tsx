@@ -3,13 +3,13 @@ import Layout from "../../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
-import ProjectCard from "../components/projectCard";
+import ProjectCard from "../../components/projectCard";
 import {
 	// EnterAnimationWrapperCard,
 	StyledProjectLayout,
-} from "../components/styles/project.styled";
+} from "../../styles/project.styled";
 import { motion } from "framer-motion";
-import { EnterAnimation } from "../components/enterAnimation";
+import { EnterAnimation } from "../../components/enterAnimation";
 
 const Projects = ({ data }) => {
 	return (

@@ -4,12 +4,16 @@ import { useStaticQuery, graphql } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
-import GlobalStyles from "./styles/global";
+import GlobalStyles from "../styles/global";
 import { ThemeProvider } from "styled-components";
-import { StyledContainer, StyledPageHeader, StyledCol, HeroImage } from "./styles/layout.styled";
+import {
+	StyledContainer,
+	StyledPageHeader,
+	StyledCol,
+	HeroImage,
+} from "../styles/layout.styled";
 import themeColor from "../resources/color.json";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
-
 
 const theme = {
 	color: {
@@ -22,7 +26,7 @@ const theme = {
 		lightgrey: "#bababa",
 		offwhite: "#FAF3EA",
 		sand: "#a3917c",
-		white: "#ffffff"
+		white: "#ffffff",
 	},
 };
 
@@ -34,8 +38,8 @@ const Layout = ({
 	heroImage?: {
 		gatsbyImage: ImageDataLike;
 		position: string;
-		height: string
-	}
+		height: string;
+	};
 	pageTitle: string;
 	children: ReactNode;
 }) => {
@@ -53,23 +57,29 @@ const Layout = ({
 		<ThemeProvider theme={themeColor.light}>
 			<title>colin lo</title>
 			<GlobalStyles />
-			<StyledContainer fluid >
+			<StyledContainer fluid>
 				<NavBar />
-					<StyledCol className="mx-auto" md={8}>
-						{/* <header>{data.site.siteMetadata.title}</header> */}
-						<main
-						//  style={{"min-height": "100vh"}}
-						 >
-							<StyledPageHeader>{pageTitle}</StyledPageHeader>
-							{heroImage ? <HeroImage image={getImage(heroImage.gatsbyImage)} alt="Hero Image" position={heroImage.position} height={heroImage.height}/> : null }
-							{children}
-						</main>
-					</StyledCol>
+				<StyledCol className="mx-auto" md={8}>
+					{/* <header>{data.site.siteMetadata.title}</header> */}
+					<main
+					//  style={{"min-height": "100vh"}}
+					>
+						<StyledPageHeader>{pageTitle}</StyledPageHeader>
+						{heroImage ? (
+							<HeroImage
+								image={getImage(heroImage.gatsbyImage)}
+								alt="Hero Image"
+								position={heroImage.position}
+								height={heroImage.height}
+							/>
+						) : null}
+						{children}
+					</main>
+				</StyledCol>
 				<Footer />
 			</StyledContainer>
 		</ThemeProvider>
 	);
 };
-
 
 export default Layout;

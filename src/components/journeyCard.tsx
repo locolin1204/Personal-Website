@@ -8,8 +8,8 @@ import {
 	DateWrapper,
 	PostWrapper,
 	TitleWrapper,
-	ImageWrapper
-} from "./styles/journey.styled";
+	ImageWrapper,
+} from "../styles/journey.styled";
 
 export default function JourneyCard({
 	title,
@@ -34,16 +34,23 @@ export default function JourneyCard({
 	return (
 		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
 			<TextWrapper>
-			<TextContainer>
-				<TitleWrapper>{title}</TitleWrapper>
-				<DateWrapper>{startdate} – {enddate}</DateWrapper>
-				<PostWrapper>{post}</PostWrapper>
-				
-				{body ? <div><hr />{body}</div> : null}
-				{/* <hr />
+				<TextContainer>
+					<TitleWrapper>{title}</TitleWrapper>
+					<DateWrapper>
+						{startdate} – {enddate}
+					</DateWrapper>
+					<PostWrapper>{post}</PostWrapper>
+
+					{body ? (
+						<div>
+							<hr />
+							{body}
+						</div>
+					) : null}
+					{/* <hr />
 
 				{body} */}
-			</TextContainer>
+				</TextContainer>
 			</TextWrapper>
 			<ImageWrapper>
 				{/* <img src={require(image)}/> */}

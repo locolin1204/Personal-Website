@@ -13,10 +13,10 @@ import {
 	LinkWrapper,
 	Arrow,
 	// EnterAnimationMDX
-} from "../components/styles/project.styled";
+} from "../../styles/project.styled";
 
 import Layout from "../../components/layout";
-import { EnterAnimation } from "../components/enterAnimation";
+import { EnterAnimation } from "../../components/enterAnimation";
 
 const ProjectPosts = ({
 	data,
@@ -43,23 +43,22 @@ const ProjectPosts = ({
 				<StyledGatsbyImageBG image={gatsbyImage} alt={pageData.title} />
 			</ImageWrapper>
 			<EnterAnimation offsetY={100}>
-			<DateWrapper>{pageData.date}</DateWrapper>
+				<DateWrapper>{pageData.date}</DateWrapper>
 				<LinkWrapper>
-			{pageData.link ? (
-				<RepoDemoLink href={pageData.link} target="_blank">
-					Link to Demo<Arrow>→</Arrow>
-					<br />
-				</RepoDemoLink>
-				
-			) : null}
-			
-			{pageData.repolink ? (
-				<RepoDemoLink href={pageData.repolink} target="_blank">
-					Link to Repo<Arrow>→</Arrow>
-				</RepoDemoLink>
-			) : null}
-			</LinkWrapper>
-			{children}
+					{pageData.link ? (
+						<RepoDemoLink href={pageData.link} target="_blank">
+							Link to Demo<Arrow>→</Arrow>
+							<br />
+						</RepoDemoLink>
+					) : null}
+
+					{pageData.repolink ? (
+						<RepoDemoLink href={pageData.repolink} target="_blank">
+							Link to Repo<Arrow>→</Arrow>
+						</RepoDemoLink>
+					) : null}
+				</LinkWrapper>
+				{children}
 			</EnterAnimation>
 		</Layout>
 	);

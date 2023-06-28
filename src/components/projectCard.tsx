@@ -7,8 +7,8 @@ import {
 	ImageWrapper,
 	InfoWrapper,
 	StyledGatsbyImage,
-	StyledTechItem
-} from "./styles/projectcard.styled";
+	StyledTechItem,
+} from "../styles/projectcard.styled";
 import { AiOutlineLink } from "react-icons/ai";
 
 function ProjectCard({
@@ -45,22 +45,22 @@ function ProjectCard({
 		// </StyledCardContainer>
 		<StyledCardContainer cardColor={index % 2 === 1 && "change"}>
 			<ImageWrapper>
-				<StyledGatsbyImage image={gatsbyImage} alt={title}/>
+				<StyledGatsbyImage image={gatsbyImage} alt={title} />
 			</ImageWrapper>
 			<InfoWrapper>
-			<StyledTitle>
-				{title + " "}
-				{/* <a href={link} target="_blank">
+				<StyledTitle>
+					{title + " "}
+					{/* <a href={link} target="_blank">
 					<AiOutlineLink />
 				</a> */}
-			</StyledTitle>
-			<StyledTechList>
-				{tech.map((item, index) => <StyledTechItem key={index}>{item}</StyledTechItem>)}
-			</StyledTechList>
+				</StyledTitle>
+				<StyledTechList>
+					{tech.map((item, index) => (
+						<StyledTechItem key={index}>{item}</StyledTechItem>
+					))}
+				</StyledTechList>
 			</InfoWrapper>
 		</StyledCardContainer>
-
-
 	);
 }
 

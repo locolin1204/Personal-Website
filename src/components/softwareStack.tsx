@@ -9,9 +9,9 @@ import {
 	SoftwareFrameContainer,
 	// EnterAnimationTechItem,
 	TechContainerWrapper,
-} from "./styles/about.styled";
+} from "../styles/about.styled";
 import TechFrame from "./techFrame";
-import techStackJSON from "../../resources/tech-stack.json";
+import techStackJSON from "../resources/tech-stack.json";
 import SoftwareFrame from "./softwareFrame";
 
 export default function SoftwareStack() {

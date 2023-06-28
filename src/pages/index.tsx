@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import IndexMain from "./components/indexMain";
+import IndexMain from "../components/indexMain";
 import { TypeAnimation } from "react-type-animation";
 import {
 	StyledMain,
@@ -10,13 +10,10 @@ import {
 	StyledSpanColin,
 	StyledSpanCS,
 	EnterAnimationText,
-} from "./components/styles/index.styled";
-import { EnterAnimation } from "./components/enterAnimation";
-
-
+} from "../styles/index.styled";
+import { EnterAnimation } from "../components/enterAnimation";
 
 const IndexPage = () => {
-
 	const typingList = [
 		// Same String at the start will only be typed once, initially
 		"i code",
@@ -31,8 +28,7 @@ const IndexPage = () => {
 		1000,
 		"badminton is my thing",
 		1000,
-	]
-
+	];
 
 	return (
 		<Layout pageTitle="">

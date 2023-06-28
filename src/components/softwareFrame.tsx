@@ -8,7 +8,7 @@ import {
 	SoftwareIconTextWrapper,
 	// EnterAnimationTechItem,
 	SoftwareTitle,
-} from "./styles/about.styled";
+} from "../styles/about.styled";
 import { EnterAnimation } from "./enterAnimation";
 
 export default function SoftwareFrame({
@@ -38,11 +38,11 @@ export default function SoftwareFrame({
 					</EnterAnimationTechItem>
 				))} */}
 				{list.map((item, index) => (
-					<EnterAnimation index={index*2} offsetY={20} delay={0.1}>
+					<EnterAnimation index={index * 2} offsetY={20} delay={0.1}>
 						<SoftwareIconTextWrapper>
 							<StyledIcon
 								src={
-									require(`../../images/techicons/${slug}/${item
+									require(`../images/techicons/${slug}/${item
 										.replace(/\s+/g, "-")
 										.toLowerCase()}.svg`).default
 								}

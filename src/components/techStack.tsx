@@ -2,10 +2,10 @@ import React from "react";
 import {
 	StyledTechContainer,
 	TechContainerWrapper,
-} from "./styles/about.styled";
+} from "../styles/about.styled";
 import TechFrame from "./techFrame";
 import { graphql } from "gatsby";
-import techStackJSON from "../../resources/tech-stack.json";
+import techStackJSON from "../resources/tech-stack.json";
 import { Col } from "react-bootstrap";
 
 export default function TechStack() {

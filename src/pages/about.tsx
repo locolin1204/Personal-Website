@@ -1,12 +1,12 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
-import TechStack from "./components/techStack";
-import AboutText from "./components/aboutText";
-import SoftwareStack from "./components/softwareStack";
+import TechStack from "../components/techStack";
+import AboutText from "../components/aboutText";
+import SoftwareStack from "../components/softwareStack";
 import { StaticImage } from "gatsby-plugin-image";
-import { ProfilePic } from "./components/styles/about.styled";
-import AboutSelfIntro from "./components/aboutSelfIntro";
+import { ProfilePic } from "../styles/about.styled";
+import AboutSelfIntro from "../components/aboutSelfIntro";
 
 const AboutPage = ({ data }: { data: object }) => {
 	const heroImage = {
@@ -18,7 +18,7 @@ const AboutPage = ({ data }: { data: object }) => {
 	return (
 		<Layout pageTitle="about me" heroImage={heroImage}>
 			<AboutText />
-			<AboutSelfIntro bodyText={data}/>
+			<AboutSelfIntro bodyText={data} />
 
 			{/* {data.mdxData.childMdx.body} */}
 			{/* <ProfilePic>

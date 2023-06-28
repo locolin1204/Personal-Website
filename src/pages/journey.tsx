@@ -1,10 +1,10 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import JourneyCard from "./components/journeyCard";
-import { StyledJourneyContainer } from "./components/styles/journey.styled";
+import JourneyCard from "../components/journeyCard";
+import { StyledJourneyContainer } from "../styles/journey.styled";
 import { graphql } from "gatsby";
-import { EnterAnimation } from "./components/enterAnimation";
+import { EnterAnimation } from "../components/enterAnimation";
 
 const JourneyPage = ({ data }) => {
 	const heroImage = {
