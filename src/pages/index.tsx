@@ -45,13 +45,13 @@ const IndexPage = () => {
 							<br />
 						</EnterAnimation>
 					</StyledMainText>
-					<EnterAnimationText delay="1">
+					<EnterAnimation isDiv={false} delay={1} offsetY={0}>
 						<StyledSubText>
 							a <StyledSpanCS>computer science</StyledSpanCS> year 3 student.
 						</StyledSubText>
-					</EnterAnimationText>
+					</EnterAnimation>
 
-					<EnterAnimation isDiv={false} delay={1.5}>
+					<EnterAnimation isDiv={false} delay={1.5} offsetY={0}>
 						<TypeAnimation
 							sequence={typingList}
 							speed={30}

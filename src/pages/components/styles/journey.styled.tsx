@@ -48,6 +48,7 @@ export const StyledJourneyContainer = styled.div`
     flex-direction: column;
     gap: 1em;
     /* border: red 1px solid; */
+    overflow: hidden;
 `
 
 export const ImageWrapper = styled.div`
