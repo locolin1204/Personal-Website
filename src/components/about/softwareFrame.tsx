@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	RedLineDiv,
 	SoftwareFrameContainer,
 	SoftwareFrameWrapper,
 	StyledIcon,
@@ -8,7 +7,7 @@ import {
 	SoftwareIconTextWrapper,
 	// EnterAnimationTechItem,
 	SoftwareTitle,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/techSoftware.styled";
 import { EnterAnimation } from "../enterAnimation";
 
 export default function SoftwareFrame({

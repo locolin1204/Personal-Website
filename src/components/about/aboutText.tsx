@@ -1,22 +1,35 @@
 import React from "react";
-import styled from "styled-components";
+import { UnderlineText } from "../../styles/global";
 import {
-	BoldText,
-	// EnterAnimationMotto,
 	MottoTextContainer,
 	MottoWrapper,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/aboutText.styled";
 import { EnterAnimation } from "../enterAnimation";
+
+const MottoUnderLine = ({ children }) => {
+	return (
+		<UnderlineText weight={400} height={1.5} duration={0.25}>
+			{children}
+		</UnderlineText>
+	);
+};
 
 export default function AboutText() {
 	return (
 		<MottoTextContainer>
 			<EnterAnimation duration={1} offsetY={50} isDiv={true}>
 				<MottoWrapper>
-					i love solving <BoldText>problems</BoldText>.
+					i love solving{" "}
+					<MottoUnderLine>
+						problems
+					</MottoUnderLine>
+					.
 					<br />
-					different <BoldText>methods</BoldText> and{" "}
-					<BoldText>strategies</BoldText> could surprise our lives various ways.
+					different <MottoUnderLine>methods</MottoUnderLine> and{" "}
+					<MottoUnderLine>
+						strategies
+					</MottoUnderLine>{" "}
+					could surprise our lives various ways.
 				</MottoWrapper>
 			</EnterAnimation>
 		</MottoTextContainer>

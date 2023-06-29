@@ -1,14 +1,8 @@
 import * as React from "react";
 import Layout from "../../components/layout/layout";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
-import styled from "styled-components";
 import ProjectCard from "../../components/projects/projectCard";
-import {
-	// EnterAnimationWrapperCard,
-	StyledProjectLayout,
-} from "../../styles/projects/project.styled";
-import { motion } from "framer-motion";
+import { StyledProjectLayout } from "../../styles/projects/project.styled";
 import { EnterAnimation } from "../../components/enterAnimation";
 
 const Projects = ({ data }) => {
@@ -17,19 +11,8 @@ const Projects = ({ data }) => {
 			<StyledProjectLayout>
 				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
-					console.log(item.frontmatter.slug);
 					return (
-						// 	<motion.div
-						// 	initial="hidden"
-						// 	whileInView="visible"
-						// 	viewport={{ once: true }}
-						// 	transition={{ ease: "easeInOut", duration: 1, delay: index*0.2}}
-						// 	variants={{
-						// 	  visible: { opacity: 1, y: 0 },
-						// 	  hidden: { opacity: 0, y: 100}
-						// 	}}
-						//   >
-						<EnterAnimation offsetY={100} delay={0.2} index={index}>
+						<EnterAnimation key={item.id} offsetY={100} delay={0.2} index={index}>
 							<Link
 								to={`/projects/${item.frontmatter.slug}`}
 								style={{ textDecoration: "none" }}
@@ -40,12 +23,10 @@ const Projects = ({ data }) => {
 									excerpt={item.excerpt}
 									tech={item.frontmatter.tech}
 									link={item.frontmatter.link}
-									key={item.id}
 									image={item.frontmatter.image}
 								/>
 							</Link>
 						</EnterAnimation>
-						// {/* </motion.div> */}
 					);
 				})}
 			</StyledProjectLayout>

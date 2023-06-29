@@ -4,6 +4,6 @@ startdate: "2018-09-01"
 enddate: "2019-07-31"
 slug: "it-club"
 post: "Chairman"
-image: "../../src/images/journey/it-club.jpg"
+image: "../../images/journey/it-club.jpg"
 ---
 Led and managed the club and aims to arouse students' interest in information and communication technology through a series of IT activities.

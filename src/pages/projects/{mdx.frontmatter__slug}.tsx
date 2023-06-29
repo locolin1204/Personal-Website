@@ -12,8 +12,7 @@ import {
 	RepoDemoLink,
 	LinkWrapper,
 	Arrow,
-	// EnterAnimationMDX
-} from "../../styles/projects/project.styled";
+} from "../../styles/projects/projectTemplate.styled";
 
 import Layout from "../../components/layout/layout";
 import { EnterAnimation } from "../../components/enterAnimation";
@@ -27,6 +26,8 @@ const ProjectPosts = ({
 }) => {
 	const pageData = data.mdx.frontmatter;
 	const gatsbyImage = getImage(pageData.image);
+	console.log(gatsbyImage);
+
 	return (
 		<Layout pageTitle={pageData.title}>
 			<StyledTechList>
@@ -40,7 +41,11 @@ const ProjectPosts = ({
 					image={gatsbyImage}
 					alt={data.mdx.frontmatter.title}
 				/> */}
-				<StyledGatsbyImageBG image={gatsbyImage} alt={pageData.title} />
+				<StyledGatsbyImageBG
+					fluid={pageData.image.childImageSharp.fluid}
+					// fixed={pageData.image.childImageSharp.fixed}
+					alt={pageData.title}
+				/>
 			</ImageWrapper>
 			<EnterAnimation offsetY={100}>
 				<DateWrapper>{pageData.date}</DateWrapper>
@@ -75,7 +80,10 @@ export const query = graphql`
 				repolink
 				image {
 					childImageSharp {
-						gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
+						# gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
+						fluid(quality: 100, maxWidth: 400, fit: COVER) {
+							...GatsbyImageSharpFluid
+						}
 					}
 				}
 			}

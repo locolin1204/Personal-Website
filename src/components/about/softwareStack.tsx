@@ -9,7 +9,7 @@ import {
 	SoftwareFrameContainer,
 	// EnterAnimationTechItem,
 	TechContainerWrapper,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/techSoftware.styled";
 import TechFrame from "./techFrame";
 import techStackJSON from "../../resources/tech-stack.json";
 import SoftwareFrame from "./softwareFrame";

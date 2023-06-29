@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
-import GlobalStyles from "../../styles/global";
+import { GlobalStyles } from "../../styles/global";
 import { ThemeProvider } from "styled-components";
 import {
 	StyledContainer,

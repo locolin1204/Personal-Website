@@ -4,8 +4,6 @@ import { graphql } from "gatsby";
 import TechStack from "../components/about/techStack";
 import AboutText from "../components/about/aboutText";
 import SoftwareStack from "../components/about/softwareStack";
-import { StaticImage } from "gatsby-plugin-image";
-import { ProfilePic } from "../styles/about/about.styled";
 import AboutSelfIntro from "../components/about/aboutSelfIntro";
 
 const AboutPage = ({ data }: { data: object }) => {
@@ -19,14 +17,6 @@ const AboutPage = ({ data }: { data: object }) => {
 		<Layout pageTitle="about me" heroImage={heroImage}>
 			<AboutText />
 			<AboutSelfIntro bodyText={data} />
-
-			{/* {data.mdxData.childMdx.body} */}
-			{/* <ProfilePic>
-				<StaticImage
-					src="../images/about/formal-profilepic-transparent.png"
-					alt="Colin Lo"
-				/>
-			</ProfilePic> */}
 			<TechStack />
 			<SoftwareStack />
 		</Layout>

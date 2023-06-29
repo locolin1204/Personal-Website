@@ -3,9 +3,8 @@ import React from "react";
 import {
 	AboutBodyText,
 	ProfilePic,
-	RedLineDiv,
 	StyledAboutSelfIntroContainer,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/aboutSelfIntro.styled";
 
 export default function AboutSelfIntro({ bodyText }) {
 	return (

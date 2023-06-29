@@ -1,14 +1,12 @@
 import React from "react";
 import {
 	StyledTechFrame,
-	StyledTechContainer,
 	StyledList,
 	StyledIcon,
 	IconNameWrapper,
-	// EnterAnimationTechItem,
-	UnderlineText,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/techSoftware.styled";
 import { EnterAnimation } from "../enterAnimation";
+import { UnderlineText } from "../../styles/global";
 
 export default function TechFrame({
 	list,
@@ -36,7 +34,9 @@ export default function TechFrame({
 											.toLowerCase()}.svg`).default
 									}
 								/>
-								<UnderlineText>{item}</UnderlineText>
+								<UnderlineText weight={"100"} height={"1"} duration={"0.5"}>
+									{item}
+								</UnderlineText>
 							</IconNameWrapper>
 						</EnterAnimation>
 					))}

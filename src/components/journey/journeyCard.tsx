@@ -9,7 +9,7 @@ import {
 	PostWrapper,
 	TitleWrapper,
 	ImageWrapper,
-} from "../../styles/journey/journey.styled";
+} from "../../styles/journey/journeyCard.styled";
 
 const HtmlToReactParser = require("html-to-react").Parser;
 
@@ -34,7 +34,7 @@ export default function JourneyCard({
 }) {
 	const htmlToReactParser = new HtmlToReactParser();
 	const reactElement = htmlToReactParser.parse(body);
-	const gatsbyImage = getImage(image);
+	// const gatsbyImage = getImage(image);
 	return (
 		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
 			<TextWrapper>
@@ -54,7 +54,7 @@ export default function JourneyCard({
 			</TextWrapper>
 			<ImageWrapper>
 				{/* <img src={require(image)}/> */}
-				<StyledGatsbyImage image={gatsbyImage} alt={title} />
+				<StyledGatsbyImage fluid={image} alt={title} />
 				{/* <StaticImage
 					src={`../../images/journey/${slug}.jpg`}
 					alt={`${slug}`}

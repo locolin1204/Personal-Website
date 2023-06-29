@@ -22,6 +22,7 @@ const JourneyPage = ({ data }) => {
 					return (
 						<EnterAnimation
 							index={index}
+							key={node.childMarkdownRemark.id}
 							delay={0.05}
 							duration={1}
 							offsetY={100}
@@ -32,9 +33,8 @@ const JourneyPage = ({ data }) => {
 								enddate={item.enddate}
 								slug={item.slug}
 								post={item.post}
-								image={item.image}
+								image={item.image.childImageSharp.fluid}
 								body={node.childMarkdownRemark.html}
-								key={node.childMarkdownRemark.id}
 								index={index}
 							/>
 						</EnterAnimation>
@@ -46,35 +46,6 @@ const JourneyPage = ({ data }) => {
 };
 
 export const query = graphql`
-	# query {
-	# 	postData: allFile(
-	# 		filter: { relativePath: { glob: "journey/*.mdx" } }
-	# 		sort: { childrenMdx: { frontmatter: { startdate: DESC } } }
-	# 	) {
-	# 		nodes {
-	# 			childMdx {
-	# 				body
-	# 				frontmatter {
-	# 					post
-	# 					startdate(formatString: "MMMM, YYYY")
-	# 					enddate(formatString: "MMMM, YYYY")
-	# 					slug
-	# 					title
-	# 					image {
-	# 						childImageSharp {
-	# 							gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
-	# 						}
-	# 					}
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# 	heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
-	# 		childImageSharp {
-	# 			gatsbyImageData
-	# 		}
-	# 	}
-	# }
 	query {
 		postData: allFile(
 			filter: { relativePath: { glob: "journey/*.md" } }
@@ -93,6 +64,9 @@ export const query = graphql`
 						image {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
+								fluid(quality: 100, maxHeight: 250,maxWidth: 400, fit: COVER) {
+									...GatsbyImageSharpFluid
+								}
 							}
 						}
 					}

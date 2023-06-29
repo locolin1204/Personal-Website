@@ -20,8 +20,8 @@ const config: GatsbyConfig = {
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
-				name: `mdx-documents`,
-				path: `${__dirname}/mdx-documents`,
+				name: `content`,
+				path: `${__dirname}/src/content`,
 			},
 		},
 		{

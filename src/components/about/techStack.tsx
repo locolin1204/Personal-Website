@@ -2,7 +2,7 @@ import React from "react";
 import {
 	StyledTechContainer,
 	TechContainerWrapper,
-} from "../../styles/about/about.styled";
+} from "../../styles/about/techSoftware.styled";
 import TechFrame from "./techFrame";
 import { graphql } from "gatsby";
 import techStackJSON from "../../resources/tech-stack.json";
