@@ -1,4 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import Masonry from "react-masonry-css";
+import { Blurhash } from "react-blurhash";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const StyledImgGrid = styled.div`
 	line-height: 0;
@@ -44,10 +47,18 @@ export const StyledImg = styled.img`
 	padding: 3px;
 `;
 
-export const TestingImg = styled.img`
+export const StyledGatsbyImage = styled(GatsbyImage)`
 	/* height: 100%; */
-`
-export const TestingDiv = styled.div`
-	display: inline-flex;
-	border: red solid 1px;
-`
+	/* border: red solid 1px; */
+	margin: 0.25em;
+`;
+
+export const StyledMasonry = styled(Masonry)`
+	display: -webkit-box; /* Not needed if autoprefixing */
+	display: -ms-flexbox; /* Not needed if autoprefixing */
+	display: flex;
+	margin-left: -30px; /* gutter size offset */
+	width: auto;
+	padding: 0.25em 0em;
+	min-height: 35vh;
+`;

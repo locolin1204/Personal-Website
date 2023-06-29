@@ -8,8 +8,3 @@ export const StyledJourneyContainer = styled.div`
     /* border: red 1px solid; */
     /* overflow: hidden; */
 `
-
-export const ImageWrapper = styled.div`
-    /* border: red 1px solid; */
-    width: 53%;
-`

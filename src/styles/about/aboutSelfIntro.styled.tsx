@@ -31,4 +31,5 @@ export const AboutBodyText = styled.div`
 	margin-top: 5rem;
 	margin-left: -2em;
 	font-weight: 350;
+	overflow: hidden;
 `

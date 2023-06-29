@@ -5,10 +5,12 @@ import {
 	ProfilePic,
 	StyledAboutSelfIntroContainer,
 } from "../../styles/about/aboutSelfIntro.styled";
+import { EnterAnimation } from "../enterAnimation";
 
 export default function AboutSelfIntro({ bodyText }) {
 	return (
 		<StyledAboutSelfIntroContainer>
+			<EnterAnimation>
 			<ProfilePic>
 				<StaticImage
 					src={"../../images/about/formal-profilepic.jpg"}
@@ -19,7 +21,10 @@ export default function AboutSelfIntro({ bodyText }) {
 					layout="constrained"
 				/>
 			</ProfilePic>
+			</EnterAnimation>
 			<AboutBodyText>
+			<EnterAnimation>
+
 				{/* {bodyText} */}I am currently a junior computer science major at the
 				Chinese University of Hong Kong, I also studied aboard at the University
 				of Notre Dame. <br />
@@ -29,6 +34,8 @@ export default function AboutSelfIntro({ bodyText }) {
 				<br />
 				Creating different programs to make my life much easier is what I am
 				striving for.
+			</EnterAnimation>
+
 			</AboutBodyText>
 		</StyledAboutSelfIntroContainer>
 	);
