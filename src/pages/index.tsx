@@ -8,7 +8,6 @@ import {
 	StyledSubText,
 	StyledSpanColin,
 	StyledSpanCS,
-	EnterAnimationText,
 } from "../styles/home/index.styled";
 import { EnterAnimation } from "../components/enterAnimation";
 

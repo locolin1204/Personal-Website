@@ -57,7 +57,9 @@ export const StyledMasonry = styled(Masonry)`
 	display: -webkit-box; /* Not needed if autoprefixing */
 	display: -ms-flexbox; /* Not needed if autoprefixing */
 	display: flex;
-	margin-left: -30px; /* gutter size offset */
+	/* margin-left: -30px; gutter size offset */
+	/* border: red solid 1px; */
+	margin: 0 -0.5em;
 	width: auto;
 	padding: 0.25em 0em;
 	min-height: 35vh;

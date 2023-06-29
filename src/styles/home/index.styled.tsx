@@ -14,7 +14,8 @@ export const StyledMain = styled.div`
 export const StyledTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-top: 10em;
+	/* padding-top: 10em; */
+	padding-top: 10%;
 	min-height: 90vh;
 	/* border: red 1px solid; */
 `;
