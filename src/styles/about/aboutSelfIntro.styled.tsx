@@ -4,8 +4,14 @@ export const StyledAboutSelfIntroContainer = styled.div`
 	display: flex;
 	/* flex-wrap: wrap; */
 	/* display: grid; */
+	/* border: red 1px solid; */
+
 	/* grid-template-columns: repeat(auto-fit, minmax(5em, 10em)); */
 	padding: 2em 0em;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+	}
 `
 
 export const ProfilePic = styled.span`
@@ -17,6 +23,9 @@ export const ProfilePic = styled.span`
 	/* margin-bottom: 10%; */
 	/* margin-right: -3%; */
 	z-index: 999;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 
@@ -32,4 +41,8 @@ export const AboutBodyText = styled.div`
 	margin-left: -2em;
 	font-weight: 350;
 	overflow: hidden;
+	@media (max-width: 768px) {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
 `

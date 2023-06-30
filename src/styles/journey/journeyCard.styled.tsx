@@ -23,7 +23,9 @@ export const StyledJourneyCardContainer = styled.div`
         margin-top: 2em;
         margin-bottom: 2em;
     }
-
+    @media only screen and (max-width: 768px){
+        flex-direction: column;
+    }
 `;
 
 
@@ -34,6 +36,10 @@ export const TextWrapper = styled.div`
     text-align: center;
     padding: 1.5em 3em;
     /* padding-left: 3em; */
+     @media only screen and (max-width: 768px){
+        flex-direction: column;
+        width: 100%;
+    }
 `
 
 export const TextContainer = styled.div`
@@ -76,4 +82,8 @@ export const StyledGatsbyImage = styled(GatsbyImage)`
 export const ImageWrapper = styled.div`
     /* border: red 1px solid; */
     width: 53%;
+       @media only screen and (max-width: 768px){
+        flex-direction: column;
+        width: 100%;
+    }
 `

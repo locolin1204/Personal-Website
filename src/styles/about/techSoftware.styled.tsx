@@ -10,7 +10,7 @@ export const TechContainerWrapper = styled.div`
 	max-width: 100vw;
 	width: 100vw;
 	background-color: ${({ theme }) => theme.color.offwhite300};
-`
+`;
 
 export const StyledTechContainer = styled.div`
 	display: grid;
@@ -33,8 +33,12 @@ export const StyledTechFrame = styled.div`
 	padding: 2rem;
 	/* padding-right: 10em; */
 	/* border: red 1px solid; */
+	@media only screen and (max-width: 768px) {
+		align-items: flex-start;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
 `;
-
 
 export const StyledList = styled.div`
 	font-family: "Source Code Pro";
@@ -45,12 +49,11 @@ export const IconNameWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 0.3em;
-`
+`;
 
 export const StyledIcon = styled.img`
 	height: 1em;
-`
-
+`;
 
 export const UnderlineText = styled.span`
 	display: inline-block;
@@ -75,10 +78,9 @@ export const UnderlineText = styled.span`
 	}
 `;
 
-
 export const SoftwareTitle = styled.h5`
-	padding-bottom: 1em ;
-`
+	padding-bottom: 1em;
+`;
 
 export const SoftwareFrameContainer = styled.div`
 	/* margin-top: 1rem; */
@@ -93,15 +95,13 @@ export const SoftwareFrameContainer = styled.div`
 	margin: 1rem;
 `;
 
-
 export const SoftwareIconTextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color: ${({ theme }) => theme.color.grey400};
 	/* border: red 1px solid; */
-`
-
+`;
 
 export const SoftwareText = styled.div`
 	font-size: 1rem;
@@ -110,10 +110,10 @@ export const SoftwareText = styled.div`
 	font-weight: 300;
 	font-family: Source Code Pro;
 	/* border: red 1px solid; */
-`
+`;
 
 export const SoftwareFrameWrapper = styled.div`
 	text-align: center;
 	padding: 2rem 0em;
 	/* border: red 1px solid; */
-`
+`;

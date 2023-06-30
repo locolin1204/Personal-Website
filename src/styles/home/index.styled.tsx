@@ -15,8 +15,12 @@ export const StyledTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	/* padding-top: 10em; */
-	padding-top: 10%;
+	padding-top: 10vh;
 	min-height: 90vh;
+
+	@media (max-width: 768px) {
+		font-size: 0.7rem;
+	}
 	/* border: red 1px solid; */
 `;
 

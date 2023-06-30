@@ -18,6 +18,7 @@ export const StyledPageHeader = styled.div`
 	font-weight: 500;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
+	padding-left: 1rem;
 `;
 
 export const StyledCol = styled(Col)`
