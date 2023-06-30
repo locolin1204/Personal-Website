@@ -16,17 +16,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef } from "react";
 
 const NavBar = () => {
-	const [button, setButton] = useState(true);
 	const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-	const showButton = () => {
-		if (window.innerWidth <= 768) {
-			setButton(true);
-		} else {
-			setButton(false);
-		}
-	};
-	window.addEventListener("resize", showButton);
 
 	const controls = useAnimation();
     const buttonRef = useRef();
@@ -43,7 +33,7 @@ const NavBar = () => {
 			<button
 				onClick={() => {
 					setIsNavExpanded(true);
-					triggerAnimation()
+					// triggerAnimation()
 				}}
 			>
 				<FaBars />
