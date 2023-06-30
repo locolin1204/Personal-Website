@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Layout from "../components/layout/layout";
 import {
 	StyledGatsbyImage,
@@ -6,17 +7,25 @@ import {
 } from "../styles/photography/photography.styled";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-function shuffleArray(arr) {
+function shuffleArray(arr: any[]) {
+	let newArr = structuredClone(arr);
 	for (let i = arr.length - 1; i > 0; i--) {
 		let j = Math.floor(Math.random() * (i + 1));
-		let temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
+		let temp = newArr[i];
+		newArr[i] = newArr[j];
+		newArr[j] = temp;
 	}
+	return newArr;
 }
 
 const PhotographyPage = ({ data }) => {
+	const initialImages = shuffleArray(data.imageList.nodes.slice(0, 15));
+	const [images, setImages] = useState(initialImages);
+	const [hasMore, setHasMore] = useState(true);
+	const [page, setPage] = useState(2);
+
 	const heroImage = {
 		gatsbyImage: data.heroImage,
 		position: "65%",
@@ -29,23 +38,44 @@ const PhotographyPage = ({ data }) => {
 		800: 1,
 	};
 
+	function fetchMore() {
+		let newImages = data.imageList.nodes.slice((page-1)*15, page*15);
+		if (newImages.length < 15) {
+			setHasMore(false);
+		} else {
+			setHasMore(true);
+			let curPage = page;
+			setPage(++curPage);
+			console.log("curPage", curPage);
+		}
+		newImages = shuffleArray(newImages);
+		setImages([...images, ...newImages]);
+	}
+
 	const shuffledImageList = data.imageList.nodes;
 
 	shuffleArray(shuffledImageList);
 
 	return (
 		<Layout pageTitle="photography" heroImage={heroImage}>
-			{/* <HeroImage src={heroImage} /> */}
-			<StyledMasonry breakpointCols={breakpointColumnsObj}>
-				{shuffledImageList.map(image => {
-					return (
-						<StyledGatsbyImage
-							image={getImage(image.childImageSharp)}
-							alt={"placeholder"}
-						/>
-					);
-				})}
-			</StyledMasonry>
+			<InfiniteScroll
+				dataLength={images.length}
+				hasMore={hasMore}
+				next={fetchMore}
+				loader={<div> </div>}
+			>
+				<StyledMasonry breakpointCols={breakpointColumnsObj}>
+					{images.map(image => {
+						return (
+							<StyledGatsbyImage
+								image={getImage(image.childImageSharp)}
+								alt={"placeholder"}
+								key={image.id}
+							/>
+						);
+					})}
+				</StyledMasonry>
+			</InfiniteScroll>
 		</Layout>
 	);
 };
@@ -64,9 +94,8 @@ export const query = graphql`
 				childImageSharp {
 					gatsbyImageData
 				}
-				relativeDirectory
+				id
 			}
-			totalCount
 		}
 	}
 `;
