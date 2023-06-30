@@ -23,9 +23,9 @@ export const ProfilePic = styled.span`
 	/* margin-bottom: 10%; */
 	/* margin-right: -3%; */
 	z-index: 999;
-	@media (max-width: 768px) {
+	/* @media (max-width: 768px) {
 		width: 100%;
-	}
+	} */
 `;
 
 

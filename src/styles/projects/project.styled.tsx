@@ -13,4 +13,6 @@ export const StyledProjectLayout = styled.div`
 		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 	}
 	padding-bottom: 4rem;
+    margin: 0em 1em;
+
 `;

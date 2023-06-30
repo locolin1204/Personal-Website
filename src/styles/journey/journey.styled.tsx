@@ -7,4 +7,5 @@ export const StyledJourneyContainer = styled.div`
     gap: 1em;
     /* border: red 1px solid; */
     /* overflow: hidden; */
+    margin: 0em 1em;
 `
