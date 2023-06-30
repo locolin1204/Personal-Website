@@ -24,7 +24,6 @@ export default function AboutSelfIntro({ bodyText }) {
 			</EnterAnimation>
 			<AboutBodyText>
 			<EnterAnimation>
-
 				{/* {bodyText} */}I am currently a junior computer science major at the
 				Chinese University of Hong Kong, I also studied aboard at the University
 				of Notre Dame. <br />

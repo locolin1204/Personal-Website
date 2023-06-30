@@ -42,7 +42,9 @@ export const AboutBodyText = styled.div`
 	font-weight: 350;
 	overflow: hidden;
 	@media (max-width: 768px) {
-		margin-left: 0;
-		margin-top: 1rem;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-top: -1rem;
+		padding: 2em 2em;
 	}
 `

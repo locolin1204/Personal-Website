@@ -12,6 +12,9 @@ export const StyledNavBar = styled.ul`
 	font-weight: 400;
 	margin: 0px;
 	/* border: red solid 1px; */
+	/* .is-expanded {
+		display: flex;
+	} */
 `;
 export const StyledNavItem = styled.li`
 	padding: 0em 2em;
@@ -42,14 +45,35 @@ export const NavContainer = styled.div`
 		cursor: pointer;
 		border: none;
 		background: transparent;
-		visibility: hidden;
-		opacity: 0;
+		display: none;
 	}
 
 	@media only screen and (max-width: 768px) {
 		button {
-			visibility: visible;
-			opacity: 1;
+			display: block;
+			padding: 1em 2em;
+		}
+		${StyledNavBar} {
+			display: none;
+		}
+		.is-expanded {
+			display: flex;
+			position: absolute;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			row-gap: 2em;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 999;
+			overflow: hidden;
+
 		}
 	}
 `;
+
+export const NavList = styled.div``;

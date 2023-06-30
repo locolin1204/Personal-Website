@@ -8,6 +8,7 @@ export const MottoTextContainer = styled.div`
 	height: 35vh;
 	/* padding: 5em; */
 	/* border: red solid 1px; */
+	padding: 0.5em ;
 	align-items: center;
 	/* top: 50%; */
 `;
