@@ -7,23 +7,27 @@ link: ""
 repolink: "https://github.com/locolin1204/CSE40868-NeuralNetworks/"
 image: "../../images/projects/binary-face-classifier.png"
 ---
-This project created and designed a binary face recognition program.
+I created and designed 5 layers neural network from scratch for a binary face recognition program.
 
-### 1. Objective
+##### 1. Objective
 
 The objective of this project is design and neural network to recognize and distinguish between 2 classes. The first class will be my own face, the second class will be a person with image source from the internet.
 
-### 2. Data Processing
+##### 2. Data Processing
 In the first part of the project, it will be mostly based on data processing. There are 2 types of data to be used in the training, namely training and validation data. The remaining data will be used in the testing session.
 
-### 3. Source of Data
+##### 3. Source of Data
 For my own face, images will be taken of myself daily. For the other face, BioID will be used for the image source.
 
-#### 3.1 Training Data
+###### 3.1 Training Data
 As there are still weeks to go until the project is fully completed, there are still many days for me to collect images of my face. Images will be taken both indoor and outdoor each day, possibly few images a day, then there will be around 20-30 images per week. Assuming the project lasts for 7 weeks, there will be around 200 images of myself for the model to do training on. Moreover, data augmentation will be done in order to facilitate better training for the model. Images taken will be adjusted, e.g. rotated, brightened, darkened, added visual noise, etc.
 
-#### 3.2 Validation Data
+###### 3.2 Validation Data
 As mentioned above, I will be taking images everyday for the training data. Some images which are more extreme or “hard” for the model to recognize, e.g. images taken in the snow/rain, will be extracted from the training data during data selection and only used for validation data to test the validity of the model.
 
-#### 3.3 Testing Data
+###### 3.3 Testing Data
 Testing Data will be collected and taken after the model is trained and ready to use.
+
+
+##### For more info please check out the Repo listed above
+Navigate to `/first-solution` or `/final-solution` to check out the CNN details.

@@ -19,53 +19,69 @@ const NavBar = () => {
 	const [isNavExpanded, setIsNavExpanded] = useState(false);
 
 	const controls = useAnimation();
-    const buttonRef = useRef();
+	const buttonRef = useRef();
 
-	const triggerAnimation = () => {
-        controls.start({
+	const triggerAnimationAppear = () => {
+		controls.start({
 			opacity: 1,
-            transition: { duration: 0.5 },
-        });
-    };
+			transition: { duration: 0.2 },
+		});
+	};
+
+	const triggerAnimationDisappear = () => {
+		controls.start({
+			opacity: 0,
+			transition: { duration: 0.2 },
+		});
+	};
 
 	return (
 		<NavContainer>
 			<button
 				onClick={() => {
 					setIsNavExpanded(true);
-					// triggerAnimation()
+					triggerAnimationAppear();
 				}}
 			>
 				<FaBars />
 			</button>
-			{/* <motion.div animate={controls} initial={{opacity: isNavExpanded ? "0": "100" }} style={{zIndex: "9999"}}> */}
-			<StyledNavBar className={isNavExpanded ? "is-expanded" : "not-expanded"}>
-				<StyledNavItem>
-					<StyledNavLink to="/">home</StyledNavLink>
-				</StyledNavItem>
-				<StyledNavItem>
-					<StyledNavLink to="/projects">projects</StyledNavLink>
-				</StyledNavItem>
-				<StyledNavItem>
-					<StyledNavLink to="/photography">photography</StyledNavLink>
-				</StyledNavItem>
-				<StyledNavItem>
-					<StyledNavLink to="/journey">journey</StyledNavLink>
-				</StyledNavItem>
-				<StyledNavItem>
-					<StyledNavLink to="/about">about me</StyledNavLink>
-				</StyledNavItem>
+			{/* <motion.div
+				animate={controls}
+				initial={{ opacity: !isNavExpanded ? "1" : "0", }}
+				style={{ zIndex: "9999" }}
+				// className={isNavExpanded ? "is-expanded" : "not-expanded"}
 
-				{isNavExpanded && (
-					<button
-						onClick={() => {
-							setIsNavExpanded(false);
-						}}
-					>
-						<RxCross1 />
-					</button>
-				)}
-			</StyledNavBar>
+			> */}
+				<StyledNavBar
+					className={isNavExpanded ? "is-expanded" : "not-expanded"}
+				>
+					<StyledNavItem>
+						<StyledNavLink to="/">home</StyledNavLink>
+					</StyledNavItem>
+					<StyledNavItem>
+						<StyledNavLink to="/projects">projects</StyledNavLink>
+					</StyledNavItem>
+					<StyledNavItem>
+						<StyledNavLink to="/photography">photography</StyledNavLink>
+					</StyledNavItem>
+					<StyledNavItem>
+						<StyledNavLink to="/journey">journey</StyledNavLink>
+					</StyledNavItem>
+					<StyledNavItem>
+						<StyledNavLink to="/about">about me</StyledNavLink>
+					</StyledNavItem>
+
+					{isNavExpanded && (
+						<button
+							onClick={() => {
+								setIsNavExpanded(false);
+								triggerAnimationDisappear();
+							}}
+						>
+							<RxCross1 />
+						</button>
+					)}
+				</StyledNavBar>
 			{/* </motion.div> */}
 		</NavContainer>
 	);

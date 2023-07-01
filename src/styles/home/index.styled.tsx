@@ -45,7 +45,7 @@ export const StyledSpanCS = styled.span`
 	color: ${({ theme }) => theme.color.yellow400};
 
 	font-family: Source Code Pro;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 0.9em;
 	background-color: ${({ theme }) => theme.color.yellow400};
 	padding: 0.1em 0.5em;

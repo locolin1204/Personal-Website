@@ -91,7 +91,7 @@ export const DateWrapper = styled.div`
 
 
 export const LinkWrapper = styled.div`
-	padding-bottom: 0.5em;
+	padding-bottom: 1em;
 `;
 
 
@@ -111,4 +111,8 @@ export const RepoDemoLink = styled.a`
 		transform: translateX(50%);
 	}
 `;
+
+export const ContentWrapper = styled.div`
+	margin: 0rem 1rem;
+`
 

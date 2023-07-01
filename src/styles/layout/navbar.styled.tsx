@@ -52,9 +52,14 @@ export const NavContainer = styled.div`
 		button {
 			display: block;
 			padding: 1em 2em;
+			text-decoration: none;
+			color: ${({ theme }) => theme.color.sand500};
 		}
 		${StyledNavBar} {
 			display: none;
+			opacity: 0; /* add this line */
+			transform: translateY(-100%); /* add this line */
+			transition: opacity 0.2s, transform 0.2s; /* add this line */
 		}
 		.is-expanded {
 			display: flex;
@@ -72,6 +77,8 @@ export const NavContainer = styled.div`
 			z-index: 999;
 			overflow: hidden;
 
+			opacity: 1; /* add this line */
+			transform: translateY(0); /* add this line */
 		}
 	}
 `;

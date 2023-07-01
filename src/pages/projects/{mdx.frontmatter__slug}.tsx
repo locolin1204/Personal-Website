@@ -12,6 +12,7 @@ import {
 	RepoDemoLink,
 	LinkWrapper,
 	Arrow,
+	ContentWrapper,
 } from "../../styles/projects/projectTemplate.styled";
 
 import Layout from "../../components/layout/layout";
@@ -48,6 +49,7 @@ const ProjectPosts = ({
 				/>
 			</ImageWrapper>
 			<EnterAnimation offsetY={100}>
+				<ContentWrapper>
 				<DateWrapper>{pageData.date}</DateWrapper>
 				<LinkWrapper>
 					{pageData.link ? (
@@ -64,6 +66,7 @@ const ProjectPosts = ({
 					) : null}
 				</LinkWrapper>
 				{children}
+				</ContentWrapper>
 			</EnterAnimation>
 		</Layout>
 	);

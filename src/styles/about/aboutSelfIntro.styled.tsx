@@ -12,10 +12,11 @@ export const StyledAboutSelfIntroContainer = styled.div`
 		flex-direction: column;
 		align-items: center;
 	}
-`
+`;
 
 export const ProfilePic = styled.span`
 	/* width: 500px; */
+	border-radius: 1em;
 	display: block;
 	/* border: red solid 1px; */
 	/* right: -100px; */
@@ -27,7 +28,6 @@ export const ProfilePic = styled.span`
 		width: 100%;
 	} */
 `;
-
 
 export const AboutBodyText = styled.div`
 	display: flex;
@@ -47,4 +47,4 @@ export const AboutBodyText = styled.div`
 		margin-top: -1rem;
 		padding: 2em 2em;
 	}
-`
+`;

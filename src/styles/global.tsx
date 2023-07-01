@@ -9,12 +9,15 @@ export const GlobalStyles = createGlobalStyle`
     .custom-toast {
         font-size: 1em;
     }
+	html.touch *:hover {
+    all:unset!important;
+}
 `;
 
 // export default GlobalStyles;
 
 export const UnderlineText = styled.span`
-	font-weight: ${({ weight }) => weight ? weight : "inherit" };
+	font-weight: ${({ weight }) => (weight ? weight : "inherit")};
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
@@ -24,12 +27,13 @@ export const UnderlineText = styled.span`
 		position: absolute;
 		width: 100%;
 		transform: scaleX(0);
-		height: ${({ height }) => height ? height : "1" }px;
+		height: ${({ height }) => (height ? height : "1")}px;
 		bottom: 0;
 		left: 0;
 		background-color: #000000;
 		transform-origin: bottom right;
-		transition: transform ${({ duration }) => duration ? duration : "0.25" }s ease-out;
+		transition: transform ${({ duration }) => (duration ? duration : "0.25")}s
+			ease-out;
 	}
 	&:hover:after {
 		transform: scaleX(1);

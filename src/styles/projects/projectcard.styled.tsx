@@ -25,7 +25,14 @@ export const StyledCardContainer = styled.div`
 		/* transform: scale(1.05); */
 	}
 
-
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+		&:hover {
+			transform: scale(1);
+			margin-top: 0em;
+			margin-bottom: 0em;
+		}
+	}
 	/* border-radius: 1em; */
 	padding: 0;
 	margin: 0;
