@@ -13,10 +13,12 @@ import {
 	LinkWrapper,
 	Arrow,
 	ContentWrapper,
+	OverflowDiv,
 } from "../../styles/projects/projectTemplate.styled";
 
 import Layout from "../../components/layout/layout";
 import { EnterAnimation } from "../../components/enterAnimation";
+import { MDXProvider } from "@mdx-js/react";
 
 const ProjectPosts = ({
 	data,
@@ -39,8 +41,8 @@ const ProjectPosts = ({
 
 			<ImageWrapper>
 				{/* <StyledGatsbyImageFront
-					image={gatsbyImage}
-					alt={data.mdx.frontmatter.title}
+					fluid={pageData.image.childImageSharp.fluid}
+					alt={pageData.title}
 				/> */}
 				<StyledGatsbyImageBG
 					fluid={pageData.image.childImageSharp.fluid}
@@ -48,26 +50,44 @@ const ProjectPosts = ({
 					alt={pageData.title}
 				/>
 			</ImageWrapper>
-			<EnterAnimation offsetY={100}>
-				<ContentWrapper>
-				<DateWrapper>{pageData.date}</DateWrapper>
-				<LinkWrapper>
-					{pageData.link ? (
-						<RepoDemoLink href={pageData.link} target="_blank">
-							Link to Demo<Arrow>→</Arrow>
-							<br />
-						</RepoDemoLink>
-					) : null}
+			<OverflowDiv>
+				<EnterAnimation offsetY={100}>
+					<ContentWrapper>
+						<DateWrapper>{pageData.date}</DateWrapper>
+						<LinkWrapper>
+							{pageData.link ? (
+								<RepoDemoLink href={pageData.link} target="_blank">
+									Link to Demo<Arrow>→</Arrow>
+									<br />
+								</RepoDemoLink>
+							) : null}
 
-					{pageData.repolink ? (
-						<RepoDemoLink href={pageData.repolink} target="_blank">
-							Link to Repo<Arrow>→</Arrow>
-						</RepoDemoLink>
-					) : null}
-				</LinkWrapper>
-				{children}
-				</ContentWrapper>
-			</EnterAnimation>
+							{pageData.repolink ? (
+								<RepoDemoLink href={pageData.repolink} target="_blank">
+									Link to Repo<Arrow>→</Arrow>
+								</RepoDemoLink>
+							) : null}
+						</LinkWrapper>
+						<StyledGatsbyImageFront
+							fluid={pageData.image.childImageSharp.fluid}
+							// fixed={pageData.image.childImageSharp.fixed}
+							alt={pageData.title}
+						/>
+						<MDXProvider
+							components={{
+								code: props => (
+									<span
+										{...props}
+										style={{ color: "", fontFamily: "Source Code Pro" }}
+									/>
+								),
+							}}
+						>
+							{children}
+						</MDXProvider>
+					</ContentWrapper>
+				</EnterAnimation>
+			</OverflowDiv>
 		</Layout>
 	);
 };

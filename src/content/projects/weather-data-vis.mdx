@@ -10,11 +10,11 @@ image: "../../images/projects/weather-data-vis.png"
 In this project, I visualizes the upcoming 9 days of weather in Hong Kong and did some weather comparison between Hong Kong and Notre Dame.
 
 ##### 1. How I Approached the Project
-    Being an exchange student at Notre Dame is a fun experience. Usually, when I introduce my hometown, Hong Kong, many people actually hear or even know of my hometown, which I am pretty surprised by, given it is such a small city.
+Being an exchange student at Notre Dame is a fun experience. Usually, when I introduce my hometown, Hong Kong, many people actually hear or even know of my hometown, which I am pretty surprised by, given it is such a small city.
 However, when we start discussing my hometown, I realize that their knowledge about it was usually limited to the skyscrapers and how it looks like New York. It seems most of the people around here have only a brief understanding of Hong Kong, and I wanted to let them know more about Hong Kong, from different perspectives
 
 ##### 2. What I Wanted to Accomplish via the Final Project
-    The first thing that came to my mind is the weather in Hong Kong. As the weather in South Bend is notoriously extreme, what better way to let others learn about Hong Kong than to show them what the weather is like in Hong Kong.
+The first thing that came to my mind is the weather in Hong Kong. As the weather in South Bend is notoriously extreme, what better way to let others learn about Hong Kong than to show them what the weather is like in Hong Kong.
 So I went to create 3 different graphs, all graphs used Celcius as the unit to provide a localize view of the temperature in Hong Kong, except for the last one:
 
 ###### 2.1. 9 Days Weather Forecast in Hong Kong
@@ -24,14 +24,15 @@ To give a general idea of what the weather is like in Hong Kong.
 Even though Hong Kong is a small city, there is still slightly different weather in different regions, which is interesting to look at.
 ###### 2.3. Weather Comparison between Notre Dame and Hong Kong
 Finally, to give a more concrete idea of what the weather is like in Hong Kong, I compared the previous 7 days' temperature of Notre Dame to Hong Kong. I also created a version with Fahrenheit temperature for people who do not have a great idea of what Celcius is to understand the figures easier.
+
 ##### 3. Resources Consulted
-The documentation of the Hong Kong Observatory API: https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf
-The documentation of Plotly:
-https://plotly.com/
+The documentation of the [Hong Kong Observatory API](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf)
+The documentation of [Plotly](https://plotly.com/)
   
 ##### 4. How I Handled Challenges I Encountered
 The major challenge was to get the data from API and transform it into Data Frames to plot in Plotly. Because the JSON retrieve from the API often contains many nested dictionaries, it is not an easy job to unpack and extract all of it and combine it into a single Data Frame.
 Another Challenge is to fine-tune the details of the graph. After plotting the graph, I got the lines, x and y axis right, but the issue is how to make the graph easier to read such as providing legends, using intuitive colours, tick marks, etc. Figuring out how to code these and how to make them visually appealing is also a challenging but fun part of the project.
+
 ##### 5. Key Takeaways
 I see a lot of graphs and figures in the past. As I person that is interested in graphic design, I often tried to use design software, e.g. Photoshop to create such graphs. Often times I would waste many times calculating the ratio of different data, e.g. size of each bar in a bar chart. This makes me feel very frustrated.
 In this project, and this course, I could hands different Python data visualization libraries such as Matplotlib, seaborn, Plotly, etc. This gave me better control over the graph. I do not have to waste so much time on getting the ratio right or shifting the pixels left and right. However, this also brings me into learning more about how data is equally important as the final execution. Instead of spending time designing the graph. I would have spent more time doing data wrangling, data cleaning, etc. Because at the end of the day, my data visualizations are helping me to tell a story. My story is the main protagonist, and data visualizations are just supporting characters along the way.

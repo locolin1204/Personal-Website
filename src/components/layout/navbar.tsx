@@ -8,18 +8,19 @@ import {
 } from "../../styles/layout/navbar.styled";
 import { RxCross1 } from "react-icons/rx";
 import { FaBars } from "react-icons/fa";
+import {HiBars3} from "react-icons/hi2";
 
 const NavBar = () => {
 	const [isNavExpanded, setIsNavExpanded] = useState(false);
 
 	return (
 		<NavContainer>
-			<button
+			<button style={{fontSize: "1.2em"}}
 				onClick={() => {
 					setIsNavExpanded(true);
 				}}
 			>
-				<FaBars />
+				<HiBars3 />
 			</button>
 
 			<StyledNavBar className={isNavExpanded ? "is-expanded" : "not-expanded"}>

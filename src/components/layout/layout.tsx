@@ -11,6 +11,7 @@ import {
 	StyledPageHeader,
 	StyledCol,
 	HeroImage,
+	StyledChildren,
 } from "../../styles/layout/layout.styled";
 import themeColor from "../../resources/color.json";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
@@ -55,7 +56,7 @@ const Layout = ({
 
 	return (
 		<ThemeProvider theme={themeColor.light}>
-			<title>colin lo</title>
+			<title>Colin Lo</title>
 			<GlobalStyles />
 			<StyledContainer fluid>
 				<NavBar />
@@ -73,7 +74,9 @@ const Layout = ({
 								height={heroImage.height}
 							/>
 						) : null}
+						<StyledChildren>
 						{children}
+						</StyledChildren>
 					</main>
 				</StyledCol>
 				<Footer />

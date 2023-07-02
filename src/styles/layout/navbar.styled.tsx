@@ -39,7 +39,7 @@ export const StyledNavItem = styled.li`
 export const StyledNavLink = styled(Link).attrs({
 	// activeStyle: ,
 })`
-	color: ${({ theme }) => theme.color.sand500};
+	color: ${({ theme }) => theme.color.sand300};
 	text-decoration: none;
 	background: inherit;
 	transition: color 0.3s ease-in-out;
@@ -62,6 +62,12 @@ export const NavContainer = styled.div`
 		border: none;
 		background: transparent;
 		display: none;
+
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			color: ${({ theme }) => theme.color.sand700};
+		}
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -69,7 +75,7 @@ export const NavContainer = styled.div`
 			display: block;
 			padding: 1em 2em;
 			text-decoration: none;
-			color: ${({ theme }) => theme.color.sand500};
+			color: ${({ theme }) => theme.color.sand300};
 		}
 		${StyledNavBar} {
 			display: none;

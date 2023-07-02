@@ -27,6 +27,7 @@ export const StyledCol = styled(Col)`
 	/* padding-bottom: 4rem; */
 	flex: 1;
 	/* padding-top: 3.5rem; */
+	/* overflow: hidden; */
 `;
 
 export const HeroImage = styled(GatsbyImage)`
@@ -45,3 +46,6 @@ export const HeroImage = styled(GatsbyImage)`
     }
 
 `;
+
+export const StyledChildren = styled.div`
+`
