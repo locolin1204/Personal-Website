@@ -14,7 +14,7 @@ export const StyledAboutSelfIntroContainer = styled.div`
 	}
 `;
 
-export const ProfilePic = styled.span`
+export const ProfilePic = styled.div`
 	/* width: 500px; */
 	border-radius: 1em;
 	display: block;

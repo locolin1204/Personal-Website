@@ -1,1 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.44 87.14"><defs><style>.cls-1{fill:#ccbeb0;}.cls-2{fill:#f8f1e8;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M71.8,38.22H50.71a14.54,14.54,0,0,0-1.18-4.75,11.25,11.25,0,0,0-2.61-3.68,11.68,11.68,0,0,0-4-2.4,15.83,15.83,0,0,0-5.34-.84A15,15,0,0,0,28.7,29.1a15.55,15.55,0,0,0-5.46,7.29,31.49,31.49,0,0,0-1.85,11.4,31.93,31.93,0,0,0,1.89,11.77,14.72,14.72,0,0,0,5.48,7.1A15.32,15.32,0,0,0,37.4,69a17.1,17.1,0,0,0,5.16-.73,11.76,11.76,0,0,0,4-2.12,11.16,11.16,0,0,0,2.75-3.34,13.5,13.5,0,0,0,1.44-4.43L58.16,50l13.64,8.6a28.48,28.48,0,0,1-2.73,9.9,32,32,0,0,1-6.67,9.27,32.4,32.4,0,0,1-10.68,6.83A39.08,39.08,0,0,1,37,87.14,39.07,39.07,0,0,1,18,82.61,32.61,32.61,0,0,1,4.84,69.3Q0,60.51,0,47.79T4.94,26.24A33,33,0,0,1,18.25,13,38.76,38.76,0,0,1,37,8.45a43,43,0,0,1,13.35,2A32.57,32.57,0,0,1,61,16.21a28.9,28.9,0,0,1,7.4,9.33c1.1,2.18,10.86,4.23,10.86,4.23Z"/><path class="cls-1" d="M81.23,86.09V9.5l7.45-8.45L102,9.5V69.34h31l7.46,8.3L133,86.09Z"/><path class="cls-2" d="M79.26,29.77H58.16A14.72,14.72,0,0,0,57,25a11.11,11.11,0,0,0-6.64-6.08A15.89,15.89,0,0,0,45,18.1a15,15,0,0,0-8.84,2.54,15.5,15.5,0,0,0-5.46,7.3,31.22,31.22,0,0,0-1.86,11.4A31.84,31.84,0,0,0,30.73,51.1a14.76,14.76,0,0,0,5.48,7.11,15.31,15.31,0,0,0,8.64,2.37A16.79,16.79,0,0,0,50,59.85a11.74,11.74,0,0,0,4-2.11,11.05,11.05,0,0,0,2.75-3.35A13.42,13.42,0,0,0,58.16,50l21.1.15A28.43,28.43,0,0,1,76.53,60,32,32,0,0,1,59.17,76.1,39.08,39.08,0,0,1,44.4,78.68a39,39,0,0,1-18.9-4.52A32.61,32.61,0,0,1,12.3,60.85Q7.46,52.06,7.45,39.34t4.94-21.56A33.13,33.13,0,0,1,25.7,4.51,38.79,38.79,0,0,1,44.4,0,43,43,0,0,1,57.75,2a32.29,32.29,0,0,1,10.7,5.78,28.9,28.9,0,0,1,7.4,9.33A34.13,34.13,0,0,1,79.26,29.77Z"/><path class="cls-2" d="M88.68,77.64V1.05h20.79V60.88h31V77.64Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 144 144" style="enable-background:new 0 0 144 144;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#CCBEB0;}
+	.st1{fill:#F8F1E8;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:url(#SVGID_00000022539129347297689660000018385292426110101639_);}
+	.st4{fill:#C6BAAF;}
+	.st5{fill:#C6BBB0;}
+	.st6{fill:#C7BBB0;}
+	.st7{fill:#C7BCB1;}
+	.st8{fill:#C8BCB1;}
+	.st9{fill:#C8BCB2;}
+	.st10{fill:#C8BDB2;}
+	.st11{fill:#C9BDB2;}
+	.st12{fill:#C9BDB3;}
+	.st13{fill:#C9BEB3;}
+	.st14{fill:#CABEB3;}
+	.st15{fill:#CABEB4;}
+	.st16{fill:#CABFB4;}
+	.st17{fill:#CBBFB4;}
+	.st18{fill:#CBBFB5;}
+	.st19{fill:#CBC0B5;}
+	.st20{fill:#CCC0B5;}
+	.st21{fill:#CCC0B6;}
+	.st22{fill:#CCC1B6;}
+	.st23{fill:#CDC1B7;}
+	.st24{fill:#CDC2B7;}
+	.st25{fill:#CDC2B8;}
+	.st26{fill:#CEC2B8;}
+	.st27{fill:#CEC3B8;}
+	.st28{fill:#CEC3B9;}
+	.st29{fill:#CFC3B9;}
+	.st30{fill:#CFC4B9;}
+	.st31{fill:#CFC4BA;}
+	.st32{fill:#D0C5BA;}
+	.st33{fill:#D0C5BB;}
+	.st34{fill:#D0C6BB;}
+	.st35{fill:#D1C6BB;}
+	.st36{fill:#D1C6BC;}
+	.st37{fill:#D1C7BC;}
+	.st38{fill:#D2C7BC;}
+	.st39{fill:#D2C7BD;}
+	.st40{fill:#D2C8BD;}
+	.st41{fill:#D3C8BD;}
+	.st42{fill:#D3C8BE;}
+	.st43{fill:#D3C9BE;}
+	.st44{fill:#D4C9BE;}
+	.st45{fill:#D4C9BF;}
+	.st46{fill:#D4CABF;}
+	.st47{fill:#D5CAC0;}
+	.st48{fill:#D5CBC0;}
+	.st49{fill:#D5CBC1;}
+	.st50{fill:#D6CBC1;}
+	.st51{fill:#D6CCC1;}
+	.st52{fill:#D6CCC2;}
+	.st53{fill:#D7CCC2;}
+	.st54{fill:#D7CDC2;}
+	.st55{fill:#D7CDC3;}
+	.st56{fill:#D8CDC3;}
+	.st57{fill:#D8CEC3;}
+	.st58{fill:#D8CEC4;}
+	.st59{fill:#D9CEC4;}
+	.st60{fill:#D9CFC4;}
+	.st61{fill:#D9CFC5;}
+	.st62{fill:#DAD0C5;}
+	.st63{fill:#DAD0C6;}
+	.st64{fill:#DAD1C6;}
+	.st65{fill:#DBD1C6;}
+	.st66{fill:#DBD1C7;}
+	.st67{fill:#DBD2C7;}
+	.st68{fill:#DCD2C8;}
+	.st69{fill:#DCD3C8;}
+	.st70{fill:#DCD3C9;}
+	.st71{fill:#DDD3C9;}
+	.st72{fill:#DDD4CA;}
+	.st73{fill:#DED4CA;}
+	.st74{fill:#DED5CB;}
+	.st75{fill:#DFD5CB;}
+	.st76{fill:#DFD6CC;}
+	.st77{fill:#E0D6CC;}
+	.st78{fill:#E0D7CD;}
+	.st79{fill:#E1D7CD;}
+	.st80{fill:#E1D8CE;}
+	.st81{fill:#E2D8CE;}
+	.st82{fill:#E2D8CF;}
+	.st83{fill:#E2D9CF;}
+	.st84{fill:#E3D9D0;}
+	.st85{fill:#E3DAD0;}
+	.st86{fill:#E3DAD1;}
+	.st87{fill:#E4DAD1;}
+	.st88{fill:#E4DBD1;}
+	.st89{fill:#E4DBD2;}
+	.st90{fill:#E5DCD2;}
+	.st91{fill:#E5DCD3;}
+	.st92{fill:#E5DDD3;}
+	.st93{fill:#E6DDD3;}
+	.st94{fill:#E6DDD4;}
+	.st95{fill:#E6DED4;}
+	.st96{fill:#E7DED4;}
+	.st97{fill:#E7DED5;}
+	.st98{fill:#E7DFD5;}
+	.st99{fill:#E8DFD5;}
+	.st100{fill:#E8DFD6;}
+	.st101{fill:#E8E0D6;}
+	.st102{fill:#E9E0D6;}
+	.st103{fill:#E9E0D7;}
+	.st104{fill:#E9E1D7;}
+	.st105{fill:#EAE1D8;}
+	.st106{fill:#EAE2D8;}
+	.st107{fill:#EAE2D9;}
+	.st108{fill:#EBE2D9;}
+	.st109{fill:#EBE3D9;}
+	.st110{fill:#EBE3DA;}
+	.st111{fill:#ECE3DA;}
+	.st112{fill:#ECE4DA;}
+	.st113{fill:#ECE4DB;}
+	.st114{fill:#EDE4DB;}
+	.st115{fill:#EDE5DB;}
+	.st116{fill:#EDE5DC;}
+	.st117{fill:#EEE5DC;}
+	.st118{fill:#EEE6DC;}
+	.st119{fill:#EEE6DD;}
+	.st120{fill:#EFE7DD;}
+	.st121{fill:#EFE7DE;}
+	.st122{fill:#EFE8DE;}
+	.st123{fill:#F0E8DE;}
+	.st124{fill:#F0E8DF;}
+	.st125{fill:#F0E9DF;}
+	.st126{fill:#F1E9DF;}
+	.st127{fill:#F1E9E0;}
+	.st128{fill:#F1EAE0;}
+	.st129{fill:#F2EAE1;}
+	.st130{fill:#F2EBE1;}
+	.st131{fill:#F2EBE2;}
+	.st132{fill:#F3EBE2;}
+	.st133{fill:#F3ECE2;}
+	.st134{fill:#F3ECE3;}
+	.st135{fill:#F4ECE3;}
+	.st136{fill:#F4EDE3;}
+	.st137{fill:#F4EDE4;}
+	.st138{fill:#F5EDE4;}
+	.st139{fill:#F5EEE4;}
+	.st140{fill:#F5EEE5;}
+	.st141{fill:#F6EEE5;}
+	.st142{fill:#F6EFE5;}
+	.st143{fill:#F6EFE6;}
+	.st144{fill:#F7EFE6;}
+	.st145{fill:#F7F0E7;}
+	.st146{fill:#F8F0E7;}
+	.st147{fill:url(#SVGID_00000087410961268027857280000003815831549900333479_);}
+	.st148{fill:url(#SVGID_00000123437978558082828930000013099739642824526988_);}
+</style>
+<g>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="18.3238" y1="96.411" x2="72.5439" y2="47.5909">
+			<stop  offset="0" style="stop-color:#CCBEB0"/>
+			<stop  offset="8.341584e-02" style="stop-color:#D6C9BC"/>
+			<stop  offset="0.2828" style="stop-color:#E9DFD4"/>
+			<stop  offset="0.4675" style="stop-color:#F4ECE3"/>
+			<stop  offset="0.6216" style="stop-color:#F8F1E8"/>
+		</linearGradient>
+		<path class="st2" d="M59,86.2L72,97c-6.7,7.1-16.1,11.5-26.5,11.5C25.3,108.5,9,92.2,9,72s16.3-36.5,36.5-36.5
+			c10.5,0,19.9,4.4,26.5,11.5L59,57.8c-3.5-3.4-8.3-5.5-13.6-5.5c-10.9,0-19.6,8.8-19.6,19.6s8.8,19.6,19.6,19.6
+			C50.7,91.6,55.5,89.6,59,86.2z"/>
+		
+			<linearGradient id="SVGID_00000071547351844225924540000013703261890475126913_" gradientUnits="userSpaceOnUse" x1="74.0568" y1="102.0619" x2="119.6477" y2="61.0116">
+			<stop  offset="0" style="stop-color:#CCBEB0"/>
+			<stop  offset="8.341584e-02" style="stop-color:#D6C9BC"/>
+			<stop  offset="0.2828" style="stop-color:#E9DFD4"/>
+			<stop  offset="0.4675" style="stop-color:#F4ECE3"/>
+			<stop  offset="0.6216" style="stop-color:#F8F1E8"/>
+		</linearGradient>
+		<path style="fill:url(#SVGID_00000071547351844225924540000013703261890475126913_);" d="M135,93.9v14.6H79.8v-73h16.8v58.4H135z"
+			/>
+	</g>
+</g>
+</svg>
