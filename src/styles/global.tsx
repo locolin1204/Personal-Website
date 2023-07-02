@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 	html.touch *:hover {
     all:unset!important;
-}
+	}
 `;
 
 // export default GlobalStyles;
@@ -30,7 +30,7 @@ export const UnderlineText = styled.span`
 		height: ${({ height }) => (height ? height : "1")}px;
 		bottom: 0;
 		left: 0;
-		background-color: #000000;
+		background-color: ${({ color }) => (color ? color : "#000000")};
 		transform-origin: bottom right;
 		transition: transform ${({ duration }) => (duration ? duration : "0.25")}s
 			ease-out;

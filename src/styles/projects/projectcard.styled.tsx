@@ -27,11 +27,7 @@ export const StyledCardContainer = styled.div`
 
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
-		&:hover {
-			transform: scale(1);
-			margin-top: 0em;
-			margin-bottom: 0em;
-		}
+		pointer-events: none;
 	}
 	/* border-radius: 1em; */
 	padding: 0;

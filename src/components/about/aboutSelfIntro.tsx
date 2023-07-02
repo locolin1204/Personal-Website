@@ -15,7 +15,7 @@ export default function AboutSelfIntro({ bodyText }) {
 					<StaticImage
 						src={"../../images/about/formal-profilepic.jpg"}
 						alt={"Colin Lo"}
-						style={{ borderRadius: "1rem", width: "12em", height: "12em" }}
+						style={{ borderRadius: "1em", width: "12em", height: "12em" }}
 						// imgStyle={{width: "100%", height: "100%"}}
 						placeholder="blurred"
 						layout="constrained"

@@ -1,5 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "gatsby";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const StyledNavBar = styled.ul`
 	display: flex;
@@ -15,6 +24,12 @@ export const StyledNavBar = styled.ul`
 	/* .is-expanded {
 		display: flex;
 	} */
+	@media only screen and (max-width: 768px) {
+		&.is-expanded {
+			display: flex;
+			animation: ${fadeIn} 0.25s ease-out forwards;
+		}
+	}
 `;
 export const StyledNavItem = styled.li`
 	padding: 0em 2em;
@@ -40,6 +55,7 @@ export const StyledNavLink = styled(Link).attrs({
 export const NavContainer = styled.div`
 	display: flex;
 	justify-content: right;
+
 	button {
 		outline: none;
 		cursor: pointer;
@@ -57,9 +73,6 @@ export const NavContainer = styled.div`
 		}
 		${StyledNavBar} {
 			display: none;
-			opacity: 0; /* add this line */
-			transform: translateY(-100%); /* add this line */
-			transition: opacity 0.2s, transform 0.2s; /* add this line */
 		}
 		.is-expanded {
 			display: flex;
@@ -76,9 +89,6 @@ export const NavContainer = styled.div`
 			right: 0;
 			z-index: 999;
 			overflow: hidden;
-
-			opacity: 1; /* add this line */
-			transform: translateY(0); /* add this line */
 		}
 	}
 `;

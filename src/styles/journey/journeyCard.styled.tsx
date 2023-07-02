@@ -27,11 +27,7 @@ export const StyledJourneyCardContainer = styled.div`
 	}
 	@media only screen and (max-width: 768px) {
 		flex-direction: column;
-		&:hover {
-			transform: scale(1);
-			margin-top: 0em;
-			margin-bottom: 0em;
-		}
+		pointer-events: none;
 	}
 `;
 
@@ -77,6 +73,8 @@ export const PostWrapper = styled.div`
 export const StyledGatsbyImage = styled(GatsbyImage)`
 	/* width: 40em; */
 	width: 100%;
+	height:100%;
+
 	/* border: red 1px solid; */
 `;
 

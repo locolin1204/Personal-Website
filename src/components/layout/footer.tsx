@@ -12,6 +12,7 @@ import styled from "styled-components";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "animate.css";
+import { UnderlineText } from "../../styles/global";
 
 const StyledToastContainer = styled(ToastContainer)`
 	.Toastify__toast {
@@ -93,9 +94,9 @@ const Footer = () => {
 				</StyledIconLink>
 			</StyledIconContainer>
 			<StyledTextContainer>
-				i love solving problems creatively. <br />
-				different methods and strategies could surprise our lives in different
-				ways.
+				the world of computer science is like world of <UnderlineText color="#FAF3EA" weight={400}>handcrafts</UnderlineText>.
+				<br />
+				but with <UnderlineText color="#FAF3EA" weight={400}>unlimited</UnderlineText> resources.
 				<br />
 				<br />
 				<b>&copy; 2023 colin lo. all right reserved.</b>
