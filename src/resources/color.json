@@ -58,15 +58,58 @@
 	},
 	"dark": {
 		"color": {
-			"darkblue": "#2C385A",
-			"blue": "#4C5DA0",
-			"lightblue": "#C6E1F0",
-			"orange": "#FF8965",
-			"yellow": "#F6E297",
-			"darkgrey": "#5B5B5B",
-			"lightgrey": "#bababa",
-			"offwhite": "#FAF3EA",
-			"sand": "#a3917c",
+			"darkblue900": "#2C385A",
+			"darkblue800": "#414c6b",
+			"darkblue700": "#56607b",
+			"darkblue600": "#6b748c",
+
+			"blue700": "#4C5DA0",
+			"blue600": "#5e6daa",
+			"blue500": "#707db3",
+			"blue400": "#828ebd",
+
+			"lightblue900": "#637178",
+			"lightblue600": "#9eb4c0",
+			"lightblue400": "#C6E1F0",
+
+			"orange900": "#99523d",
+			"orange700": "#cc6e51",
+			"orange500": "#FF8965",
+			"orange300": "#ffa184",
+			"orange100": "#ffb8a3",
+
+			"yellow900": "#7b714c",
+			"yellow800": "#ac9e6a",
+			"yellow700": "#c5b579",
+			"yellow400": "#F6E297",
+			"yellow300": "#f7e5a1",
+			"yellow200": "#f8e8ac",
+			"yellow000": "#faeec1",
+
+			"sand900": "#312b25",
+			"sand700": "#726657",
+			"sand500": "#a3917c",
+			"sand300": "#bfb2a3",
+			"sand100": "#dad3cb",
+
+			"grey900": "#242424",
+			"grey700": "#404040",
+			"grey600": "#525252",
+			"grey500": "#5B5B5B",
+			"grey300": "#8c8c8c",
+			"grey200": "#adadad",
+			"grey100": "#cecece",
+
+			"offwhite900": "#191817",
+			"offwhite800": "#4b4946",
+			"offwhite700": "#7d7a75",
+			"offwhite600": "#e1dbd3",
+			"offwhite550": "#f8f1e8",
+			"offwhite500": "#FAF3EA",
+			"offwhite400": "#fbf5ee",
+			"offwhite300": "#fdf9f5",
+			"offwhite200": "#fefbf9",
+
 			"white": "#ffffff"
 		}
 	}

@@ -1,5 +1,6 @@
 # Personal Website
-This is a personal website to showcase the work I have done.
+This is a personal website to showcase the work I have done.\
+[locolin.com](locolin.com)
 
 ## Why Gatsby.js?
 Fast.

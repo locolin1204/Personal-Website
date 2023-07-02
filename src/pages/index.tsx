@@ -13,7 +13,6 @@ import { EnterAnimation } from "../components/enterAnimation";
 
 const IndexPage = () => {
 	const typingList = [
-		// Same String at the start will only be typed once, initially
 		"i code",
 		1000,
 		"i do photography",
