@@ -15,6 +15,7 @@ import {
 } from "../../styles/layout/layout.styled";
 import themeColor from "../../resources/color.json";
 import { ImageDataLike, getImage } from "gatsby-plugin-image";
+import SEO from "./seo";
 
 const theme = {
 	color: {
@@ -56,6 +57,7 @@ const Layout = ({
 
 	return (
 		<ThemeProvider theme={themeColor.light}>
+			<SEO/>
 			<title>Colin Lo</title>
 			<GlobalStyles />
 			<StyledContainer fluid>
