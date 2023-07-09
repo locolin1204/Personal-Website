@@ -51,6 +51,7 @@ const VideographyPage = ({ data }) => {
 		try {
 			const res = await axios.get(url);
 			const resItem = res.data.items[0];
+			console.log(resItem);
 			videosFromAPI.push({
 				description: cutDescription(resItem.snippet.description, 400),
 				date: new Date(resItem.snippet.publishedAt),
