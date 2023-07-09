@@ -26,6 +26,7 @@ const IndexPage = () => {
 		"badminton is my thing",
 		1000,
 	];
+	const axios = require('axios');
 
 	return (
 		<Layout pageTitle="">

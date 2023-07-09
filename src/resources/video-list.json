@@ -1,0 +1,44 @@
+{
+	"list": [
+		{
+			"title": "La Salle College Class of 2020 Graduation Video",
+			"link": "https://www.youtube.com/watch?v=6jxS2CsVzfg",
+            "position": ["Director of Photography", "Editor", "Cinematographer", "Scriptwriter"]
+		},
+		{
+			"title": "Interschool Athletics Competition Promotion Video 2018-19",
+			"link": "https://www.youtube.com/watch?v=X99bagZhKAc",
+            "position": ["Cinematographer", "Editor"]
+		},
+		{
+			"title": "Interschool Swimming Competition Promotion Video 2018-19",
+			"link": "https://www.youtube.com/watch?v=q9CaN73GHyM",
+            "position": ["Cinematographer", "Editor"]
+		},
+		{
+			"title": "CampusTV 1819 Promotion Video",
+			"link": "https://www.youtube.com/watch?v=R1ihDINvn3Y",
+            "position": ["Editor"]
+		},
+		{
+			"title": "Talent Quest Heats Promotion Video 2018",
+			"link": "https://www.youtube.com/watch?v=Z4JYQMHr-LI",
+            "position": ["Editor"]
+		},
+		{
+			"title": "Interview with Br Chris",
+			"link": "https://www.youtube.com/watch?v=X8F2fKWfHeg",
+            "position": ["Cinematographer", "Editor"]
+		},
+		{
+			"title": "2019 Inter-School Athletics Competition D1 (Finals) LSC x GHS Live Broadcast",
+			"link": "https://www.youtube.com/watch?v=jnunG2W0RTA",
+            "position": ["Graphic Designer", "Cinematographer", "Graphics Operator"]
+		},
+		{
+			"title": "2018 Interschool Swimming Competition Finals Live Broadcast",
+			"link": "https://www.youtube.com/watch?v=vXd_ATmP9RI",
+            "position": ["Graphic Designer", "Cinematographer"]
+		}
+	]
+}

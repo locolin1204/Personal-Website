@@ -20,32 +20,22 @@ const SEO = () => {
 
 	// const metaUrl = url ? `${site.siteMetadata.siteUrl}${url}` : site.siteMetadata.siteUrl;
 
-    const siteDetails = site.siteMetadata;
-    if (!siteDetails) {
+	const siteDetails = site.siteMetadata;
+	if (!siteDetails) {
 		return null;
 	}
+
 	const metaImage = siteDetails.siteUrl + siteDetails.siteImage;
+
 	return (
-		<Helmet
-			meta={[
-				{
-					property: `og:title`,
-					content: siteDetails.title,
-				},
-				{
-					property: `og:image`,
-					content: metaImage,
-				},
-				{
-					property: `og:url`,
-					content: siteDetails.siteUrl,
-				},
-                {
-                    property: `og:description`,
-                    content: siteDetails.description,
-                },
-			]}
-		/>
+		<Helmet>
+			<meta name="description" content={siteDetails.description} />
+
+			<meta property="og:url" content={siteDetails.siteUrl} />
+			<meta property="og:title" content={siteDetails.title} />
+			<meta property="og:description" content={siteDetails.description} />
+			<meta property="og:image" content={metaImage} />
+		</Helmet>
 	);
 };
 

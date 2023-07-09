@@ -33,9 +33,9 @@ const NavBar = () => {
 				<StyledNavItem>
 					<StyledNavLink to="/photography">photography</StyledNavLink>
 				</StyledNavItem>
-				{/* <StyledNavItem>
+				<StyledNavItem>
 					<StyledNavLink to="/videography">videography</StyledNavLink>
-				</StyledNavItem> */}
+				</StyledNavItem>
 				<StyledNavItem>
 					<StyledNavLink to="/journey">journey</StyledNavLink>
 				</StyledNavItem>
