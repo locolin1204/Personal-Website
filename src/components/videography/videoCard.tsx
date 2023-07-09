@@ -15,7 +15,7 @@ import { VideoObj } from "../../pages/videography";
 export default function VideoCard({ video }: { video: VideoObj }) {
 	return (
 		<StyledVideoCardContainer>
-			{video.embeddable ? (
+			{/* {video.embeddable ? (
 				<StyledIframe
 					src={`https://www.youtube.com/embed/${video.videoId}`}
 					title="YouTube video player"
@@ -25,9 +25,13 @@ export default function VideoCard({ video }: { video: VideoObj }) {
 				/>
 			) : (
 				<Thumbnail src={video.thumbnailUrl} />
-			)}
+			)} */}
+			<Thumbnail src={video.thumbnailUrl} />
+
 			<StyledVideoDetail>
-            <VideoTitle target="_blank" href={video.videoLink}>{video.title}</VideoTitle>
+				<VideoTitle target="_blank" href={video.videoLink}>
+					{video.title}
+				</VideoTitle>
 				<VideoDate>
 					{video.date.toLocaleDateString("en-us", {
 						year: "numeric",
