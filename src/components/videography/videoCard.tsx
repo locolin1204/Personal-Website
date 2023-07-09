@@ -37,8 +37,8 @@ export default function VideoCard({ video }) {
 					""
 				)}
 				<TagContainer>
-					{video.position.map(item => {
-						return <PostTag>{item}</PostTag>;
+					{video.position.map((item, index) => {
+						return <PostTag key={index}>{item}</PostTag>;
 					})}
 				</TagContainer>
 			</StyledVideoDetail>

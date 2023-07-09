@@ -29,7 +29,6 @@ const VideographyPage = ({ data }) => {
 		position: "40%",
 		height: "50vh",
 	};
-
 	function cutDescription(description: string, maxLength: number) {
 		if (description.length <= maxLength) {
 			return description;
@@ -43,15 +42,12 @@ const VideographyPage = ({ data }) => {
 		link: string;
 		position: string[];
 	}) {
-		// const apiKey = process.env.YOUTUBE_API_KEY;
+		const apiKey = process.env.YOUTUBE_API_KEY;
 		const curLink = video.link;
-		const apiKey = "***REMOVED***";
 		const videoId = curLink.slice(curLink.indexOf("=") + 1);
 		const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&id=${videoId}&key=${apiKey}`;
 		try {
 			const res = await axios.get(url);
-			console.log(res.data);
-
 			videosFromAPI.push({
 				description: cutDescription(res.data.items[0].snippet.description, 400),
 				date: new Date(res.data.items[0].snippet.publishedAt),
@@ -61,7 +57,6 @@ const VideographyPage = ({ data }) => {
 				views: res.data.items[0].statistics.viewCount,
 				position: video.position,
 			});
-			console.log(videosFromAPI);
 		} catch (error) {
 			console.error("Failed to fetch video description: ", error);
 		}
@@ -94,8 +89,8 @@ const VideographyPage = ({ data }) => {
 				? ""
 				: videos.map((item, index) => {
 						return (
-							<EnterAnimation index={index} delay={0.25}>
-								<VideoCard video={item} key={index} />
+							<EnterAnimation key={item.videoId}  index={index} delay={0.25}>
+								<VideoCard video={item} />
 							</EnterAnimation>
 						);
 				  })}
