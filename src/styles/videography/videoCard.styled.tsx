@@ -16,18 +16,22 @@ export const StyledIframe = styled.iframe`
 	/* height: 100%; */
 	display: inline-block;
 	/* border: red 1px solid; */
-	height: 20em;
-	width: 30em;
-	width: 100%;
+	height: 18em;
+	width: 32em;
+	/* width: 100%; */
 	/* height: 30vh; */
 	/* width: 53vw; */
 `;
 
 export const Thumbnail = styled.img`
 	display: inline-block;
-	height: 20em;
-	width: 30em;
-	width: 100%;
+	width: 50%;
+    height: 50%;
+	@media only screen and (max-width: 768px) {
+		height: 100%;
+		width: 100%;
+	}
+	/* width: 100%; */
 `;
 
 export const StyledVideoDetail = styled.div`
