@@ -6,6 +6,7 @@ import videoListJSON from "../resources/video-list.json";
 import { get } from "http";
 import axios from "axios";
 import VideoCard from "../components/videography/videoCard";
+import { EnterAnimation } from "../components/enterAnimation";
 
 interface VideoObj {
 	date: Date;
@@ -33,11 +34,15 @@ const VideographyPage = ({ data }) => {
 		if (description.length <= maxLength) {
 			return description;
 		}
-	
+
 		const cutDesc = description.substr(0, maxLength);
 		return cutDesc.substr(0, cutDesc.lastIndexOf(" ")) + "...";
 	}
-	async function getVideosInfo(video: { title: string; link: string, position: string[] }) {
+	async function getVideosInfo(video: {
+		title: string;
+		link: string;
+		position: string[];
+	}) {
 		// const apiKey = process.env.YOUTUBE_API_KEY;
 		const curLink = video.link;
 		const apiKey = "***REMOVED***";
@@ -46,7 +51,7 @@ const VideographyPage = ({ data }) => {
 		try {
 			const res = await axios.get(url);
 			console.log(res.data);
-			
+
 			videosFromAPI.push({
 				description: cutDescription(res.data.items[0].snippet.description, 400),
 				date: new Date(res.data.items[0].snippet.publishedAt),
@@ -82,15 +87,17 @@ const VideographyPage = ({ data }) => {
 			getVideosInfo(item);
 		});
 	}, []);
-	
+
 	return (
 		<Layout pageTitle="videography" heroImage={heroImage}>
 			{isLoading
-				? <h1>Loading</h1>
+				? ""
 				: videos.map((item, index) => {
 						return (
-						<VideoCard video={item} key={index} />
-						)
+							<EnterAnimation index={index} delay={0.25}>
+								<VideoCard video={item} key={index} />
+							</EnterAnimation>
+						);
 				  })}
 		</Layout>
 	);

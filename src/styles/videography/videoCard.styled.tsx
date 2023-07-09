@@ -50,7 +50,7 @@ export const VideoDate = styled.div`
 
 export const PostTag = styled.span`
 	display: inline-block;
-	background-color: ${({ theme }) => theme.color.offwhite600};
+	background-color: ${({ theme }) => theme.color.offwhite550};
 	margin: 0.1em;
 	/* border: red 1px solid; */
 	padding: 0.1em 0.3em;
