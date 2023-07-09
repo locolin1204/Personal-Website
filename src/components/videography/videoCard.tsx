@@ -14,8 +14,6 @@ export default function VideoCard({ video }) {
 	return (
 		<StyledVideoCardContainer>
 			<StyledIframe
-				// width="560"
-				// height="315"
 				src={`https://www.youtube.com/embed/${video.videoId}`}
 				title="YouTube video player"
 				frameBorder="0"
