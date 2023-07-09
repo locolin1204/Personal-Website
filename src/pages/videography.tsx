@@ -42,7 +42,7 @@ const VideographyPage = ({ data }) => {
 		link: string;
 		position: string[];
 	}) {
-		const apiKey = process.env.YOUTUBE_API_KEY;
+		const apiKey = process.env.GATSBY_YOUTUBE_API_KEY;
 		const curLink = video.link;
 		const videoId = curLink.slice(curLink.indexOf("=") + 1);
 		const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&id=${videoId}&key=${apiKey}`;
