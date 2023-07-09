@@ -23,6 +23,13 @@ export const StyledIframe = styled.iframe`
 	/* width: 53vw; */
 `;
 
+export const Thumbnail = styled.img`
+	display: inline-block;
+	height: 20em;
+	width: 30em;
+	width: 100%;
+`;
+
 export const StyledVideoDetail = styled.div`
 	padding: 1em;
 	display: flex;
@@ -37,8 +44,15 @@ export const StyledVideoDetail = styled.div`
 
 export const TagContainer = styled.div``;
 
-export const VideoTitle = styled.div`
+export const VideoTitle = styled.a`
 	font-size: 1.2em;
+	color: ${({ theme }) => theme.color.grey600};
+	text-decoration: none;
+	&:hover {
+		color: ${({ theme }) => theme.color.grey600};
+
+		text-decoration: underline;
+	}
 `;
 
 export const VideoDate = styled.div`

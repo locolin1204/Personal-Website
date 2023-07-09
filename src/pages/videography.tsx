@@ -8,7 +8,7 @@ import axios from "axios";
 import VideoCard from "../components/videography/videoCard";
 import { EnterAnimation } from "../components/enterAnimation";
 
-interface VideoObj {
+export interface VideoObj {
 	date: Date;
 	description: string;
 	videoId: string;
@@ -16,6 +16,8 @@ interface VideoObj {
 	title: string;
 	views: number;
 	position: string[];
+	embeddable: boolean;
+	thumbnailUrl: string;
 }
 
 const VideographyPage = ({ data }) => {
@@ -45,17 +47,20 @@ const VideographyPage = ({ data }) => {
 		const apiKey = process.env.GATSBY_YOUTUBE_API_KEY;
 		const curLink = video.link;
 		const videoId = curLink.slice(curLink.indexOf("=") + 1);
-		const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&id=${videoId}&key=${apiKey}`;
+		const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&part=statistics&part=status&id=${videoId}&key=${apiKey}`;
 		try {
 			const res = await axios.get(url);
+			const resItem = res.data.items[0];
 			videosFromAPI.push({
-				description: cutDescription(res.data.items[0].snippet.description, 400),
-				date: new Date(res.data.items[0].snippet.publishedAt),
+				description: cutDescription(resItem.snippet.description, 400),
+				date: new Date(resItem.snippet.publishedAt),
 				videoId: videoId,
 				videoLink: curLink,
 				title: video.title,
-				views: res.data.items[0].statistics.viewCount,
+				views: resItem.statistics.viewCount,
 				position: video.position,
+				embeddable: resItem.status.embeddable,
+				thumbnailUrl: resItem.snippet.thumbnails.maxres.url,
 			});
 		} catch (error) {
 			console.error("Failed to fetch video description: ", error);
@@ -89,7 +94,7 @@ const VideographyPage = ({ data }) => {
 				? ""
 				: videos.map((item, index) => {
 						return (
-							<EnterAnimation key={item.videoId}  index={index} delay={0.25}>
+							<EnterAnimation key={item.videoId} index={index} delay={0.25}>
 								<VideoCard video={item} />
 							</EnterAnimation>
 						);
