@@ -7,7 +7,6 @@ import {
 } from "../../styles/layout/footer.styled";
 import { IoMdMail } from "react-icons/io";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
-// import toast, { Toaster } from 'react-hot-toast';
 import styled from "styled-components";
 import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -23,20 +22,13 @@ const StyledToastContainer = styled(ToastContainer)`
 		margin-bottom: 0.5rem;
 		min-height: 0.5rem;
 		padding: 0;
-		/* margin: 0; */
 	}
 	.Toastify__toast-body {
-		/* min-height: 0.5rem;
-		padding: 0;
-		margin: 0; */
 	}
 `;
 
 const Footer = () => {
-	// const copyNotification = () => toast('copied to clipboard.',{
-	// 	duration: 1000,
-	// 	position: "bottom-left",
-	// });
+;
 	const copyNotify = () => {
 		toast("copied", {
 			position: "bottom-left",
@@ -81,7 +73,6 @@ const Footer = () => {
 						transition={fade}
 					/>
 					<IoMdMail />
-					{/* <Toaster /> */}
 				</StyledIconLink>
 				<StyledIconLink
 					href={"https://www.linkedin.com/in/colin-lo-789086236/"}

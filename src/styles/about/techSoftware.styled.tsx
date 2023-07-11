@@ -14,15 +14,9 @@ export const TechContainerWrapper = styled.div`
 
 export const StyledTechContainer = styled.div`
 	display: grid;
-	/* display: flex; */
-	/* justify-content: space-evenly; */
-	/* justify-content: center; */
-	/* padding: 0% 5%; */
 	flex-direction: row;
 	overflow: hidden;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	/* border: red 1px solid; */
-	/* background-color: ${({ theme }) => theme.color.yellow200}; */
 	border-radius: 1em;
 `;
 
@@ -31,8 +25,6 @@ export const StyledTechFrame = styled.div`
 	flex-direction: column;
 	align-items: center;
 	padding: 2rem;
-	/* padding-right: 10em; */
-	/* border: red 1px solid; */
 	@media only screen and (max-width: 768px) {
 		align-items: flex-start;
 		margin-left: 2rem;
@@ -83,15 +75,11 @@ export const SoftwareTitle = styled.h5`
 `;
 
 export const SoftwareFrameContainer = styled.div`
-	/* margin-top: 1rem; */
-	/* padding: 2rem; */
 	display: grid;
 	font-size: 4em;
 	justify-content: center;
 	gap: 2em;
-	/* background-color: ${({ theme }) => theme.color.yellow400}; */
 	grid-template-columns: repeat(auto-fit, minmax(1em, 1em));
-	/* border: red 1px solid; */
 	margin: 1rem;
 `;
 
@@ -100,7 +88,6 @@ export const SoftwareIconTextWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	color: ${({ theme }) => theme.color.grey400};
-	/* border: red 1px solid; */
 `;
 
 export const SoftwareText = styled.div`
@@ -109,11 +96,9 @@ export const SoftwareText = styled.div`
 	padding: 1em;
 	font-weight: 300;
 	font-family: Source Code Pro;
-	/* border: red 1px solid; */
 `;
 
 export const SoftwareFrameWrapper = styled.div`
 	text-align: center;
 	padding: 2rem 0em;
-	/* border: red 1px solid; */
 `;

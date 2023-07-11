@@ -20,10 +20,6 @@ export const StyledNavBar = styled.ul`
     `}
 	font-weight: 400;
 	margin: 0px;
-	/* border: red solid 1px; */
-	/* .is-expanded {
-		display: flex;
-	} */
 	@media only screen and (max-width: 768px) {
 		&.is-expanded {
 			display: flex;
@@ -37,15 +33,11 @@ export const StyledNavItem = styled.li`
 `;
 
 export const StyledNavLink = styled(Link).attrs({
-	// activeStyle: ,
 })`
 	color: ${({ theme }) => theme.color.sand300};
 	text-decoration: none;
 	background: inherit;
 	transition: color 0.3s ease-in-out;
-	/* &:hover{
-        color: ${({ theme }) => theme.color.grey500};
-    } */
 	&&[aria-current],
 	&:hover {
 		color: ${({ theme }) => theme.color.sand700};
@@ -62,9 +54,7 @@ export const NavContainer = styled.div`
 		border: none;
 		background: transparent;
 		display: none;
-
 		transition: color 0.3s ease-in-out;
-
 		&:hover {
 			color: ${({ theme }) => theme.color.sand700};
 		}

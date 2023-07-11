@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ReactNode } from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import {
 	StyledGatsbyImageBG,
 	StyledGatsbyImageFront,
@@ -24,7 +24,7 @@ const ProjectPosts = ({
 	data,
 	children,
 }: {
-	data: object;
+	data: any;
 	children: ReactNode;
 }) => {
 	const pageData = data.mdx.frontmatter;

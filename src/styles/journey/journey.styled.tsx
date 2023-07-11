@@ -5,7 +5,5 @@ export const StyledJourneyContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1em;
-    /* border: red 1px solid; */
-    /* overflow: hidden; */
     margin: 0em 1em;
 `

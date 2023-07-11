@@ -20,13 +20,9 @@ export const StyledTechItem = styled.span`
 export const StyledGatsbyImageFront = styled(GatsbyImage)`
 	position: absolute;
 	z-index: 999;
-	
 	width: 30em;
-	/* margin-top: -20vh; */
-	/* border: red 1px solid; */
 	box-shadow: 0 5px 10px rgba(160, 160, 160, 0.05),
 		0 15px 40px rgba(175, 175, 175, 0.2);
-	/* height:100%; */
 	margin-bottom: 1em;
 
 	@media (max-width: 768px) {
@@ -37,26 +33,16 @@ export const StyledGatsbyImageFront = styled(GatsbyImage)`
 export const StyledGatsbyImageBG = styled(GatsbyImage)`
 	filter: blur(3px);
 	-webkit-filter: blur(3px);
-
-	/* left: 50%; */
-	/* margin-left: -50vw; */
-	/* margin-right: -50vw; */
-	/* max-width: 100vw; */
-	/* position: absolute; */
-	/* right: 50%; */
-
 	width: 100%;
 	height: 40vh;
 	/* 
 	object-fit: cover;
 	object-position: 50% 65%;
 	 */
-	/* border: red 1px solid; */
 `;
 
 
 export const ImageWrapper = styled.div`
-	/* width: 100em; */
 	left: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
@@ -65,28 +51,10 @@ export const ImageWrapper = styled.div`
 	right: 50%;
 	width: 100vw;
 	overflow: hidden;
-	/* border: red 1px solid; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 `;
-
-// export const StyledTechList = styled.div`
-// 	padding-bottom: 1em;
-// `;
-// export const StyledTechItem = styled.span`
-// 	font-family: Source Code Pro;
-// 	font-size: 1.2em;
-// 	font-weight: 300;
-// 	font-style: italic;
-// 	background-color: ${({ theme }) => theme.color.offwhite200};
-// 	color: ${({ theme }) => theme.color.yellow900};
-// 	margin-right: 0.5em;
-// 	padding: 0em 0.5em;
-// 	border-radius: 0.3rem;
-// 	font-weight: 300;
-// `;
-
 
 export const DateWrapper = styled.div`
 	padding: 1em 0em;

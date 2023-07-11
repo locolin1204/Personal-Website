@@ -6,7 +6,7 @@ import { StyledJourneyContainer } from "../styles/journey/journey.styled";
 import { graphql } from "gatsby";
 import { EnterAnimation } from "../components/enterAnimation";
 
-const JourneyPage = ({ data }) => {
+const JourneyPage = ({ data }: { data: any }) => {
 	const heroImage = {
 		gatsbyImage: data.heroImage,
 		position: "45%",
@@ -64,7 +64,7 @@ export const query = graphql`
 						image {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
-								fluid(quality: 100, maxHeight: 250,maxWidth: 400, fit: COVER) {
+								fluid(quality: 100, maxHeight: 250, maxWidth: 400, fit: COVER) {
 									...GatsbyImageSharpFluid
 								}
 							}

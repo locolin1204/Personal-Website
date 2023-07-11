@@ -11,7 +11,6 @@ export const StyledFooter = styled.div`
     flex-direction: column;
 	padding: 2em;
 	font-weight: 300;
-    /* border: red 1px solid; */
 `;
 
 export const StyledIconContainer = styled.div`
@@ -20,14 +19,12 @@ export const StyledIconContainer = styled.div`
 	background: inherit;
 	column-gap: 1em;
 	font-size: 1.5em;
-    /* border: red 1px solid; */
 `;
 
 export const StyledIconLink = styled.a`
     display: flex;
     align-items: center;
 	color: ${({ theme }) => theme.color.offwhite500};
-    /* border: red 1px solid; */
     &:hover{
         color :${({ theme }) => theme.color.yellow400}
     }
@@ -36,7 +33,6 @@ export const StyledIconLink = styled.a`
 
 export const StyledTextContainer = styled.span`
   padding-top: 1em;
-  /* border: red 1px solid; */
   text-align: center;
   margin-bottom: 0px;
 `

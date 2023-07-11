@@ -1,4 +1,3 @@
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import {
 	StyledJourneyCardContainer,
@@ -53,16 +52,7 @@ export default function JourneyCard({
 				</TextContainer>
 			</TextWrapper>
 			<ImageWrapper>
-				{/* <img src={require(image)}/> */}
 				<StyledGatsbyImage fluid={image} alt={title} />
-				{/* <StaticImage
-					src={`../../images/journey/${slug}.jpg`}
-					alt={`${slug}`}
-					style={{
-						width: "30em",
-						// border: "red 1px solid"
-					}}
-				/> */}
 			</ImageWrapper>
 		</StyledJourneyCardContainer>
 	);

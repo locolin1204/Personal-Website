@@ -1,5 +1,5 @@
 import React from "react";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import {
 	StyledCardContainer,
 	StyledTitle,
@@ -29,20 +29,6 @@ function ProjectCard({
 	const gatsbyImage = getImage(image);
 
 	return (
-		// <StyledCardContainer cardColor={index % 2 === 1 && "change"}>
-		// 	<StyledTitle>
-		// 		{title + " "}
-		// 		<a href={link} target="_blank">
-		// 			<AiOutlineLink />
-		// 		</a>
-		// 	</StyledTitle>
-		// 	<StyledTechList>
-		// 		{tech.map((item, index) => <StyledTechItem key={index}>{item}</StyledTechItem>)}
-		// 	</StyledTechList>
-		// 	<ImageWrapper>
-		// 		<StyledGatsbyImage image={gatsbyImage} alt={title}/>
-		// 	</ImageWrapper>
-		// </StyledCardContainer>
 		<StyledCardContainer cardColor={index % 2 === 1 && "change"}>
 			<ImageWrapper>
 				<StyledGatsbyImage image={gatsbyImage} alt={title} />
@@ -52,7 +38,7 @@ function ProjectCard({
 					{title + " "}
 					{/* <a href={link} target="_blank">
 					<AiOutlineLink />
-				</a> */}
+					</a> */}
 				</StyledTitle>
 				<StyledTechList>
 					{tech.map((item, index) => (

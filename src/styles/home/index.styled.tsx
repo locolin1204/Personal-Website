@@ -8,31 +8,25 @@ export const StyledMain = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* border: red solid 1px; */
 `;
 
 export const StyledTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	/* padding-top: 10em; */
 	padding-top: 10vh;
 	min-height: 90vh;
-
 	@media (max-width: 768px) {
 		font-size: 0.7rem;
 	}
-	/* border: red 1px solid; */
 `;
 
 export const StyledMainText = styled.div`
 	font-size: 6em;
 	font-weight: 700;
-	/* border: red solid 1px; */
 `;
 
 export const StyledSubText = styled.div`
 	font-size: 1.5em;
-	/* border: red solid 1px; */
 	color: ${({ theme }) => theme.color.grey500};
 	padding-bottom: 1em;
 `;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const StyledProjectLayout = styled.div`
-	/* border: red 1px solid; */
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	grid-gap: 3rem;

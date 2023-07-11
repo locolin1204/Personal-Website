@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import Layout from "../components/layout/layout";
 import { graphql } from "gatsby";
 import videoListJSON from "../resources/video-list.json";
-import { get } from "http";
 import axios from "axios";
 import VideoCard from "../components/videography/videoCard";
 import { EnterAnimation } from "../components/enterAnimation";
+import { VideoContainer } from "../styles/videography/videography.styled";
 
 export interface VideoObj {
 	date: Date;
@@ -20,7 +20,7 @@ export interface VideoObj {
 	thumbnailUrl: string;
 }
 
-const VideographyPage = ({ data }) => {
+const VideographyPage = ({ data }: { data: any }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [videos, setVideos] = useState<VideoObj[]>([]);
 	const videosFromAPI: VideoObj[] = [];
@@ -51,7 +51,6 @@ const VideographyPage = ({ data }) => {
 		try {
 			const res = await axios.get(url);
 			const resItem = res.data.items[0];
-			console.log(resItem);
 			videosFromAPI.push({
 				description: cutDescription(resItem.snippet.description, 400),
 				date: new Date(resItem.snippet.publishedAt),
@@ -84,22 +83,26 @@ const VideographyPage = ({ data }) => {
 	}
 
 	useEffect(() => {
-		videoList.forEach((item: { title: string; link: string }) => {
-			getVideosInfo(item);
-		});
+		videoList.forEach(
+			(item: { title: string; link: string; position: string[] }) => {
+				getVideosInfo(item);
+			}
+		);
 	}, []);
 
 	return (
 		<Layout pageTitle="videography" heroImage={heroImage}>
-			{isLoading
-				? ""
-				: videos.map((item, index) => {
-						return (
-							<EnterAnimation key={item.videoId} index={index} delay={0.25}>
-								<VideoCard video={item} />
-							</EnterAnimation>
-						);
-				  })}
+			<VideoContainer>
+				{isLoading
+					? ""
+					: videos.map((item, index) => {
+							return (
+								<EnterAnimation key={item.videoId} index={index} delay={0.25}>
+									<VideoCard video={item} />
+								</EnterAnimation>
+							);
+					  })}
+			</VideoContainer>
 		</Layout>
 	);
 };
@@ -116,4 +119,4 @@ export const query = graphql`
 
 export default VideographyPage;
 
-// export const Head = () => <title>photography</title>;
+// export const Head = () => <title>videography</title>;

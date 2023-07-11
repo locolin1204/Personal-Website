@@ -24,9 +24,9 @@ export default function AboutSelfIntro({ bodyText }) {
 			</EnterAnimation>
 			<AboutBodyText>
 				<EnterAnimation>
-					{/* {bodyText} */}I am currently a junior computer science major at
-					the Chinese University of Hong Kong, I also studied aboard at the
-					University of Notre Dame. <br />
+					I am currently a junior computer science major at the Chinese
+					University of Hong Kong, I also studied aboard at the University of
+					Notre Dame. <br />
 					<br /> Integrating my daily life with programming is my motive. I
 					believe the existence of programming is to increase the efficiency of
 					our work. <br />

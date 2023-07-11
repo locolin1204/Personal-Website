@@ -20,7 +20,7 @@ function shuffleArray(arr: any[]) {
 	return newArr;
 }
 
-const PhotographyPage = ({ data }) => {
+const PhotographyPage = ({ data }: { data: any }) => {
 	const initialImages = shuffleArray(data.imageList.nodes.slice(0, 15));
 	const [images, setImages] = useState(initialImages);
 	const [hasMore, setHasMore] = useState(true);
@@ -39,7 +39,7 @@ const PhotographyPage = ({ data }) => {
 	};
 
 	function fetchMore() {
-		let newImages = data.imageList.nodes.slice((page-1)*15, page*15);
+		let newImages = data.imageList.nodes.slice((page - 1) * 15, page * 15);
 		if (newImages.length < 15) {
 			setHasMore(false);
 		} else {

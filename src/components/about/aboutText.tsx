@@ -6,7 +6,7 @@ import {
 } from "../../styles/about/aboutText.styled";
 import { EnterAnimation } from "../enterAnimation";
 
-const MottoUnderLine = ({ children }) => {
+const MottoUnderLine = ({ children } : {children: React.ReactNode}) => {
 	return (
 		<UnderlineText weight={400} height={1.5} duration={0.25}>
 			{children}

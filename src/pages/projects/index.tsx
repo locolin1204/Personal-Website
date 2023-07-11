@@ -5,14 +5,19 @@ import ProjectCard from "../../components/projects/projectCard";
 import { StyledProjectLayout } from "../../styles/projects/project.styled";
 import { EnterAnimation } from "../../components/enterAnimation";
 
-const Projects = ({ data }) => {
+const Projects = ({ data }: { data: any }) => {
 	return (
 		<Layout pageTitle="projects">
 			<StyledProjectLayout>
 				{data.allFile.nodes.map((node, index) => {
 					const item = node.childMdx;
 					return (
-						<EnterAnimation key={item.id} offsetY={100} delay={0.2} index={index}>
+						<EnterAnimation
+							key={item.id}
+							offsetY={100}
+							delay={0.2}
+							index={index}
+						>
 							<Link
 								to={`/projects/${item.frontmatter.slug}`}
 								style={{ textDecoration: "none" }}

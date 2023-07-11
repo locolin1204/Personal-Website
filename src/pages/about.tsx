@@ -6,7 +6,7 @@ import AboutText from "../components/about/aboutText";
 import SoftwareStack from "../components/about/softwareStack";
 import AboutSelfIntro from "../components/about/aboutSelfIntro";
 
-const AboutPage = ({ data }: { data: object }) => {
+const AboutPage = ({ data }: { data: any }) => {
 	const heroImage = {
 		gatsbyImage: data.imageData,
 		position: "40%",
