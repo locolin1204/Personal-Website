@@ -9,7 +9,8 @@ const config: GatsbyConfig = {
 		title: `Colin Lo`,
 		siteUrl: `https://locolin.com`,
 		description: `i love solving problems. different methods and strategies could surprise our lives various ways.`,
-		siteImage: "/images/site-image/site-image.jpg"
+		siteImage: "/images/site-image/site-image.jpg",
+		keywords: "lo hoa tsun, colin, colin lo, cuhk, chinese university of hong kong, computer science, la salle college, lsc",
 	},
 	// More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
 	// If you use VSCode you can also use the GraphQL plugin
@@ -21,7 +22,7 @@ const config: GatsbyConfig = {
 		"gatsby-plugin-sharp",
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		'gatsby-plugin-react-helmet',
+		"gatsby-plugin-react-helmet",
 		"react-bootstrap",
 		{
 			resolve: "gatsby-source-filesystem",
@@ -78,13 +79,12 @@ const config: GatsbyConfig = {
 			},
 		},
 		{
-			resolve: 'gatsby-plugin-manifest',
+			resolve: "gatsby-plugin-manifest",
 			options: {
-			  icon: `${__dirname}/src/images/icon.svg`,
+				icon: `${__dirname}/src/images/icon.svg`,
 			},
-		  },
+		},
 	],
-	
 };
 
 export default config;

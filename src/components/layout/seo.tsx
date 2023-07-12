@@ -12,6 +12,7 @@ const SEO = () => {
 						title
 						siteUrl
 						siteImage
+						keywords
 					}
 				}
 			}
@@ -26,26 +27,60 @@ const SEO = () => {
 	const metaImage = siteDetails.siteUrl + siteDetails.siteImage;
 
 	return (
-		<Helmet>
-			<meta name="description" content={siteDetails.description} />
-			
-			{/* facebook */}
-			<meta property="og:url" content={siteDetails.siteUrl} />
-			<meta property="og:title" content={siteDetails.title} />
-			<meta property="og:description" content={siteDetails.description} />
-			<meta property="og:image" content={metaImage} />
-
-			{/* twitter */}
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta
-				property="twitter:domain"
-				content={siteDetails.siteUrl.replace(/^https?:\/\//, "")}
-			/>
-			<meta property="twitter:url" content={siteDetails.siteUrl} />
-			<meta name="twitter:title" content={siteDetails.title} />
-			<meta name="twitter:description" content={siteDetails.description} />
-			<meta name="twitter:image" content={siteDetails.description} />
-		</Helmet>
+		<Helmet
+			meta={[
+				{
+					name: `description`,
+					content: siteDetails.description,
+				},
+				{
+					name: `keywords`,
+					content: siteDetails.keywords,
+				},
+				// facebook
+				{
+					property: `og:url`,
+					content: siteDetails.siteUrl,
+				},
+				{
+					property: `og:title`,
+					content: siteDetails.title,
+				},
+				{
+					property: `og:description`,
+					content: siteDetails.description,
+				},
+				{
+					property: `og:image`,
+					content: metaImage,
+				},
+				// twitter
+				{
+					property: `twitter:card`,
+					content: `summary_large_image`,
+				},
+				{
+					property: `twitter:domain`,
+					content: siteDetails.siteUrl.replace(/^https?:\/\//, ""),
+				},
+				{
+					property: `twitter:url`,
+					content: siteDetails.siteUrl,
+				},
+				{
+					property: `twitter:title`,
+					content: siteDetails.title,
+				},
+				{
+					property: `twitter:description`,
+					content: siteDetails.description,
+				},
+				{
+					property: `twitter:image`,
+					content: metaImage,
+				},
+			]}
+		/>
 	);
 };
 
