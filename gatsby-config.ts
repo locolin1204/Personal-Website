@@ -10,7 +10,7 @@ const config: GatsbyConfig = {
 		siteUrl: `https://locolin.com`,
 		description: `i love solving problems. different methods and strategies could surprise our lives various ways.`,
 		siteImage: "/images/site-image/site-image.jpg",
-		keywords: "lo hoa tsun, colin, colin lo, cuhk, chinese university of hong kong, computer science, la salle college, lsc",
+		keywords: "lo hoa tsun, locolin, lo colin, colin, colin lo, cuhk, chinese university of hong kong, computer science, la salle college, lsc, hong kong, hk, university of notre dame,personal website, website, personal site, programming, csci, cs, comp sci, software engineer, developer, greentomato, gt, greentomato limited",
 	},
 	// More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
 	// If you use VSCode you can also use the GraphQL plugin
