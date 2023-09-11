@@ -19,11 +19,14 @@
       "Kotlin Multiplatform Mobile",
       "Apollo GraphQL",
       "PyTorch",
-      "Flask"
+      "Flask",
+      "Spring Boot",
+      "Vue.js"
     ],
     "db": [
       "MySQL",
-      "Oracle DB"
+      "Oracle DB",
+      "Mongo DB"
     ],
     "design":[
       "Adobe Photoshop",
