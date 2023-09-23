@@ -12,7 +12,7 @@ import {HiBars3} from "react-icons/hi2";
 
 const NavBar = () => {
 	const [isNavExpanded, setIsNavExpanded] = useState(false);
-
+	React.useEffect(()=>{console.log(isNavExpanded ? "is-expanded" : "not-expanded");},[isNavExpanded]);
 	return (
 		<NavContainer>
 			<button style={{fontSize: "1.2em"}}

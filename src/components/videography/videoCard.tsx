@@ -27,7 +27,6 @@ export default function VideoCard({ video }: { video: VideoObj }) {
 				<Thumbnail src={video.thumbnailUrl} />
 			)} */}
 			<Thumbnail src={video.thumbnailUrl} />
-
 			<StyledVideoDetail>
 				<VideoTitle target="_blank" href={video.videoLink}>
 					{video.title}

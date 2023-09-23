@@ -29,6 +29,7 @@ export const Thumbnail = styled.img`
 
 export const StyledVideoDetail = styled.div`
 	padding: 1em;
+	padding-left: 1.3em;
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5em;
@@ -41,7 +42,7 @@ export const StyledVideoDetail = styled.div`
 export const TagContainer = styled.div``;
 
 export const VideoTitle = styled.a`
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: ${({ theme }) => theme.color.grey600};
 	text-decoration: none;
 	&:hover {

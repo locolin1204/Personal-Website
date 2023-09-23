@@ -6,3 +6,9 @@ slug: "accenture"
 post: "Associate Software Engineer"
 image: "../../images/journey/accenture.jpg"
 ---
+Worked in two different projects, [Project Vertical Team] and [Support Team].
+
+[Project Vertical Team] Developed enhancement features for an airline contact center.
+Consulted proactively with clients to maximize cost efficiency and streamline operational processes. 
+
+[Support Team] Investigate and provide solutions for technical issue regarding Customer Relationship Management for a leading airport management organization. Developed code change request to address adhoc and technical challenges.
