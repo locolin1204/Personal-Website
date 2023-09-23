@@ -81,8 +81,8 @@ const Layout = ({
 						</StyledChildren>
 					</main>
 				</StyledCol>
-				<Footer />
 			</StyledContainer>
+				<Footer />
 		</ThemeProvider>
 	);
 };

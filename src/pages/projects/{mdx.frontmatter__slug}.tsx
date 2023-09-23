@@ -78,7 +78,7 @@ const ProjectPosts = ({
 								code: props => (
 									<span
 										{...props}
-										style={{ color: "", fontFamily: "Source Code Pro" }}
+										style={{ color: "#726657", fontFamily: "Source Code Pro", backgroundColor: "#fefbf9", fontWeight: "300", paddingLeft: "0.3em", paddingRight: "0.3em", borderRadius: "0.3em"}}
 									/>
 								),
 							}}

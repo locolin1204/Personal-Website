@@ -8,16 +8,19 @@ export const StyledMain = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* border: solid red 1px; */
 `;
 
 export const StyledTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-top: 10vh;
+	padding-top: 15vh;
 	min-height: 90vh;
 	@media (max-width: 768px) {
 		font-size: 0.7rem;
 	}
+	/* border: solid red 1px; */
+
 `;
 
 export const StyledMainText = styled.div`

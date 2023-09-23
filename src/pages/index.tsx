@@ -17,7 +17,7 @@ const IndexPage = () => {
 		1000,
 		"i do photography",
 		1000,
-		"i hit the shuttlecock",
+		"i love trying new stuff",
 		1000,
 		"i love cinematography",
 		1000,

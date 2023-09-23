@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
+interface UnderlineTextProps {
+	weight: string
+	height: string
+	duration: string
+}
+
 export const GlobalStyles = createGlobalStyle`
     main{
         /* background-color: #fffae6; */
@@ -16,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
 
 // export default GlobalStyles;
 
-export const UnderlineText = styled.span`
+export const UnderlineText = styled.span<UnderlineTextProps>`
 	font-weight: ${({ weight }) => (weight ? weight : "inherit")};
 	display: inline-block;
 	position: relative;

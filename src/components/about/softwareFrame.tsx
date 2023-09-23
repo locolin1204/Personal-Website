@@ -8,6 +8,7 @@ import {
 	SoftwareTitle,
 } from "../../styles/about/techSoftware.styled";
 import { EnterAnimation } from "../enterAnimation";
+import { UnderlineText } from "../../styles/global";
 
 export default function SoftwareFrame({
 	list,
@@ -34,7 +35,12 @@ export default function SoftwareFrame({
 										.toLowerCase()}.svg`).default
 								}
 							/>
-							<SoftwareText>{item}</SoftwareText>
+
+
+
+							<SoftwareText><UnderlineText weight={"100"} height={"1"} duration={"0.5"}>
+									{item}
+								</UnderlineText></SoftwareText>
 						</SoftwareIconTextWrapper>
 					</EnterAnimation>
 				))}
