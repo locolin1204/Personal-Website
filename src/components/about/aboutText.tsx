@@ -29,7 +29,7 @@ export default function AboutText() {
 					<MottoUnderLine>
 						strategies
 					</MottoUnderLine>{" "}
-					could surprise our lives various ways.
+					could surprise our lives in various ways.
 				</MottoWrapper>
 			</EnterAnimation>
 		</MottoTextContainer>

@@ -90,7 +90,7 @@ const Footer = () => {
 				but with <UnderlineText color="#FAF3EA" weight={400}>unlimited</UnderlineText> resources.
 				<br />
 				<br />
-				<b>&copy; 2023 colin lo. all right reserved.</b>
+				<b>&copy; 2024 colin lo. all right reserved.</b>
 			</StyledTextContainer>
 		</StyledFooter>
 	);

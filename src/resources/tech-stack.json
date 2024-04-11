@@ -10,7 +10,8 @@
       "Python",
       "GraphQL",
       "SQL",
-      "TypeScript"
+      "TypeScript",
+      "C++"
     ],
     "lib": [
       "React.js",
@@ -21,12 +22,14 @@
       "PyTorch",
       "Flask",
       "Spring Boot",
-      "Vue.js"
+      "Vue.js",
+      "SvelteKit"
     ],
     "db": [
       "MySQL",
       "Oracle DB",
-      "Mongo DB"
+      "MongoDB",
+      "DynamoDB"
     ],
     "design":[
       "Adobe Photoshop",
