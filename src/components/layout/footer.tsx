@@ -85,7 +85,7 @@ const Footer = () => {
 				</StyledIconLink>
 			</StyledIconContainer>
 			<StyledTextContainer>
-				the world of computer science is like world of <UnderlineText color="#FAF3EA" weight={400}>handcrafts</UnderlineText>.
+				the world of computer science is like the world of <UnderlineText color="#FAF3EA" weight={400}>handcrafts</UnderlineText>.
 				<br />
 				but with <UnderlineText color="#FAF3EA" weight={400}>unlimited</UnderlineText> resources.
 				<br />
