@@ -101,7 +101,7 @@ const config: GatsbyConfig = {
 					production: {
 						policy: [{userAgent: '*'}],
 						host: 'https://locolin.com',
-						sitemap: 'https://locolin.com/sitemap-index.xml'
+						sitemap: 'https://locolin.com/sitemap-0.xml'
 					},
 					'branch-deploy': {
 						policy: [{userAgent: '*', disallow: ['/']}],
@@ -128,12 +128,6 @@ const config: GatsbyConfig = {
 					  }
 					}`,
 				resolveSiteUrl: () => `https://locolin.com`,
-				resolvePages: ({ allSitePage: { nodes: allPages }, allMarkdownRemark: { nodes: allMarkdownNodes } }) => {
-					return allPages.map(page => {
-						const mdNode = allMarkdownNodes.find(node => node.fields.slug === page.path)
-						return { ...page, ...mdNode }
-					})
-				},
 				serialize: ({ path, frontmatter }) => {
 					return {
 						url: path,
