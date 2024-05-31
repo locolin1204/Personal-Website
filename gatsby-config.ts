@@ -126,17 +126,8 @@ const config: GatsbyConfig = {
 						  path
 						}
 					  }
-					  allMarkdownRemark {
-						nodes {
-						  frontmatter {
-							date
-						  }
-						  fields {
-							slug
-						  }
-						}
-					  }
 					}`,
+				resolveSiteUrl: () => `https://locolin.com`,
 				resolvePages: ({ allSitePage: { nodes: allPages }, allMarkdownRemark: { nodes: allMarkdownNodes } }) => {
 					return allPages.map(page => {
 						const mdNode = allMarkdownNodes.find(node => node.fields.slug === page.path)
