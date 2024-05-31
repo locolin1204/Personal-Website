@@ -4,6 +4,15 @@ require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
+const {
+	NODE_ENV,
+	URL: NETLIFY_SITE_URL = 'https://locolin.netlify.app',
+	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+	CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 const config: GatsbyConfig = {
 	siteMetadata: {
 		title: `Colin Lo`,
@@ -24,6 +33,7 @@ const config: GatsbyConfig = {
 		`gatsby-plugin-sharp`,
 		"gatsby-plugin-react-helmet",
 		"react-bootstrap",
+		"gatsby-plugin-sitemap",
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
@@ -82,6 +92,29 @@ const config: GatsbyConfig = {
 			resolve: "gatsby-plugin-manifest",
 			options: {
 				icon: `${__dirname}/src/images/icon.svg`,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				resolveEnv: () => NETLIFY_ENV,
+				env: {
+					production: {
+						policy: [{userAgent: '*'}],
+						host: 'https://locolin.com',
+						sitemap: 'https://locolin.com/sitemap-index.xml'
+					},
+					'branch-deploy': {
+						policy: [{userAgent: '*', disallow: ['/']}],
+						sitemap: null,
+						host: null
+					},
+					'deploy-preview': {
+						policy: [{userAgent: '*', disallow: ['/']}],
+						sitemap: null,
+						host: null
+					}
+				}
 			},
 		},
 	],
