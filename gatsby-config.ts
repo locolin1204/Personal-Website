@@ -96,25 +96,10 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				resolveEnv: () => NETLIFY_ENV,
-				env: {
-					production: {
-						policy: [{userAgent: '*'}],
-						host: 'https://locolin.com',
-						sitemap: 'https://locolin.com/sitemap-0.xml'
-					},
-					'branch-deploy': {
-						policy: [{userAgent: '*', disallow: ['/']}],
-						sitemap: null,
-						host: null
-					},
-					'deploy-preview': {
-						policy: [{userAgent: '*', disallow: ['/']}],
-						sitemap: null,
-						host: null
-					}
-				}
-			},
+				host: 'https://locolin.com',
+				sitemap: 'https://locolin.com/sitemap-0.xml',
+				policy: [{userAgent: '*', allow: '/'}]
+			}
 		},
 		{
 			resolve: `gatsby-plugin-sitemap`,
