@@ -33,7 +33,6 @@ const config: GatsbyConfig = {
 		`gatsby-plugin-sharp`,
 		"gatsby-plugin-react-helmet",
 		"react-bootstrap",
-		"gatsby-plugin-sitemap",
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
@@ -115,6 +114,41 @@ const config: GatsbyConfig = {
 						host: null
 					}
 				}
+			},
+		},
+		{
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				query: `
+					{
+					  allSitePage {
+						nodes {
+						  path
+						}
+					  }
+					  allMarkdownRemark {
+						nodes {
+						  frontmatter {
+							date
+						  }
+						  fields {
+							slug
+						  }
+						}
+					  }
+					}`,
+				resolvePages: ({ allSitePage: { nodes: allPages }, allMarkdownRemark: { nodes: allMarkdownNodes } }) => {
+					return allPages.map(page => {
+						const mdNode = allMarkdownNodes.find(node => node.fields.slug === page.path)
+						return { ...page, ...mdNode }
+					})
+				},
+				serialize: ({ path, frontmatter }) => {
+					return {
+						url: path,
+						lastmod: frontmatter ? frontmatter.date : undefined,
+					}
+				},
 			},
 		},
 	],
