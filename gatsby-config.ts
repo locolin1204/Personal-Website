@@ -96,8 +96,8 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'https://locolin.com',
-				sitemap: 'https://locolin.com/sitemap-0.xml',
+				host: 'https://www.locolin.com',
+				sitemap: 'https://www.locolin.com/sitemap-0.xml',
 				policy: [{userAgent: '*', allow: '/'}]
 			}
 		},
