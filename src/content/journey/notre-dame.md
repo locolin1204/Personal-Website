@@ -5,4 +5,5 @@ enddate: "2023-05-14"
 slug: "notre-dame"
 post: "Exchange Programme"
 image: "../../images/journey/notre-dame.jpg"
+logo: "../../images/journey/logo/notre-dame-logo.png"
 ---

@@ -5,6 +5,7 @@ enddate: "2022-08-31"
 slug: "greentomato"
 post: "Full Stack Developer Intern"
 image: "../../images/journey/greentomato.jpg"
+logo: "../../images/journey/logo/greentomato-logo.png"
 ---
 Revamped inhouse messaging application to enhance performance.
 

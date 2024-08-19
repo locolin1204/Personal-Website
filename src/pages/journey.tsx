@@ -34,6 +34,7 @@ const JourneyPage = ({ data }: { data: any }) => {
 								slug={item.slug}
 								post={item.post}
 								image={item.image.childImageSharp.fluid}
+								logo={item.logo?.childImageSharp.fluid}
 								body={node.childMarkdownRemark.html}
 								index={index}
 							/>
@@ -57,14 +58,22 @@ export const query = graphql`
 					id
 					frontmatter {
 						post
-						startdate(formatString: "MMMM, YYYY")
-						enddate(formatString: "MMMM, YYYY")
+						startdate(formatString: "MMMM YYYY")
+						enddate(formatString: "MMMM YYYY")
 						slug
 						title
 						image {
 							childImageSharp {
-								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
-								fluid(quality: 100, maxHeight: 250, maxWidth: 400, fit: COVER) {
+								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
+								fluid(quality: 100, maxHeight: 1000, maxWidth: 1500, fit: COVER) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+						logo {
+							childImageSharp {
+								gatsbyImageData(aspectRatio: 1, quality: 100, width: 500)
+								fluid(quality: 100, maxHeight: 500, maxWidth: 500, fit: CONTAIN, background: "#fefbf9") {
 									...GatsbyImageSharpFluid
 								}
 							}

@@ -5,6 +5,7 @@ enddate: "2023-01-31"
 slug: "cucs"
 post: "Publication Secretary"
 image: "../../images/journey/cucs.jpg"
+logo: "../../images/journey/logo/cucs-logo.png"
 ---
 Designed publications to support the promotion of the Society.
 
