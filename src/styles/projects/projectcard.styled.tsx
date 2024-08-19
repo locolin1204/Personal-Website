@@ -26,7 +26,13 @@ export const StyledTitle = styled.div`
 	color: ${({ theme }) => theme.color.grey700};
 `;
 
-export const StyledTechList = styled.div``;
+export const StyledTechList = styled.div`
+    display: flex;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    row-gap: 0.5em;
+    flex-wrap: wrap;
+`;
 
 export const StyledTechItem = styled.span`
 	font-family: Source Code Pro;
