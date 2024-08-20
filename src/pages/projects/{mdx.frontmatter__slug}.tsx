@@ -70,7 +70,8 @@ const ProjectPosts = ({
 						</LinkWrapper>
 						<BodyWrapper>
 							<div style={{
-								'flex': 2
+								'flex': 2,
+								'width': "100%"
 							}}>
 								<MDXProvider
 									components={{
