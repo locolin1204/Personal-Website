@@ -85,7 +85,7 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/photography.jpg" }) {
 			childImageSharp {
-				fluid(quality: 100, maxWidth: 4000, fit: COVER) {
+				fluid(quality: 100, maxWidth: 2500, fit: COVER, webpQuality: 80) {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}

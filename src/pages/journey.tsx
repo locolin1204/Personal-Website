@@ -51,7 +51,7 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
 			childImageSharp {
-				fluid(quality: 100, maxWidth: 4000, fit: COVER) {
+				fluid(quality: 100, maxWidth: 2500, fit: COVER, webpQuality: 80) {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -73,7 +73,7 @@ export const query = graphql`
 						image {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
-								fluid(quality: 100, maxHeight: 1000, maxWidth: 1500, fit: COVER) {
+								fluid(quality: 100, maxHeight: 700, maxWidth: 1050, fit: COVER) {
 									...GatsbyImageSharpFluid_withWebp
 								}
 							}
