@@ -5,19 +5,19 @@ import JourneyCard from "../components/journey/journeyCard";
 import { StyledJourneyContainer } from "../styles/journey/journey.styled";
 import { graphql } from "gatsby";
 import { EnterAnimation } from "../components/enterAnimation";
+import GatsbyImage from "gatsby-image";
 
 const JourneyPage = ({ data }: { data: any }) => {
 	const heroImage = {
-		gatsbyImage: data.heroImage,
 		position: "45%",
 		height: "45vh",
+		imgFluid: data.heroImage.childImageSharp.fluid
 	};
 
 	return (
 		<Layout pageTitle="journey" heroImage={heroImage}>
 			<StyledJourneyContainer>
 				{data.postData.nodes.map((node, index) => {
-					// const item = node.childMdx.frontmatter;
 					const item = node.childMarkdownRemark.frontmatter;
 					return (
 						<EnterAnimation
@@ -34,6 +34,7 @@ const JourneyPage = ({ data }: { data: any }) => {
 								slug={item.slug}
 								post={item.post}
 								image={item.image.childImageSharp.fluid}
+								logo={item.logo?.childImageSharp.fluid}
 								body={node.childMarkdownRemark.html}
 								index={index}
 							/>
@@ -47,6 +48,13 @@ const JourneyPage = ({ data }: { data: any }) => {
 
 export const query = graphql`
 	query {
+		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
+			childImageSharp {
+				fluid(quality: 80, maxWidth: 2500, fit: COVER, webpQuality: 80) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
 		postData: allFile(
 			filter: { relativePath: { glob: "journey/*.md" } }
 			sort: { childrenMarkdownRemark: { frontmatter: { startdate: DESC } } }
@@ -57,25 +65,28 @@ export const query = graphql`
 					id
 					frontmatter {
 						post
-						startdate(formatString: "MMMM, YYYY")
-						enddate(formatString: "MMMM, YYYY")
+						startdate(formatString: "MMMM YYYY")
+						enddate(formatString: "MMMM YYYY")
 						slug
 						title
 						image {
 							childImageSharp {
-								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
-								fluid(quality: 100, maxHeight: 250, maxWidth: 400, fit: COVER) {
-									...GatsbyImageSharpFluid
+								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
+								fluid(quality: 100, maxHeight: 600, maxWidth: 900, fit: COVER) {
+									...GatsbyImageSharpFluid_withWebp
+								}
+							}
+						}
+						logo {
+							childImageSharp {
+								gatsbyImageData(aspectRatio: 1, quality: 100, width: 500)
+								fluid(quality: 100, maxHeight: 100, maxWidth: 100, fit: CONTAIN, background: "#fefbf9") {
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 						}
 					}
 				}
-			}
-		}
-		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
 			}
 		}
 	}

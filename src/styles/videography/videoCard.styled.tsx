@@ -28,14 +28,15 @@ export const Thumbnail = styled.img`
 `;
 
 export const StyledVideoDetail = styled.div`
-	padding: 1em;
-	padding-left: 1.3em;
+	padding: 2em;
 	display: flex;
 	flex-direction: column;
 	row-gap: 0.5em;
 	width: 70%;
 	@media only screen and (max-width: 768px) {
 		width: 100%;
+        padding: 1em;
+        padding-left: 1.3em;
 	}
 `;
 

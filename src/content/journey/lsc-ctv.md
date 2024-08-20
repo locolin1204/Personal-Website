@@ -5,6 +5,7 @@ enddate: "2019-07-31"
 slug: "lsc-ctv"
 post : "Vice Chairman"
 image: "../../images/journey/lsc-ctv.jpg"
+logo: "../../images/journey/logo/lsc-ctv-logo.png"
 ---
 Oversaw the central media of the College, served as the broadcasting bridge between the College and Lasallians.
 

@@ -18,7 +18,7 @@ const config: GatsbyConfig = {
 		title: `Colin Lo`,
 		siteUrl: `https://locolin.com`,
 		description: `i love solving problems. different methods and strategies could surprise our lives various ways.`,
-		siteImage: "/images/about/formal-profilepic.jpg",
+		siteImage: "/images/site-image/site-image.jpg",
 		keywords: "lo hoa tsun, locolin, lo colin, colin, colin lo, cuhk, chinese university of hong kong, computer science, la salle college, lsc, hong kong, hk, university of notre dame,personal website, website, personal site, programming, csci, cs, comp sci, software engineer, developer, greentomato, gt, greentomato limited",
 	},
 	// More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -33,6 +33,14 @@ const config: GatsbyConfig = {
 		`gatsby-plugin-sharp`,
 		"gatsby-plugin-react-helmet",
 		"react-bootstrap",
+		{
+			resolve: `gatsby-plugin-image`,
+			options: {
+				quality: 100,
+				breakpoints: [750, 1080, 1366, 1920],
+				formats: ['auto', 'webp'],
+			}
+		},
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
@@ -96,8 +104,8 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'https://locolin.com',
-				sitemap: 'https://locolin.com/sitemap-0.xml',
+				host: 'https://www.locolin.com',
+				sitemap: 'https://www.locolin.com/sitemap-0.xml',
 				policy: [{userAgent: '*', allow: '/'}]
 			}
 		},

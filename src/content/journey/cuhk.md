@@ -5,4 +5,5 @@ enddate: "2024-07-31"
 slug: "cuhk"
 post: "B.Sc. in Computer Science"
 image: "../../images/journey/cuhk.jpg"
+logo: "../../images/journey/logo/cuhk-logo.png"
 ---

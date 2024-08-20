@@ -3,7 +3,7 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 export const StyledCardContainer = styled.div`
 	background-color: ${({ theme }) => theme.color.offwhite300};
-	border-radius: 0.2em;
+	border-radius: 0.3em;
 	padding: 1em;
 	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 	box-shadow: 0 5px 10px rgba(160,160,160,.05), 0 15px 40px rgba(175,175,175,.2);
@@ -26,7 +26,13 @@ export const StyledTitle = styled.div`
 	color: ${({ theme }) => theme.color.grey700};
 `;
 
-export const StyledTechList = styled.div``;
+export const StyledTechList = styled.div`
+    display: flex;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    row-gap: 0.5em;
+    flex-wrap: wrap;
+`;
 
 export const StyledTechItem = styled.span`
 	font-family: Source Code Pro;
@@ -57,6 +63,7 @@ export const InfoWrapper = styled.div`
 
 export const StyledGatsbyImage = styled(GatsbyImage)`
 	height:100%;
+    border-radius: 0.3em;
 	transition: transform 0.3s ease-in-out;
 	&:hover {
 		transform: scale(1.09);

@@ -47,29 +47,6 @@ export const StyledIcon = styled.img`
 	height: 1em;
 `;
 
-export const UnderlineText = styled.span`
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-
-	&:after {
-		content: "";
-		position: absolute;
-		width: 100%;
-		transform: scaleX(0);
-		height: 0.05em;
-		bottom: 0;
-		left: 0;
-		background-color: #000000;
-		transform-origin: bottom right;
-		transition: transform 0.5s ease-out;
-	}
-	&:hover:after {
-		transform: scaleX(1);
-		transform-origin: bottom left;
-	}
-`;
-
 export const SoftwareTitle = styled.h5`
 	padding-bottom: 1em;
 `;

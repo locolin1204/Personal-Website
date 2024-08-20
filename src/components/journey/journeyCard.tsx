@@ -7,8 +7,10 @@ import {
 	DateWrapper,
 	PostWrapper,
 	TitleWrapper,
-	ImageWrapper,
+	ImageWrapper, TitleLogoWrapper, StyledLogo,
 } from "../../styles/journey/journeyCard.styled";
+
+import { FluidObject } from "gatsby-image";
 
 const HtmlToReactParser = require("html-to-react").Parser;
 
@@ -19,6 +21,7 @@ export default function JourneyCard({
 	enddate,
 	slug,
 	image,
+	logo,
 	index,
 	body,
 }: {
@@ -28,32 +31,35 @@ export default function JourneyCard({
 	enddate: string;
 	slug: string;
 	index: number;
-	image: string;
+	image: FluidObject;
+	logo: FluidObject;
 	body: string;
 }) {
 	const htmlToReactParser = new HtmlToReactParser();
 	const reactElement = htmlToReactParser.parse(body);
-	// const gatsbyImage = getImage(image);
 	return (
-		<StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
-			<TextWrapper>
-				<TextContainer>
-					<TitleWrapper>{title}</TitleWrapper>
-					<DateWrapper>
-						{startdate} – {enddate}
-					</DateWrapper>
-					<PostWrapper>{post}</PostWrapper>
-					{body ? (
-						<div>
-							<hr />
-							{reactElement}
-						</div>
-					) : null}
-				</TextContainer>
-			</TextWrapper>
-			<ImageWrapper>
-				<StyledGatsbyImage fluid={image} alt={title} />
-			</ImageWrapper>
-		</StyledJourneyCardContainer>
+        <StyledJourneyCardContainer rowLayout={index % 2 === 1 && "row-reverse"}>
+            <TextWrapper>
+                <TextContainer>
+                    <TitleLogoWrapper>
+                        <div>
+                            <TitleWrapper>{title}</TitleWrapper>
+                            <PostWrapper>{post}</PostWrapper>
+                            <DateWrapper>{startdate} – {enddate}</DateWrapper>
+                        </div>
+                        <StyledLogo fluid={logo} alt={title}/>
+                    </TitleLogoWrapper>
+                    {body ? (
+                        <div>
+                            <hr/>
+                            {reactElement}
+                        </div>
+                    ) : null}
+                </TextContainer>
+            </TextWrapper>
+            <ImageWrapper>
+                <StyledGatsbyImage fluid={image} alt={title}/>
+            </ImageWrapper>
+        </StyledJourneyCardContainer>
 	);
 }

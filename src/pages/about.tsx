@@ -8,9 +8,9 @@ import AboutSelfIntro from "../components/about/aboutSelfIntro";
 
 const AboutPage = ({ data }: { data: any }) => {
 	const heroImage = {
-		gatsbyImage: data.imageData,
 		position: "40%",
 		height: "50vh",
+		imgFluid: data.heroImage.childImageSharp.fluid
 	};
 
 	return (
@@ -25,16 +25,18 @@ const AboutPage = ({ data }: { data: any }) => {
 
 export const query = graphql`
 	query {
+		heroImage: file(relativePath: { glob: "*/about.jpg" }) {
+			childImageSharp {
+				fluid(quality: 80, maxWidth: 2500, fit: COVER, webpQuality: 80) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
 		mdxData: file(name: { eq: "about-me-info" }) {
 			childMdx {
 				body
 				excerpt
 				id
-			}
-		}
-		imageData: file(relativePath: { glob: "*/about.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
 			}
 		}
 	}

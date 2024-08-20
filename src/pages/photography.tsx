@@ -27,9 +27,9 @@ const PhotographyPage = ({ data }: { data: any }) => {
 	const [page, setPage] = useState(2);
 
 	const heroImage = {
-		gatsbyImage: data.heroImage,
 		position: "65%",
 		height: "50vh",
+		imgFluid: data.heroImage.childImageSharp.fluid
 	};
 
 	const breakpointColumnsObj = {
@@ -84,7 +84,9 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/photography.jpg" }) {
 			childImageSharp {
-				gatsbyImageData
+				fluid(quality: 80, maxWidth: 2500, fit: COVER, webpQuality: 80) {
+					...GatsbyImageSharpFluid_withWebp
+				}
 			}
 		}
 		imageList: allFile(

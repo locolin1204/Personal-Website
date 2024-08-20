@@ -23,7 +23,10 @@
       "Flask",
       "Spring Boot",
       "Vue.js",
-      "SvelteKit"
+      "SvelteKit",
+      "Angular",
+      "Ktor",
+      "RxJS"
     ],
     "db": [
       "MySQL",

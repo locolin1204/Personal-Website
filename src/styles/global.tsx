@@ -7,6 +7,10 @@ interface UnderlineTextProps {
 	duration: string
 }
 
+interface WeightedTextProps {
+	weight: string
+}
+
 export const GlobalStyles = createGlobalStyle`
     main{
         /* background-color: #fffae6; */
@@ -46,6 +50,10 @@ export const UnderlineText = styled.span<UnderlineTextProps>`
 		transform-origin: bottom left;
 	}
 `;
+
+export const WeightedText = styled.span<WeightedTextProps>`
+	font-weight: ;
+`
 
 export const RedLineDiv = styled.div`
 	border: red 1px solid;
