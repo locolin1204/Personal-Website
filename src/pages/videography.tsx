@@ -30,7 +30,9 @@ const VideographyPage = ({ data }: { data: any }) => {
 		gatsbyImage: data.heroImage,
 		position: "40%",
 		height: "50vh",
+		imgFluid: data.heroImage.childImageSharp.fluid
 	};
+
 	function cutDescription(description: string, maxLength: number) {
 		if (description.length <= maxLength) {
 			return description;
@@ -39,6 +41,7 @@ const VideographyPage = ({ data }: { data: any }) => {
 		const cutDesc = description.substr(0, maxLength);
 		return cutDesc.substr(0, cutDesc.lastIndexOf(" ")) + "...";
 	}
+
 	async function getVideosInfo(video: {
 		title: string;
 		link: string;
@@ -111,7 +114,9 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/videography.jpg" }) {
 			childImageSharp {
-				gatsbyImageData
+				fluid(quality: 100, maxWidth: 4000, fit: COVER) {
+					...GatsbyImageSharpFluid_withWebp
+				}
 			}
 		}
 	}

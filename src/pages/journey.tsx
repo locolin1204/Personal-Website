@@ -5,19 +5,20 @@ import JourneyCard from "../components/journey/journeyCard";
 import { StyledJourneyContainer } from "../styles/journey/journey.styled";
 import { graphql } from "gatsby";
 import { EnterAnimation } from "../components/enterAnimation";
+import GatsbyImage from "gatsby-image";
 
 const JourneyPage = ({ data }: { data: any }) => {
 	const heroImage = {
 		gatsbyImage: data.heroImage,
 		position: "45%",
 		height: "45vh",
+		imgFluid: data.heroImage.childImageSharp.fluid
 	};
 
 	return (
 		<Layout pageTitle="journey" heroImage={heroImage}>
 			<StyledJourneyContainer>
 				{data.postData.nodes.map((node, index) => {
-					// const item = node.childMdx.frontmatter;
 					const item = node.childMarkdownRemark.frontmatter;
 					return (
 						<EnterAnimation
@@ -48,6 +49,13 @@ const JourneyPage = ({ data }: { data: any }) => {
 
 export const query = graphql`
 	query {
+		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
+			childImageSharp {
+				fluid(quality: 100, maxWidth: 4000, fit: COVER) {
+					...GatsbyImageSharpFluid_withWebp
+				}
+			}
+		}
 		postData: allFile(
 			filter: { relativePath: { glob: "journey/*.md" } }
 			sort: { childrenMarkdownRemark: { frontmatter: { startdate: DESC } } }
@@ -66,25 +74,20 @@ export const query = graphql`
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
 								fluid(quality: 100, maxHeight: 1000, maxWidth: 1500, fit: COVER) {
-									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 						}
 						logo {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1, quality: 100, width: 500)
-								fluid(quality: 100, maxHeight: 500, maxWidth: 500, fit: CONTAIN, background: "#fefbf9") {
-									...GatsbyImageSharpFluid
+								fluid(quality: 100, maxHeight: 200, maxWidth: 200, fit: CONTAIN, background: "#fefbf9") {
+									...GatsbyImageSharpFluid_withWebp
 								}
 							}
 						}
 					}
 				}
-			}
-		}
-		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
-			childImageSharp {
-				gatsbyImageData
 			}
 		}
 	}

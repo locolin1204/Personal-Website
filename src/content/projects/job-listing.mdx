@@ -2,38 +2,58 @@
 title: "Job Listing"
 date: "2023-09-01"
 slug: "job-listing"
-tech: ["TypeScript","Java","Vue.js", "Spring Boot","Mongo DB"]
+tech: ["Vue.js", "Spring Boot","MongoDB", "Docker", "GitHub Actions", "TypeScript", "Java"]
 link: ""
 repolink: "https://github.com/locolin1204/Job-Listing"
 image: "../../images/projects/job-listing.png"
 ---
-The Green Project, where I use `Vue.js`, `Spring Boot` and `Mongo DB` as the tech stack of this project.
+#### **Motivation**
+This is my first full-stack project to build from scratch.
+This project is mainly for me to experiment different technologies and learn about the integration between, frontend, backend and database.
 
-Hirers are able to submit job requirements to the website with desired skills and job description.
-Job Seekers are able to view jobs with corresponding job titles and requirements.
+**1. Frontend**\
+The popularity of `Vue.js` is rising quickly in recent years, being a `React.js` developer, I want to dive deeper to see
+the mechanics behind `Vue.js`.
 
-I am still currently working on it!\
-Stay tuned!
+**2. Backend**\
+`Spring Boot` has always been a solid choice for the backend, by building the backend from scratch, I want to brush up on the best practice
+and see what `Spring Boot` has to offer.
+
+**3. Database**\
+`MongoDB` has always been a popular choice for `NoSQL` databases, coming from a `SQL` background, I want to learn the pros and cons
+of `NoSQL`.
+
+**4. DevOps**\
+CI/CD could provide much convenience when developing an application, with that said, I integrated with `GitHub Action`, `Docker` and `AWS` for the
+deployment pipeline.
+
+<br/>
+
+#### **Description**
+The Green Project, where I use `Vue.js`, `Spring Boot` and `MongoDB` as the tech stack of this project.
+
+**Hirers** are able to submit job requirements to the website with desired skills and job descriptions.\
+**Job Seekers** are able to view jobs with corresponding job titles and requirements.
+
 
 ##### Features
-    1. Submit Job Listings
-        1. Job Title
-        2. Job Description
-        3. Job Skills
-        4. Years of Experience
-    
-    2. View Job Listings
-        1. Filter By Keywords
-        2. Filter By Job Skills
+1. Submit Job Listings
+    1. Job Title
+    2. Job Description
+    3. Job Skills
+    4. Years of Experience
+2. View Job Listings
+    1. Filter By Keywords
+    2. Filter By Job Skills
+3. User Login
+    1. Additional features for login users
+    2. Unlogged in user cannot call any API
 
-    3. User Login
-        1. Additoinal features for login users
-        2. Unlogged in user cannot call any API
-    
 ##### Technical Details
-    1. Vuex
-        1. State management for the entire application
-    
-    2. JWT Token
-        1. Backend will generate a JWT Token every time the user login, and store it in Cookie
-        2. Frontend will look for the JWT Token in Cookie, verify and login the user if it is valid. 
+1. Vuex
+    1. State management for the entire application
+2. JWT Token
+    1. Backend will generate a JWT Token every time the user login, and store it in Cookie
+    2. Frontend will look for the JWT Token in Cookie, verify and login the user if it is valid.
+3. Loading Screen / Error Screen
+    1. There are many unexpected events that might happen, and catching these errors is very essential to keep the application running.

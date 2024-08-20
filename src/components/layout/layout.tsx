@@ -14,8 +14,8 @@ import {
 	StyledChildren,
 } from "../../styles/layout/layout.styled";
 import themeColor from "../../resources/color.json";
-import { ImageDataLike, getImage } from "gatsby-plugin-image";
 import SEO from "./seo";
+import { FluidObject } from "gatsby-image";
 
 const theme = {
 	color: {
@@ -38,9 +38,9 @@ const Layout = ({
 	children,
 }: {
 	heroImage?: {
-		gatsbyImage: ImageDataLike;
 		position: string;
 		height: string;
+		imgFluid: FluidObject
 	};
 	pageTitle: string;
 	children: ReactNode;
@@ -68,16 +68,18 @@ const Layout = ({
 					//  style={{"min-height": "100vh"}}
 					>
 						<StyledPageHeader>{pageTitle}</StyledPageHeader>
-						{heroImage ? (
+						{ heroImage ? (
 							<HeroImage
-								image={getImage(heroImage.gatsbyImage)}
+								fluid={heroImage.imgFluid}
 								alt="Hero Image"
-								position={heroImage.position}
+								imgStyle={{
+									objectPosition: `50% ${heroImage.position}`
+								}}
 								height={heroImage.height}
 							/>
-						) : null}
+						) : null }
 						<StyledChildren>
-						{children}
+							{children}
 						</StyledChildren>
 					</main>
 				</StyledCol>

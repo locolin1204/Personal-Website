@@ -13,7 +13,7 @@ import {
 	LinkWrapper,
 	Arrow,
 	ContentWrapper,
-	OverflowDiv,
+	OverflowDiv, BodyWrapper,
 } from "../../styles/projects/projectTemplate.styled";
 
 import Layout from "../../components/layout/layout";
@@ -68,23 +68,39 @@ const ProjectPosts = ({
 								</RepoDemoLink>
 							) : null}
 						</LinkWrapper>
-						<StyledGatsbyImageFront
-							fluid={pageData.image.childImageSharp.fluid}
-							// fixed={pageData.image.childImageSharp.fixed}
-							alt={pageData.title}
-						/>
-						<MDXProvider
-							components={{
-								code: props => (
-									<span
-										{...props}
-										style={{ color: "#726657", fontFamily: "Source Code Pro", backgroundColor: "#fefbf9", fontWeight: "300", paddingLeft: "0.3em", paddingRight: "0.3em", borderRadius: "0.3em"}}
-									/>
-								),
-							}}
-						>
-							{children}
-						</MDXProvider>
+						<BodyWrapper>
+							<div style={{
+								'flex': 2
+							}}>
+								<MDXProvider
+									components={{
+										code: props => (
+											<span
+												{...props}
+												style={{
+													color: "#a7947f",
+													fontFamily: "Source Code Pro",
+													backgroundColor: "#ffffff",
+													fontWeight: "400",
+													paddingLeft: "0.3em",
+													paddingRight: "0.3em",
+													borderRadius: "0.3em"
+												}}
+											/>
+										),
+									}}
+								>
+									{children}
+								</MDXProvider>
+							</div>
+							<StyledGatsbyImageFront
+								fluid={pageData.image.childImageSharp.fluid}
+								alt={pageData.title}
+								style={{
+									'flex': 1
+								}}
+							/>
+						</BodyWrapper>
 					</ContentWrapper>
 				</EnterAnimation>
 			</OverflowDiv>
@@ -98,14 +114,13 @@ export const query = graphql`
 			frontmatter {
 				title
 				tech
-				date(formatString: "MMMM, YYYY")
+				date(formatString: "MMMM YYYY")
 				link
 				repolink
 				image {
 					childImageSharp {
-						# gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 500)
-						fluid(quality: 100, maxWidth: 400, fit: COVER) {
-							...GatsbyImageSharpFluid
+						fluid(quality: 100, maxWidth: 1000, fit: COVER) {
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}
