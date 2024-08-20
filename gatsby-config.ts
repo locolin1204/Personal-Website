@@ -34,6 +34,14 @@ const config: GatsbyConfig = {
 		"gatsby-plugin-react-helmet",
 		"react-bootstrap",
 		{
+			resolve: `gatsby-plugin-image`,
+			options: {
+				quality: 100,
+				breakpoints: [750, 1080, 1366, 1920],
+				formats: ['auto', 'webp'],
+			}
+		},
+		{
 			resolve: "gatsby-source-filesystem",
 			options: {
 				name: `content`,
