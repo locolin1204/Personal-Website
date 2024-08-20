@@ -2,6 +2,7 @@ import styled from "styled-components";
 import GatsbyImage from "gatsby-image";
 
 export const StyledTechList = styled.div`
+    padding-left: 1em;
 	padding-bottom: 1em;
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +19,9 @@ export const StyledTechItem = styled.span`
 	color: ${({ theme }) => theme.color.yellow900};
 	padding: 0em 0.5em;
 	border-radius: 0.3rem;
+    @media (max-width: 768px) {
+        font-size: 1em;
+    }
 `;
 
 export const BodyWrapper = styled.div`
@@ -78,6 +82,9 @@ export const DateWrapper = styled.div`
 	font-size: 1.2em;
 	color: ${({ theme }) => theme.color.yellow900};
 	font-style: italic;
+    @media (max-width: 768px) {
+        font-size: 1em;
+    }
 `;
 
 
