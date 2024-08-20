@@ -71,7 +71,6 @@ const Layout = ({
 						{ heroImage ? (
 							<HeroImage
 								fluid={heroImage.imgFluid}
-								alt="Hero Image"
 								imgStyle={{
 									objectPosition: `50% ${heroImage.position}`
 								}}
