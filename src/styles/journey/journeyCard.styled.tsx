@@ -20,7 +20,7 @@ export const StyledJourneyCardContainer = styled.div`
 		margin-bottom: 1em;
 	}
     @media only screen and (max-width: 1400px) {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		pointer-events: none;
 	}
 `;
