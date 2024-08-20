@@ -27,8 +27,8 @@ export default function AboutSelfIntro({ bodyText }) {
 			<AboutBodyText>
 				<EnterAnimation>
 					I am currently a senior <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>computer science</UnderlineText> major
-					at the <UnderlineText weight={"500"} height={"1"} duration={"0.5"}> Chinese University of Hong Kong </UnderlineText>,
-					I also studied aboard at the <UnderlineText weight={"500"} height={"1"} duration={"0.5"}> University of Notre Dame </UnderlineText>.
+					at <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>the Chinese University of Hong Kong </UnderlineText>,
+					I also studied aboard at <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>the University of Notre Dame </UnderlineText>.
 					<br />
 					<br />
 					<UnderlineText weight={"500"} height={"1"} duration={"0.5"}>Integrating</UnderlineText> my daily life with programming is my motive.
