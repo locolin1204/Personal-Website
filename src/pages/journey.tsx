@@ -9,7 +9,6 @@ import GatsbyImage from "gatsby-image";
 
 const JourneyPage = ({ data }: { data: any }) => {
 	const heroImage = {
-		gatsbyImage: data.heroImage,
 		position: "45%",
 		height: "45vh",
 		imgFluid: data.heroImage.childImageSharp.fluid
@@ -51,7 +50,7 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/journey.jpg" }) {
 			childImageSharp {
-				fluid(quality: 100, maxWidth: 2500, fit: COVER, webpQuality: 80) {
+				fluid(quality: 80, maxWidth: 2500, fit: COVER, webpQuality: 80) {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
@@ -73,7 +72,7 @@ export const query = graphql`
 						image {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
-								fluid(quality: 100, maxHeight: 700, maxWidth: 1050, fit: COVER) {
+								fluid(quality: 100, maxHeight: 600, maxWidth: 900, fit: COVER) {
 									...GatsbyImageSharpFluid_withWebp
 								}
 							}
@@ -81,7 +80,7 @@ export const query = graphql`
 						logo {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1, quality: 100, width: 500)
-								fluid(quality: 100, maxHeight: 200, maxWidth: 200, fit: CONTAIN, background: "#fefbf9") {
+								fluid(quality: 100, maxHeight: 100, maxWidth: 100, fit: CONTAIN, background: "#fefbf9") {
 									...GatsbyImageSharpFluid_withWebp
 								}
 							}

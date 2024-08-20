@@ -1,4 +1,5 @@
 import GatsbyImage from "gatsby-image";
+import { GatsbyImage as GImage } from "gatsby-plugin-image";
 import { Container, Col } from "react-bootstrap";
 import styled from "styled-components";
 
@@ -17,6 +18,10 @@ export const StyledPageHeader = styled.div`
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 	padding-left: 1rem;
+    @media (max-width: 768px) {
+        font-size: 2em;
+        padding-bottom: 1rem;
+    }
 `;
 
 export const StyledCol = styled(Col)`

@@ -27,7 +27,6 @@ const PhotographyPage = ({ data }: { data: any }) => {
 	const [page, setPage] = useState(2);
 
 	const heroImage = {
-		gatsbyImage: data.heroImage,
 		position: "65%",
 		height: "50vh",
 		imgFluid: data.heroImage.childImageSharp.fluid
@@ -85,7 +84,7 @@ export const query = graphql`
 	query {
 		heroImage: file(relativePath: { glob: "*/photography.jpg" }) {
 			childImageSharp {
-				fluid(quality: 100, maxWidth: 2500, fit: COVER, webpQuality: 80) {
+				fluid(quality: 80, maxWidth: 2500, fit: COVER, webpQuality: 80) {
 					...GatsbyImageSharpFluid_withWebp
 				}
 			}
