@@ -72,7 +72,7 @@ export const query = graphql`
 						image {
 							childImageSharp {
 								gatsbyImageData(aspectRatio: 1.5, quality: 100, width: 1000)
-								fluid(quality: 100, maxHeight: 600, maxWidth: 900, fit: COVER) {
+								fluid(quality: 100, maxHeight: 600, maxWidth: 900, fit: COVER, webpQuality: 70) {
 									...GatsbyImageSharpFluid_withWebp
 								}
 							}
