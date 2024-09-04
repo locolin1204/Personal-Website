@@ -7,8 +7,23 @@ link: ""
 repolink: "https://github.com/locolin1204/PhotoTransfer"
 image: "../../images/projects/python-photo-transfer.png"
 ---
+#### **Motivation**
+
+As a photographer, transferring photo from SD to hard disk is always a very repetitive and annoying process.
+It involves a lot of infuriating clicking and unpleasant file navigations.\
+*"Open file explorer", \*click\*, "find where the photos are saved", \*click\*, "create new folder", \*click\*, ...*
+
 I created this script to simplify my photo transfer process.
+
+Imagine, everytime when I come back home with my fully filled SD Card, I just have to click a single button:\
+*folders will be created for me, photos will be copied for me, photos not copied will be checked for me.*\
+Sounds like a paradise. That's why I created this script.
+
+#### **Description**
 
 I coded with both `Python` and `AppleScript` to provide the most convenient way to transfer photos.
 
-With a click of a button, it will trigger AppleScript, the script will trigger the Python script. The program will get today's date and check if the corresponding, year and month directory is created. If not, the directories will be created. Then, it will ask user for the name of the folder. Finally, it will show the current progress in percentage together with the transferred and total files.
+With a click of a button, it will trigger an `AppleScript` script in the `MacOS` system, the script will then trigger the `Python` script.
+The program will get today's date and check if the corresponding, year and month directory is created.
+If not, the directories will be created. Then, it will ask user for the name of the folder.
+Finally, it will show the current progress in percentage together with the transferred and total files.
