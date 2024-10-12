@@ -5,7 +5,7 @@ import {
 	StyledVideoCardContainer,
 	StyledVideoDetail,
 	TagContainer,
-	Thumbnail,
+	ThumbnailImage, ThumbnailContainer,
 	VideoDate,
 	VideoDescription,
 	VideoTitle,
@@ -26,7 +26,11 @@ export default function VideoCard({ video }: { video: VideoObj }) {
 			) : (
 				<Thumbnail src={video.thumbnailUrl} />
 			)} */}
-			<Thumbnail src={video.thumbnailUrl} />
+			<ThumbnailContainer>
+				<a target="_blank" href={video.videoLink}>
+					<ThumbnailImage src={video.thumbnailUrl} />
+				</a>
+			</ThumbnailContainer>
 			<StyledVideoDetail>
 				<VideoTitle target="_blank" href={video.videoLink}>
 					{video.title}
