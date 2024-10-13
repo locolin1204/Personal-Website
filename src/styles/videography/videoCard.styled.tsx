@@ -6,9 +6,10 @@ export const StyledVideoCardContainer = styled.div`
 	justify-content: space-between;
 	background-color: ${({ theme }) => theme.color.offwhite300};
     transition: box-shadow 0.3s ease-in-out;
+    border-radius: 0.5em;
+    box-shadow: 0 5px 10px rgba(160, 160, 160, 0.05), 0 15px 40px rgba(175, 175, 175, 0.2);
     &:hover {
-        box-shadow: 0 5px 10px rgba(160, 160, 160, 0.05),
-        0 15px 40px rgba(175, 175, 175, 0.2);
+        box-shadow: 0 5px 10px rgba(160,160,160,.05), 0 15px 40px rgba(175,175,175,.4);
     }
 	@media only screen and (max-width: 1400px) {
 		flex-direction: column;
