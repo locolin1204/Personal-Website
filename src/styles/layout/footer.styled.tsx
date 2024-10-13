@@ -25,7 +25,7 @@ export const StyledIconLink = styled.a`
     display: flex;
     align-items: center;
 	color: ${({ theme }) => theme.color.offwhite500};
-    &:hover{
+    &:hover {
         color :${({ theme }) => theme.color.yellow400}
     }
     cursor: pointer;

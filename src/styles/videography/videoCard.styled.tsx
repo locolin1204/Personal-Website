@@ -5,9 +5,16 @@ export const StyledVideoCardContainer = styled.div`
 	margin: 1em 0em;
 	justify-content: space-between;
 	background-color: ${({ theme }) => theme.color.offwhite300};
-	@media only screen and (max-width: 768px) {
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 0.5em;
+    box-shadow: 0 5px 10px rgba(160, 160, 160, 0.05), 0 15px 40px rgba(175, 175, 175, 0.2);
+    &:hover {
+        box-shadow: 0 5px 10px rgba(160,160,160,.05), 0 15px 40px rgba(175,175,175,.4);
+    }
+	@media only screen and (max-width: 1400px) {
 		flex-direction: column;
 		margin: 0.5em 0.5em;
+        border-radius: 0;
 	}
 `;
 
@@ -17,14 +24,32 @@ export const StyledIframe = styled.iframe`
 	width: 32em;
 `;
 
-export const Thumbnail = styled.img`
-	display: inline-block;
-	width: 50%;
+export const ThumbnailContainer = styled.div`
+    display: flex;
+    width: 70%;
     height: 50%;
-	@media only screen and (max-width: 768px) {
-		height: 100%;
-		width: 100%;
-	}
+    overflow: hidden;
+    @media only screen and (max-width: 1400px) {
+        height: 100%;
+        width: 100%;
+    }
+`
+export const ThumbnailImage = styled.img`
+    display: inline-block;
+	width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease-in-out;
+    &:hover {
+        transform: scale(1.03);
+    }
+    @media only screen and (max-width: 1400px) {
+        height: 100%;
+        width: 100%;
+    }
+    @media only screen and (max-width: 768px) {
+        pointer-events: none;
+    }
 `;
 
 export const StyledVideoDetail = styled.div`
@@ -33,7 +58,7 @@ export const StyledVideoDetail = styled.div`
 	flex-direction: column;
 	row-gap: 0.5em;
 	width: 70%;
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1400px) {
 		width: 100%;
         padding: 1em;
         padding-left: 1.3em;
