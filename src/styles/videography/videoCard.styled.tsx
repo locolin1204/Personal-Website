@@ -14,6 +14,7 @@ export const StyledVideoCardContainer = styled.div`
 	@media only screen and (max-width: 1400px) {
 		flex-direction: column;
 		margin: 0.5em 0.5em;
+        border-radius: 0;
 	}
 `;
 
