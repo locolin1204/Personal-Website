@@ -90,7 +90,7 @@ export const query = graphql`
 			}
 		}
 		imageList: allFile(
-			filter: { relativePath: { glob: "photography/*.jpg" } }
+			filter: { relativePath: { glob: "photography/*.[jJ][pP][gG]" } }
 		) {
 			nodes {
 				childImageSharp {
