@@ -40,7 +40,7 @@ const IndexPage = () => {
 					</StyledMainText>
 					<EnterAnimation isDiv={false} delay={1} offsetY={0}>
 						<StyledSubText>
-							a <StyledSpanCS>computer science</StyledSpanCS> year 4 student.
+							a <StyledSpanCS>computer science</StyledSpanCS> year 5 student.
 						</StyledSubText>
 					</EnterAnimation>
 
