@@ -16,6 +16,9 @@ export const GlobalStyles = createGlobalStyle`
         /* background-color: #fffae6; */
         font-family: inter;
     }
+	body {
+		background-color: #FAF3EA;
+	}
     .custom-toast {
         font-size: 1em;
     }
