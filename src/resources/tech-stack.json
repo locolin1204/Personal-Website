@@ -26,7 +26,8 @@
       "SvelteKit",
       "Angular",
       "Ktor",
-      "RxJS"
+      "RxJS",
+      "Next.js"
     ],
     "db": [
       "MySQL",
