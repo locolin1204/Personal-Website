@@ -1,7 +1,6 @@
 ---
 title: "N.P. Lam Memorial Scholarship for Balanced Education"
 startdate: "2025-04-17"
-enddate: "2025-04-17"
 slug: "balanced-education-scholarship"
 post: "Scholarship Awardee"
 image: "../../images/journey/balanced-education-scholarship.jpg"
