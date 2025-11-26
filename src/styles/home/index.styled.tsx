@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -32,6 +32,40 @@ export const StyledSubText = styled.div`
 	font-size: 1.5em;
 	color: ${({ theme }) => theme.color.grey500};
 	padding-bottom: 1em;
+`;
+
+const strikeInSmooth = keyframes`
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+`;
+
+export const StrikeThroughline = styled.span<{ delay?: number }>`
+  font-weight: inherit;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background-color: ${({ theme }) => theme.color.grey500};
+    
+    top: 30%;
+    transform: translateY(-50%);
+    
+    transform-origin: left center;
+    transform: scaleX(0);
+  	animation: ${strikeInSmooth} 1.5s
+	cubic-bezier(0.4, 0.0, 0.2, 1)
+	forwards;
+    animation-delay: ${({ delay }) => (delay ? `${delay}s` : '0s')};
+  }
 `;
 
 export const StyledSpanColin = styled.span`
