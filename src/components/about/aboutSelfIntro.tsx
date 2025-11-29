@@ -26,7 +26,10 @@ export default function AboutSelfIntro({ bodyText }) {
 			</EnterAnimation>
 			<AboutBodyText>
 				<EnterAnimation>
-					I am currently a senior <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>computer science</UnderlineText> major
+					I am currently a <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>software engineer</UnderlineText> in <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>Global Markets Technology</UnderlineText> at <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>Nomura</UnderlineText>.
+					<br />
+					<br />
+					I graduated as a <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>computer science</UnderlineText> major
 					at <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>the Chinese University of Hong Kong </UnderlineText>,
 					I also studied aboard at <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>the University of Notre Dame </UnderlineText>.
 					<br />
@@ -34,8 +37,6 @@ export default function AboutSelfIntro({ bodyText }) {
 					<UnderlineText weight={"500"} height={"1"} duration={"0.5"}>Integrating</UnderlineText> my daily life with programming is my motive.
 					I believe the existence of programming is to increase the <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>efficiency</UnderlineText> of
 					our work.
-					<br />
-					<br />
 					Creating different programs to make my life much <UnderlineText weight={"500"} height={"1"} duration={"0.5"}>easier</UnderlineText> is what I am
 					striving for.
 				</EnterAnimation>

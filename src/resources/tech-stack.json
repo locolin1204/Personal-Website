@@ -27,13 +27,15 @@
       "Angular",
       "Ktor",
       "RxJS",
-      "Next.js"
+      "Next.js",
+      "Jenkins"
     ],
     "db": [
       "MySQL",
       "Oracle DB",
       "MongoDB",
-      "DynamoDB"
+      "DynamoDB",
+      "MSSQL Server"
     ],
     "design":[
       "Adobe Photoshop",

@@ -7,7 +7,7 @@ import {
 	StyledMainText,
 	StyledSubText,
 	StyledSpanColin,
-	StyledSpanCS,
+	StyledSpanCS, StrikeThroughline,
 } from "../styles/home/index.styled";
 import { EnterAnimation } from "../components/enterAnimation";
 
@@ -39,12 +39,19 @@ const IndexPage = () => {
 						</EnterAnimation>
 					</StyledMainText>
 					<EnterAnimation isDiv={false} delay={1} offsetY={0}>
+						<StrikeThroughline delay={1.5}>
+							<StyledSubText>
+								a <StyledSpanCS>computer science</StyledSpanCS> year 5 student.
+							</StyledSubText>
+						</StrikeThroughline>
+					</EnterAnimation>
+					<EnterAnimation isDiv={false} delay={1.5} offsetY={0}>
 						<StyledSubText>
-							a <StyledSpanCS>computer science</StyledSpanCS> year 5 student.
+							a <StyledSpanCS>software engineer</StyledSpanCS>.
 						</StyledSubText>
 					</EnterAnimation>
 
-					<EnterAnimation isDiv={false} delay={1.5} offsetY={0}>
+					<EnterAnimation isDiv={false} delay={2} offsetY={0}>
 						<TypeAnimation
 							sequence={typingList}
 							speed={30}

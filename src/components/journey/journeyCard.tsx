@@ -45,7 +45,7 @@ export default function JourneyCard({
                         <div>
                             <TitleWrapper>{title}</TitleWrapper>
                             <PostWrapper>{post}</PostWrapper>
-                            <DateWrapper>{startdate} – {enddate}</DateWrapper>
+                            <DateWrapper>{startdate} {enddate && "–"} {enddate}</DateWrapper>
                         </div>
                         <StyledLogo fluid={logo} alt={title}/>
                     </TitleLogoWrapper>
