@@ -36,6 +36,7 @@
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-plugin-styled-components": "^6.8.0",
+    "gatsby-remark-copy-linked-files": "^6.15.0",
     "gatsby-remark-images": "^7.10.0",
     "gatsby-remark-use-frontmatter-path": "^1.0.0",
     "gatsby-source-filesystem": "^5.10.0",

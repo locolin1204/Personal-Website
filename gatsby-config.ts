@@ -90,7 +90,15 @@ const config: GatsbyConfig = {
 				gatsbyRemarkPlugins: [
 					{
 						resolve: `gatsby-remark-images`,
-						options: {},
+						options: {
+							backgroundColor: `transparent`,
+						},
+					},
+					{
+						resolve: `gatsby-remark-copy-linked-files`,
+						options: {
+							ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+						},
 					},
 				],
 			},

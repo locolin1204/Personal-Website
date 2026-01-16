@@ -75,6 +75,15 @@ const ProjectPosts = ({
 							}}>
 								<MDXProvider
 									components={{
+										img: ({ src, alt }) => (
+											<img
+												src={src}
+												alt={alt}
+												style={{
+													width: "100%",
+												}}
+											/>
+										),
 										code: props => (
 											<span
 												{...props}
