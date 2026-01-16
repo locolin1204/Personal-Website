@@ -90,7 +90,9 @@ const config: GatsbyConfig = {
 				gatsbyRemarkPlugins: [
 					{
 						resolve: `gatsby-remark-images`,
-						options: {},
+						options: {
+							backgroundColor: `transparent`,
+						},
 					},
 				],
 			},
