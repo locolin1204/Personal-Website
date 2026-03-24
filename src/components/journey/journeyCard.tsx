@@ -7,7 +7,7 @@ import {
 	DateWrapper,
 	PostWrapper,
 	TitleWrapper,
-	ImageWrapper, TitleLogoWrapper, StyledLogo,
+	ImageWrapper, TitleLogoWrapper, StyledLogo, DescWrapper,
 } from "../../styles/journey/journeyCard.styled";
 
 import { FluidObject } from "gatsby-image";
@@ -50,10 +50,10 @@ export default function JourneyCard({
                         <StyledLogo fluid={logo} alt={title}/>
                     </TitleLogoWrapper>
                     {body ? (
-                        <div>
+                        <DescWrapper>
                             <hr/>
                             {reactElement}
-                        </div>
+                        </DescWrapper>
                     ) : null}
                 </TextContainer>
             </TextWrapper>

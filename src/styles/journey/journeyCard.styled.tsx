@@ -33,11 +33,12 @@ export const StyledLogo = styled(GatsbyImage)`
 export const TextWrapper = styled.div`
 	width: 47%;
 	text-align: center;
-	padding: 1.5em 3em;
+	padding: 2em;
     
     @media only screen and (max-width: 1400px) {
 		flex-direction: column;
 		width: 100%;
+        padding: 1.5em;
 	}
 `;
 
@@ -56,6 +57,9 @@ export const TitleLogoWrapper = styled.div`
 export const TitleWrapper = styled.div`
 	font-size: 1.5em;
     font-weight: 500;
+    @media only screen and (max-width: 768px) {
+        font-size: 1.15em;
+    }
 `;
 
 export const DateWrapper = styled.div`
@@ -64,13 +68,27 @@ export const DateWrapper = styled.div`
 	font-style: italic;
 	font-size: 0.85em;
     padding-top: 1em;
+    @media only screen and (max-width: 768px) {
+        font-size: 0.75em;
+        padding-top: 0.75em;
+    }
 `;
 
 export const PostWrapper = styled.div`
 	color: ${({ theme }) => theme.color.grey300};
 	font-size: 0.9em;
 	font-weight: 400;
+    @media only screen and (max-width: 768px) {
+        font-size: 0.8em;
+    }
 `;
+
+export const DescWrapper = styled.div`
+    font-size: 1em;
+    @media only screen and (max-width: 768px) {
+        font-size: 0.9em;
+    }
+`
 
 export const StyledGatsbyImage = styled(GatsbyImage)`
 	width: 100%;
