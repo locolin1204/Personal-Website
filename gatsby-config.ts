@@ -137,6 +137,13 @@ const config: GatsbyConfig = {
 				},
 			},
 		},
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				color: `#bfb2a3`,
+				showSpinner: false,
+			},
+		},
 	],
 };
 
