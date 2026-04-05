@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ReactNode } from "react";
-import { graphql } from "gatsby";
+import { graphql, HeadFC } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import {
 	StyledGatsbyImageBG,
@@ -19,6 +19,7 @@ import {
 import Layout from "../../components/layout/layout";
 import { EnterAnimation } from "../../components/enterAnimation";
 import { MDXProvider } from "@mdx-js/react";
+import PageHead from "../../components/layout/pageHead";
 
 const ProjectPosts = ({
 	data,
@@ -143,3 +144,17 @@ export const query = graphql`
 // export const Head = () => <title>Random</title>;
 
 export default ProjectPosts;
+
+export const Head: HeadFC<any> = ({ data }) => {
+	const { title } = data.mdx.frontmatter;
+	return (
+		<PageHead
+			title={`${title} | Project`}
+			description={data.mdx.excerpt}
+			pathname={`/projects/${data.mdx.frontmatter.slug}`}
+			image={data.mdx.frontmatter.image.childImageSharp.fluid.src}
+			type="article"
+		/>
+	);
+};
+

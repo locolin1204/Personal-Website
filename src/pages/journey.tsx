@@ -3,9 +3,10 @@ import Layout from "../components/layout/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import JourneyCard from "../components/journey/journeyCard";
 import { StyledJourneyContainer } from "../styles/journey/journey.styled";
-import { graphql } from "gatsby";
+import { graphql, HeadFC } from "gatsby";
 import { EnterAnimation } from "../components/enterAnimation";
 import GatsbyImage from "gatsby-image";
+import PageHead from "../components/layout/pageHead";
 
 const JourneyPage = ({ data }: { data: any }) => {
 	const heroImage = {
@@ -95,3 +96,12 @@ export const query = graphql`
 // export const Head = () => <title>journey</title>;
 
 export default JourneyPage;
+
+export const Head: HeadFC = () => (
+	<PageHead
+		title="journey"
+		description="journey as developer."
+		pathname="/journey"
+	/>
+);
+

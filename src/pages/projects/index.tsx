@@ -1,9 +1,10 @@
 import * as React from "react";
 import Layout from "../../components/layout/layout";
-import { graphql, Link } from "gatsby";
+import { graphql, HeadFC, Link } from "gatsby";
 import ProjectCard from "../../components/projects/projectCard";
 import { StyledProjectLayout } from "../../styles/projects/project.styled";
 import { EnterAnimation } from "../../components/enterAnimation";
+import PageHead from "../../components/layout/pageHead";
 
 const Projects = ({ data }: { data: any }) => {
 	return (
@@ -71,3 +72,12 @@ export const query = graphql`
 // export const Head = () => <title>projects</title>;
 
 export default Projects;
+
+export const Head: HeadFC = () => (
+	<PageHead
+		title="projects"
+		description="explore projects."
+		pathname="/projects"
+	/>
+);
+

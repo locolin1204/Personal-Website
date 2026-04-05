@@ -1,12 +1,13 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout/layout";
-import { graphql } from "gatsby";
+import { graphql, HeadFC } from "gatsby";
 import videoListJSON from "../resources/video-list.json";
 import axios from "axios";
 import VideoCard from "../components/videography/videoCard";
 import { EnterAnimation } from "../components/enterAnimation";
 import { VideoContainer } from "../styles/videography/videography.styled";
+import PageHead from "../components/layout/pageHead";
 
 export interface VideoObj {
 	date: Date;
@@ -124,3 +125,12 @@ export const query = graphql`
 export default VideographyPage;
 
 // export const Head = () => <title>videography</title>;
+
+export const Head: HeadFC = () => (
+	<PageHead
+		title="videography"
+		description="storytelling through motion and sound."
+		pathname="/videography"
+	/>
+);
+

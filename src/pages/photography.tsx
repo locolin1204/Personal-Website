@@ -10,9 +10,10 @@ import {
 	StyledGatsbyImage,
 	StyledMasonry,
 } from "../styles/photography/photography.styled";
-import { graphql } from "gatsby";
+import { graphql, HeadFC } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import InfiniteScroll from "react-infinite-scroll-component";
+import PageHead from "../components/layout/pageHead";
 
 function shuffleArray(arr: any[]) {
 	let newArr = structuredClone(arr);
@@ -233,3 +234,12 @@ export const query = graphql`
 export default PhotographyPage;
 
 // export const Head = () => <title>photography</title>;
+
+export const Head: HeadFC = () => (
+	<PageHead
+		title="photography"
+		description="how i see the world through the lens."
+		pathname="/photography"
+	/>
+);
+

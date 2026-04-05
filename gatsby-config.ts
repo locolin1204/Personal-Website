@@ -4,19 +4,12 @@ require("dotenv").config({
 	path: `.env.${process.env.NODE_ENV}`,
 });
 
-const {
-	NODE_ENV,
-	URL: NETLIFY_SITE_URL = 'https://locolin.netlify.app',
-	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-	CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+const canonicalSiteUrl = "https://locolin.com";
 
 const config: GatsbyConfig = {
 	siteMetadata: {
 		title: `Colin Lo`,
-		siteUrl: `https://locolin.com`,
+		siteUrl: canonicalSiteUrl,
 		description: `i love solving problems. different methods and strategies could surprise our lives various ways.`,
 		siteImage: "/images/site-image/site-image.jpg",
 		keywords: "lo hoa tsun, locolin, lo colin, colin, colin lo, cuhk, chinese university of hong kong, computer science, la salle college, lsc, hong kong, hk, university of notre dame,personal website, website, personal site, programming, csci, cs, comp sci, software engineer, developer, greentomato, gt, greentomato limited",
@@ -112,8 +105,8 @@ const config: GatsbyConfig = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'https://www.locolin.com',
-				sitemap: 'https://www.locolin.com/sitemap-0.xml',
+				host: canonicalSiteUrl,
+				sitemap: `${canonicalSiteUrl}/sitemap-index.xml`,
 				policy: [{userAgent: '*', allow: '/'}]
 			}
 		},
@@ -128,13 +121,10 @@ const config: GatsbyConfig = {
 						}
 					  }
 					}`,
-				resolveSiteUrl: () => `https://locolin.com`,
-				serialize: ({ path, frontmatter }) => {
-					return {
-						url: path,
-						lastmod: frontmatter ? frontmatter.date : undefined,
-					}
-				},
+							resolveSiteUrl: () => canonicalSiteUrl,
+				serialize: ({ path }: { path: string }) => ({
+					url: path,
+				}),
 			},
 		},
 		{

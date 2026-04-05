@@ -10,6 +10,8 @@ import {
 	StyledSpanCS, StrikeThroughline,
 } from "../styles/home/index.styled";
 import { EnterAnimation } from "../components/enterAnimation";
+import { HeadFC } from "gatsby";
+import PageHead from "../components/layout/pageHead";
 
 const IndexPage = () => {
 	const typingList = [
@@ -73,4 +75,10 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-// export const Head = () => <title>home</title>;
+export const Head: HeadFC = () => (
+	<PageHead
+		title="colin lo"
+		description="i am colin lo"
+		pathname="/"
+	/>
+);
