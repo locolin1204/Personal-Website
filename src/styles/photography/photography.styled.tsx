@@ -82,39 +82,9 @@ export const StyledCategoryWrapper = styled.div`
         margin-bottom: 0.75em;
     }
 `
-//
-// export const StyledCategorySelectorAnimation = styled(motion.div)`
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center; /* centers each wrapped row */
-//     gap: 2em;
-//     padding: 1em 1em;
-//     font-weight: 400;
-//
-//     border: 1px solid red;
-//
-//     @media only screen and (max-width: 768px) {
-//         display: flex;
-//         flex-direction: row;
-//         gap: 1em;
-//     }
-// `
 
 
-// src/styles/photography/photography.styled.tsx
 export const StyledCategorySelectorAnimation = styled(motion.div)`
-    //overflow: hidden;
-    //height: auto;
-    //margin: 0 2em;
-    //
-    //@media only screen and (max-width: 768px) {
-    //    height: 0;
-    //    margin: 0.25em;
-    //
-    //    &.is-expanded {
-    //        height: auto;
-    //    }
-    //}
     overflow: hidden;
     height: auto;
     margin: 0 0 0;

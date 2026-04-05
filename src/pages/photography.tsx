@@ -2,14 +2,14 @@ import * as React from "react";
 import { useEffect, useMemo, useState } from "react";
 import Layout from "../components/layout/layout";
 import {
-	StyledSelectorWrapper,
-	StyledCategorySelectorAnimation,
-	StyledCategorySelectorInner,
-	StyledCategoryTitle,
-	StyledCategoryWrapper,
-	StyledDropDownIcon,
-	StyledGatsbyImage,
-	StyledMasonry,
+    StyledCategorySelectorAnimation,
+    StyledCategorySelectorInner,
+    StyledCategoryTitle,
+    StyledCategoryWrapper,
+    StyledDropDownIcon,
+    StyledGatsbyImage,
+    StyledMasonry,
+    StyledSelectorWrapper,
 } from "../styles/photography/photography.styled";
 import { graphql, HeadFC } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
@@ -106,16 +106,11 @@ const PhotographyPage = ({ data }: { data: any }) => {
 		<Layout pageTitle="photography" heroImage={heroImage}>
 			<StyledCategoryWrapper isExpanded={isExpanded}>
 				<StyledSelectorWrapper onClick={() => setIsExpanded((v) => !v)}>
-					<StyledDropDownIcon
-						isExpanded={isExpanded}
-
-					/>
-				<StyledCategoryTitle forMobileOnly={true} isListItem={false} selected={true}>
-					{selectedCategory.replace(
-						"-", " ")}
-				</StyledCategoryTitle>
-
-			</StyledSelectorWrapper>
+                    <StyledDropDownIcon isExpanded={isExpanded}/>
+                    <StyledCategoryTitle forMobileOnly={true} isListItem={false} selected={true}>
+                        {selectedCategory.replace("-", " ")}
+                    </StyledCategoryTitle>
+			    </StyledSelectorWrapper>
 
 				<StyledCategorySelectorAnimation
 					animate={{ height:  isExpanded ? "auto" : 0 }}
@@ -138,62 +133,7 @@ const PhotographyPage = ({ data }: { data: any }) => {
 					))}
 					</StyledCategorySelectorInner>
 				</StyledCategorySelectorAnimation>
-				{/*<IconWrapper>*/}
-				{/*<StyledDropDownIcon*/}
-				{/*	isExpanded={isExpanded}*/}
-				{/*	onClick={() => setIsExpanded((v) => !v)}*/}
-				{/*/>*/}
-				{/*</IconWrapper>*/}
 			</StyledCategoryWrapper>
-			{/*<StyledCategoryWrapper isExpanded={isExpanded}>*/}
-			{/*	/!* Selected category at top *!/*/}
-			{/*	<motion.div layoutId="selected-category">*/}
-			{/*		<StyledCategoryTitle selected={true}>*/}
-			{/*			{selectedCategory.replace("-", " ")}*/}
-			{/*		</StyledCategoryTitle>*/}
-			{/*	</motion.div>*/}
-
-			{/*	/!* Dropdown categories *!/*/}
-			{/*	<StyledCategorySelectorAnimation*/}
-			{/*		style={{ overflow: "hidden" }}*/}
-			{/*		initial={{ height: 0, opacity: 0 }}*/}
-			{/*		animate={isExpanded ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}*/}
-			{/*		exit={{ height: 0, opacity: 0 }}*/}
-			{/*		transition={{ duration: 0.3, ease: "easeInOut" }}*/}
-			{/*	>*/}
-			{/*		<AnimatePresence mode="popLayout">*/}
-			{/*			{Object.keys(initSelectedImagesDict).filter(*/}
-			{/*				category => selectedCategory !== category*/}
-			{/*			).map((category: string) => (*/}
-			{/*				<motion.div*/}
-			{/*					key={category}*/}
-			{/*					layout*/}
-			{/*					initial={{ opacity: 0, y: -10 }}*/}
-			{/*					animate={{ opacity: 1, y: 0 }}*/}
-			{/*					exit={{ opacity: 0, y: -10 }}*/}
-			{/*					transition={{ duration: 0.2 }}*/}
-			{/*					onClick={() => {*/}
-			{/*						setIsExpanded(false);*/}
-			{/*						setSelectedCategory(category);*/}
-			{/*					}}*/}
-			{/*					style={{width: "100%"}}*/}
-			{/*				>*/}
-			{/*					<StyledCategoryTitle>*/}
-			{/*						{category.replace("-", " ")}*/}
-			{/*					</StyledCategoryTitle>*/}
-			{/*				</motion.div>*/}
-			{/*			))}*/}
-			{/*		</AnimatePresence>*/}
-			{/*	</StyledCategorySelectorAnimation>*/}
-
-			{/*	<StyledDropDownIcon*/}
-			{/*		isExpanded={isExpanded}*/}
-			{/*		onClick={() => setIsExpanded((v) => !v)}*/}
-			{/*	/>*/}
-			{/*</StyledCategoryWrapper>*/}
-
-
-
 			<InfiniteScroll
 				dataLength={filteredImages.length}
 				hasMore={hasMore}
