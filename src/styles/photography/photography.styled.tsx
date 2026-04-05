@@ -114,9 +114,8 @@ export const StyledCategorySelectorAnimation = styled(motion.div)`
     //}
     overflow: hidden;
     height: auto;
-    margin: 0.25em 2em;
-    //border: 1px red solid;
-
+    margin: 0.25em 0;
+    
     @media only screen and (min-width: 769px) {
         height: auto !important;
     }
