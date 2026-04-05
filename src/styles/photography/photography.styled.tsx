@@ -57,26 +57,29 @@ export const StyledMasonry = styled(Masonry)`
 	display: -ms-flexbox; /* Not needed if autoprefixing */
 	display: flex;
 	/* margin-left: -30px; gutter size offset */
-	margin: 0em 0.25em;
+	margin: 0 0.25em;
 	width: auto;
-	padding: 0.25em 0em;
+	padding: 0 0 0.25em;
 	min-height: 35vh;
 `;
 
 export const StyledCategoryWrapper = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center; /* centers each wrapped row */
+    justify-content: center;
+    align-items: end;
     gap: 2em;
     padding: 1em;
     font-weight: 400;
-    margin: 0px;
-    //border: 1px red solid;
+    margin: 0 0 -0.25em;
 
     @media only screen and (max-width: 768px) {
-        gap: 0em;
-        padding: 1em 0 0.5em;
+        gap: 0;
+        padding: 1em 0 0;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 0.75em;
     }
 `
 //
@@ -114,15 +117,17 @@ export const StyledCategorySelectorAnimation = styled(motion.div)`
     //}
     overflow: hidden;
     height: auto;
-    margin: 0.25em 0;
-    
+    margin: 0 0 0;
+    width: 100%;
+
     @media only screen and (min-width: 769px) {
         height: auto !important;
     }
 `;
 
+
 export const StyledCategorySelectorInner = styled.div`
-    padding: 0em;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,8 +135,11 @@ export const StyledCategorySelectorInner = styled.div`
     font-weight: 400;
     
     @media only screen and (max-width: 768px) {
+        margin: 0 auto;
+        width: 100%;
         gap: 1em;
-        padding: 0.75em 0em;
+        padding: 1em 0 0;
+        flex-direction: column;
     }
 `;
 
@@ -150,7 +158,7 @@ export const StyledCategoryTitle = styled.div`
 	}
     color: ${({ theme, selected }) => selected ? theme.color.sand700 : ""};
     cursor: pointer;
-    text-align: center;
+    text-align: end;
     
     @media only screen and (max-width: 768px) {
         width: 100%;
@@ -159,7 +167,6 @@ export const StyledCategoryTitle = styled.div`
         display: ${({ isListItem, selected, forMobileOnly }) => (isListItem && selected && !forMobileOnly) ? "none" : "block"};
     }
 `
-
 
 
 export const StyledDropDownIcon = styled(IoIosArrowDown)<{ isExpanded: boolean }>`
@@ -172,9 +179,19 @@ export const StyledDropDownIcon = styled(IoIosArrowDown)<{ isExpanded: boolean }
     &:hover {
         color: ${({ theme }) => theme.color.sand700};
     }
-    
     cursor: pointer;
     @media only screen and (max-width: 768px) {
         display: block;
+    }
+`
+
+
+export const StyledSelectorWrapper = styled.div`
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+        display: flex;
     }
 `

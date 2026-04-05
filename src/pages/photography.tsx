@@ -2,6 +2,7 @@ import * as React from "react";
 import { useEffect, useMemo, useState } from "react";
 import Layout from "../components/layout/layout";
 import {
+	StyledSelectorWrapper,
 	StyledCategorySelectorAnimation,
 	StyledCategorySelectorInner,
 	StyledCategoryTitle,
@@ -104,10 +105,18 @@ const PhotographyPage = ({ data }: { data: any }) => {
 	return (
 		<Layout pageTitle="photography" heroImage={heroImage}>
 			<StyledCategoryWrapper isExpanded={isExpanded}>
+				<StyledSelectorWrapper onClick={() => setIsExpanded((v) => !v)}>
+					<StyledDropDownIcon
+						isExpanded={isExpanded}
+
+					/>
 				<StyledCategoryTitle forMobileOnly={true} isListItem={false} selected={true}>
 					{selectedCategory.replace(
 						"-", " ")}
 				</StyledCategoryTitle>
+
+			</StyledSelectorWrapper>
+
 				<StyledCategorySelectorAnimation
 					animate={{ height:  isExpanded ? "auto" : 0 }}
 					transition={{ ease: "easeInOut", duration: 0.75 }}
@@ -129,10 +138,12 @@ const PhotographyPage = ({ data }: { data: any }) => {
 					))}
 					</StyledCategorySelectorInner>
 				</StyledCategorySelectorAnimation>
-				<StyledDropDownIcon
-					isExpanded={isExpanded}
-					onClick={() => setIsExpanded((v) => !v)}
-				/>
+				{/*<IconWrapper>*/}
+				{/*<StyledDropDownIcon*/}
+				{/*	isExpanded={isExpanded}*/}
+				{/*	onClick={() => setIsExpanded((v) => !v)}*/}
+				{/*/>*/}
+				{/*</IconWrapper>*/}
 			</StyledCategoryWrapper>
 			{/*<StyledCategoryWrapper isExpanded={isExpanded}>*/}
 			{/*	/!* Selected category at top *!/*/}
