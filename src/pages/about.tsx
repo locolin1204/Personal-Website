@@ -1,10 +1,11 @@
 import * as React from "react";
 import Layout from "../components/layout/layout";
-import { graphql } from "gatsby";
+import { graphql, HeadFC } from "gatsby";
 import TechStack from "../components/about/techStack";
 import AboutText from "../components/about/aboutText";
 import SoftwareStack from "../components/about/softwareStack";
 import AboutSelfIntro from "../components/about/aboutSelfIntro";
+import PageHead from "../components/layout/pageHead";
 
 const AboutPage = ({ data }: { data: any }) => {
 	const heroImage = {
@@ -44,3 +45,12 @@ export const query = graphql`
 // export const Head = () => <title>about me</title>;
 
 export default AboutPage;
+
+export const Head: HeadFC = () => (
+	<PageHead
+		title="about"
+		description="a little bit about me."
+		pathname="/about"
+	/>
+);
+
