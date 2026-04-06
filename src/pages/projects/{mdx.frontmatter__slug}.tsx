@@ -124,6 +124,7 @@ export const query = graphql`
 		mdx(id: { eq: $id }) {
 			frontmatter {
 				title
+				slug
 				tech
 				date(formatString: "MMMM YYYY")
 				link
@@ -146,14 +147,18 @@ export const query = graphql`
 export default ProjectPosts;
 
 export const Head: HeadFC<any> = ({ data }) => {
-	const { title } = data.mdx.frontmatter;
+	const { title, slug } = data.mdx.frontmatter;
 	return (
 		<PageHead
 			title={`${title} | Project`}
 			description={data.mdx.excerpt}
-			pathname={`/projects/${data.mdx.frontmatter.slug}`}
+			pathname={`/projects/${slug}`}
 			image={data.mdx.frontmatter.image.childImageSharp.fluid.src}
 			type="article"
+			breadcrumbs={[
+				{ name: "projects", pathname: "/projects" },
+				{ name: title, pathname: `/projects/${slug}` },
+			]}
 		/>
 	);
 };

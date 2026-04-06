@@ -3,6 +3,10 @@ import { GatsbyImage as GImage } from "gatsby-plugin-image";
 import { Container, Col } from "react-bootstrap";
 import styled from "styled-components";
 
+type HeroImageProps = {
+	height: string;
+};
+
 export const StyledContainer = styled(Container)`
 	min-height: 100vh;
 	padding: 0px;
@@ -28,7 +32,7 @@ export const StyledCol = styled(Col)`
 	flex: 1;
 `;
 
-export const HeroImage = styled(GatsbyImage)`
+export const HeroImage = styled(GatsbyImage)<HeroImageProps>`
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;

@@ -80,5 +80,6 @@ export const Head: HeadFC = () => (
 		title="colin lo"
 		description="i am colin lo"
 		pathname="/"
+		breadcrumbs={[]}
 	/>
 );

@@ -131,6 +131,9 @@ export const Head: HeadFC = () => (
 		title="videography"
 		description="storytelling through motion and sound."
 		pathname="/videography"
+		breadcrumbs={[
+			{ name: "videography", pathname: "/videography" },
+		]}
 	/>
 );
 

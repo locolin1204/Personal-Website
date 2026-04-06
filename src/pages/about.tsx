@@ -51,6 +51,9 @@ export const Head: HeadFC = () => (
 		title="about"
 		description="a little bit about me."
 		pathname="/about"
+		breadcrumbs={[
+			{ name: "about", pathname: "/about" },
+		]}
 	/>
 );
 
