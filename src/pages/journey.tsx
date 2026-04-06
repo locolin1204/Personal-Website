@@ -102,6 +102,9 @@ export const Head: HeadFC = () => (
 		title="journey"
 		description="journey as developer."
 		pathname="/journey"
+		breadcrumbs={[
+			{ name: "journey", pathname: "/journey" },
+		]}
 	/>
 );
 

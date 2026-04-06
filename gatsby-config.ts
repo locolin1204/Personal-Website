@@ -7,6 +7,7 @@ require("dotenv").config({
 const canonicalSiteUrl = "https://locolin.com";
 
 const config: GatsbyConfig = {
+	trailingSlash: "always",
 	siteMetadata: {
 		title: `Colin Lo`,
 		siteUrl: canonicalSiteUrl,

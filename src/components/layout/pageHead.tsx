@@ -1,11 +1,33 @@
 import React from "react";
 
+interface BreadcrumbItem {
+	name: string;
+	pathname: string;
+}
+
 interface PageHeadProps {
 	title: string;
 	description?: string;
 	pathname?: string;
 	image?: string;
 	type?: "website" | "article";
+	breadcrumbs?: BreadcrumbItem[];
+	noindex?: boolean;
+}
+
+function normalizePathname(rawPathname?: string) {
+	if (!rawPathname || rawPathname.trim() === "" || rawPathname === "/") {
+		return "/";
+	}
+
+	const pathWithLeadingSlash = rawPathname.startsWith("/")
+		? rawPathname
+		: `/${rawPathname}`;
+	const collapsedSlashes = pathWithLeadingSlash.replace(/\/+/g, "/");
+
+	return collapsedSlashes.endsWith("/")
+		? collapsedSlashes
+		: `${collapsedSlashes}/`;
 }
 
 /**
@@ -19,15 +41,35 @@ export const PageHead = ({
 	pathname = "/",
 	image = "/images/site-image/site-image.jpg",
 	type = "website",
+	breadcrumbs,
+	noindex = false,
 }: PageHeadProps) => {
 	const siteUrl = "https://locolin.com";
-	const canonicalUrl = `${siteUrl}${pathname}`;
+	const normalizedPathname = normalizePathname(pathname);
+	const canonicalUrl = `${siteUrl}${normalizedPathname}`;
 	const imageUrl = `${siteUrl}${image}`;
+	const breadcrumbList = breadcrumbs?.length
+		? [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Home",
+				item: `${siteUrl}/`,
+			},
+			...breadcrumbs.map((breadcrumb, index) => ({
+				"@type": "ListItem",
+				position: index + 2,
+				name: breadcrumb.name,
+				item: `${siteUrl}${normalizePathname(breadcrumb.pathname)}`,
+			})),
+		]
+		: null;
 
 	return (
 		<>
 			{/* Page title */}
 			<title>{title}</title>
+			{noindex ? <meta name="robots" content="noindex,follow" /> : null}
 
 			{/* Meta description */}
 			<meta name="description" content={description} />
@@ -51,6 +93,16 @@ export const PageHead = ({
 
 			{/* Standard meta */}
 			<meta name="author" content="Colin Lo" />
+
+			{breadcrumbList ? (
+				<script type="application/ld+json">
+					{JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "BreadcrumbList",
+						itemListElement: breadcrumbList,
+					})}
+				</script>
+			) : null}
 		</>
 	);
 };

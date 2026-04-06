@@ -1,6 +1,5 @@
 import * as React from "react";
 import { ReactNode } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./navbar";
 import Footer from "./footer";
@@ -45,25 +44,12 @@ const Layout = ({
 	pageTitle: string;
 	children: ReactNode;
 }) => {
-	const data = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`);
-
 	return (
 		<ThemeProvider theme={themeColor.light}>
-			<SEO/>
-			<title>Colin Lo</title>
 			<GlobalStyles />
 			<StyledContainer fluid>
 				<NavBar />
 				<StyledCol className="mx-auto" md={8}>
-					{/* <header>{data.site.siteMetadata.title}</header> */}
 					<main
 					//  style={{"min-height": "100vh"}}
 					>

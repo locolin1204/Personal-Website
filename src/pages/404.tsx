@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout/layout";
+import PageHead from "../components/layout/pageHead";
 import { FourOFourContainer, StyledCode } from "../styles/404/404.styled";
 
 
@@ -31,4 +32,6 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage
 
-export const Head: HeadFC = () => <title>Not found</title>
+export const Head: HeadFC = () => (
+  <PageHead title="not found" pathname="/404" noindex />
+)
